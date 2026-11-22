@@ -15,11 +15,13 @@
 import GuildSettings from './GuildSettings.js';
 import UserSettings from './UserSettings.js';
 import LanguageOverride from './LanguageOverride.js';
+import AuditLog from './AuditLog.js';
 
 export const models = {
   GuildSettings,
   UserSettings,
   LanguageOverride,
+  AuditLog,
 };
 
 /** Collections planned for later phases (declared so the roadmap is explicit). */
@@ -41,7 +43,6 @@ export const PLANNED_MODELS = Object.freeze([
   'Warning',
   'ModerationCase',
   'AutomodConfig',
-  'AuditLog',
   'CustomTag',
   'Announcement',
   'Reminder',
@@ -53,5 +54,6 @@ export const PLANNED_MODELS = Object.freeze([
   'ScheduledTask',
 ]);
 
-export { GuildSettings, UserSettings, LanguageOverride };
+export { GuildSettings, UserSettings, LanguageOverride, AuditLog };
+export { AUDIT_TYPES } from './AuditLog.js';
 export default models;
