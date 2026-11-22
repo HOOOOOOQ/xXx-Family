@@ -1,0 +1,90 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Comprueba la latencia del bot, del gateway y de la base de datos."
+  },
+  "uptime": {
+    "name": "uptime",
+    "description": "Muestra cuánto tiempo lleva xXx Family en funcionamiento."
+  },
+  "help": {
+    "name": "ayuda",
+    "description": "Muestra todos los comandos o el detalle de uno.",
+    "options": {
+      "command": {
+        "name": "comando",
+        "description": "El comando del que quieres ver el detalle."
+      }
+    }
+  },
+  "language": {
+    "name": "idioma",
+    "description": "Gestiona tu idioma o el idioma de este servidor.",
+    "options": {
+      "set": {
+        "name": "establecer",
+        "description": "Establece tu idioma personal."
+      },
+      "list": {
+        "name": "lista",
+        "description": "Lista todos los idiomas disponibles."
+      },
+      "reset": {
+        "name": "restablecer",
+        "description": "Restablece tu idioma personal al del servidor."
+      },
+      "server": {
+        "name": "servidor",
+        "description": "Establece el idioma predeterminado de este servidor."
+      },
+      "user": {
+        "name": "usuario",
+        "description": "Muestra el idioma que se usa para ti."
+      },
+      "language": {
+        "name": "idioma",
+        "description": "El idioma que se va a usar."
+      }
+    }
+  },
+  "settings": {
+    "name": "ajustes",
+    "description": "Consulta o restablece la configuración de xXx Family de este servidor.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Muestra la configuración de este servidor."
+      },
+      "reset": {
+        "name": "restablecer",
+        "description": "Restablece todos los ajustes del servidor."
+      },
+      "confirm": {
+        "name": "confirmar",
+        "description": "Escribe CONFIRM para restablecer. No se puede deshacer."
+      }
+    }
+  },
+  "responses": {
+    "pong": "¡Pong!",
+    "pingTitle": "Estado de la conexión",
+    "uptimeTitle": "Tiempo activo del sistema",
+    "helpTitle": "Directorio de comandos",
+    "helpDescription": "Todos los comandos están disponibles en tu idioma. Elige una categoría para acotar la lista.",
+    "helpUsage": "Uso",
+    "helpCooldown": "Espera",
+    "helpPermissions": "Permisos necesarios",
+    "helpCategory": "Categoría",
+    "helpSelectPlaceholder": "Elige una categoría",
+    "helpNoCommands": "Todavía no hay comandos registrados.",
+    "helpEveryone": "Todos",
+    "languageTitle": "Ajustes de idioma",
+    "settingsTitle": "Configuración del servidor",
+    "settingsGuildId": "ID del servidor",
+    "settingsPrefix": "Módulos",
+    "settingsResetDone": "Todos los ajustes de este servidor volvieron a su valor predeterminado.",
+    "settingsResetConfirm": "¿Restablecer todos los ajustes de este servidor? No se puede deshacer.",
+    "modulesLoaded": "Módulos activos",
+    "noModules": "Todavía no hay módulos activos."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "refresh": "Atualizar",
+    "next": "Próxima",
+    "previous": "Voltar",
+    "support": "Servidor de suporte",
+    "invite": "Convidar o xXx Family",
+    "dashboard": "Abrir painel",
+    "dismiss": "Dispensar"
+  },
+  "selects": { "languagePlaceholder": "Selecione um idioma", "categoryPlaceholder": "Selecione uma categoria" },
+  "modals": {
+    "feedbackTitle": "Enviar feedback",
+    "feedbackLabel": "Sua mensagem",
+    "feedbackPlaceholder": "Escreva seu feedback aqui…"
+  },
+  "menu": { "back": "Voltar ao menu", "home": "Menu principal" }
+}

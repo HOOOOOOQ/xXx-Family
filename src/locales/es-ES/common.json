@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "name": "xXx Family",
+    "tagline": "Ecosistema de comunidad internacional"
+  },
+  "greeting": "¡Hola, {{user}}!",
+  "yes": "Sí",
+  "no": "No",
+  "enabled": "Activado",
+  "disabled": "Desactivado",
+  "none": "Ninguno",
+  "unknown": "Desconocido",
+  "language": {
+    "title": "Idioma",
+    "current": "Idioma actual",
+    "server": "Idioma del servidor",
+    "personal": "Tu idioma",
+    "source": "Aplicado desde",
+    "sourceUser": "Tu elección personal",
+    "sourceDiscordUser": "El idioma de tu cliente de Discord",
+    "sourceGuild": "El valor predeterminado de este servidor",
+    "sourceDiscordGuild": "El idioma de la comunidad de Discord de este servidor",
+    "sourceDefault": "Predeterminado del bot",
+    "sourceFallback": "Reserva (inglés)",
+    "updatedPersonal": "Tu idioma personal ahora es **{{language}}**.",
+    "updatedServer": "El idioma predeterminado de este servidor ahora es **{{language}}**.",
+    "reset": "Se restableció tu idioma personal. Ahora se usa el predeterminado del servidor.",
+    "alreadyActive": "Ya estás usando **{{language}}**.",
+    "selectPlaceholder": "Elige tu idioma",
+    "availableTitle": "Idiomas disponibles",
+    "availableCount_one": "{{count}} idioma disponible",
+    "availableCount": "{{count}} idiomas disponibles",
+    "availableCount_other": "{{count}} idiomas disponibles"
+  },
+  "status": {
+    "online": "En línea",
+    "offline": "Desconectado",
+    "degraded": "Degradado",
+    "unknown": "Desconocido",
+    "healthy": "Saludable"
+  },
+  "fields": {
+    "uptime": "Tiempo activo",
+    "ping": "Latencia",
+    "roundtrip": "Ida y vuelta",
+    "gateway": "Gateway",
+    "database": "Base de datos",
+    "api": "API",
+    "shard": "Shard",
+    "guilds": "Servidores",
+    "members": "Miembros",
+    "version": "Versión",
+    "commands": "Comandos",
+    "startedAt": "Iniciado el",
+    "node": "Node.js",
+    "memory": "Memoria"
+  },
+  "footer": {
+    "requestedBy": "Solicitado por {{user}}",
+    "poweredBy": "Con la tecnología de xXx Family"
+  },
+  "pagination": {
+    "page": "Página {{current}} de {{total}}",
+    "next": "Siguiente",
+    "previous": "Atrás"
+  },
+  "time": {
+    "days": "{{count}} d",
+    "hours": "{{count}} h",
+    "minutes": "{{count}} min",
+    "seconds": "{{count}} s",
+    "justNow": "justo ahora"
+  }
+}

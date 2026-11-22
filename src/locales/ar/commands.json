@@ -1,0 +1,90 @@
+{
+  "ping": {
+    "name": "بنق",
+    "description": "تحقق من زمن استجابة البوت والبوابة وقاعدة البيانات."
+  },
+  "uptime": {
+    "name": "مدة_التشغيل",
+    "description": "اعرض كم من الوقت يعمل xXx Family."
+  },
+  "help": {
+    "name": "مساعدة",
+    "description": "اعرض كل الأوامر أو تفاصيل أمر واحد.",
+    "options": {
+      "command": {
+        "name": "الأمر",
+        "description": "الأمر الذي تريد تفاصيله."
+      }
+    }
+  },
+  "language": {
+    "name": "اللغة",
+    "description": "أدر لغتك أو لغة هذا الخادم.",
+    "options": {
+      "set": {
+        "name": "تعيين",
+        "description": "عيّن لغتك الشخصية."
+      },
+      "list": {
+        "name": "قائمة",
+        "description": "اعرض كل اللغات المتاحة."
+      },
+      "reset": {
+        "name": "إعادة_تعيين",
+        "description": "أعد تعيين لغتك الشخصية."
+      },
+      "server": {
+        "name": "الخادم",
+        "description": "عيّن اللغة الافتراضية لهذا الخادم."
+      },
+      "user": {
+        "name": "المستخدم",
+        "description": "اعرض اللغة المستخدمة لك."
+      },
+      "language": {
+        "name": "اللغة",
+        "description": "اللغة المراد استخدامها."
+      }
+    }
+  },
+  "settings": {
+    "name": "الإعدادات",
+    "description": "اعرض أو أعد تعيين إعدادات xXx Family لهذا الخادم.",
+    "options": {
+      "view": {
+        "name": "عرض",
+        "description": "اعرض إعدادات هذا الخادم."
+      },
+      "reset": {
+        "name": "إعادة_تعيين",
+        "description": "أعد تعيين كل إعدادات الخادم."
+      },
+      "confirm": {
+        "name": "تأكيد",
+        "description": "اكتب CONFIRM لإعادة التعيين. لا يمكن التراجع."
+      }
+    }
+  },
+  "responses": {
+    "pong": "بونغ!",
+    "pingTitle": "حالة الاتصال",
+    "uptimeTitle": "مدة تشغيل النظام",
+    "helpTitle": "دليل الأوامر",
+    "helpDescription": "كل الأوامر متاحة بلغتك. اختر فئة لتضييق القائمة.",
+    "helpUsage": "الاستخدام",
+    "helpCooldown": "فترة الانتظار",
+    "helpPermissions": "الصلاحيات المطلوبة",
+    "helpCategory": "الفئة",
+    "helpSelectPlaceholder": "اختر فئة",
+    "helpNoCommands": "لا توجد أوامر مسجّلة بعد.",
+    "helpEveryone": "الجميع",
+    "languageTitle": "إعدادات اللغة",
+    "settingsTitle": "إعدادات الخادم",
+    "settingsGuildId": "معرّف الخادم",
+    "settingsPrefix": "الوحدات",
+    "settingsResetDone": "تمت إعادة كل إعدادات هذا الخادم إلى الوضع الافتراضي.",
+    "settingsResetConfirm": "إعادة تعيين كل إعدادات هذا الخادم؟ لا يمكن التراجع.",
+    "modulesLoaded": "الوحدات النشطة",
+    "noModules": "لا توجد وحدات نشطة بعد."
+  }
+}

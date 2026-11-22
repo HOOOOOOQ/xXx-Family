@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "name": "xXx Family",
+    "tagline": "International Community Ecosystem"
+  },
+  "greeting": "Hello, {{user}}!",
+  "yes": "Yes",
+  "no": "No",
+  "enabled": "Enabled",
+  "disabled": "Disabled",
+  "none": "None",
+  "unknown": "Unknown",
+  "language": {
+    "title": "Language",
+    "current": "Current language",
+    "server": "Server language",
+    "personal": "Your language",
+    "source": "Applied from",
+    "sourceUser": "Your personal choice",
+    "sourceDiscordUser": "Your Discord client language",
+    "sourceGuild": "This server's default",
+    "sourceDiscordGuild": "This server's Discord community language",
+    "sourceDefault": "Bot default",
+    "sourceFallback": "Fallback (English)",
+    "updatedPersonal": "Your personal language is now **{{language}}**.",
+    "updatedServer": "The default language of this server is now **{{language}}**.",
+    "reset": "Your personal language was reset. The server default is now used.",
+    "alreadyActive": "You are already using **{{language}}**.",
+    "selectPlaceholder": "Choose your language",
+    "availableTitle": "Available languages",
+    "availableCount_one": "{{count}} language available",
+    "availableCount": "{{count}} languages available",
+    "availableCount_other": "{{count}} languages available"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "degraded": "Degraded",
+    "unknown": "Unknown",
+    "healthy": "Healthy"
+  },
+  "fields": {
+    "uptime": "Uptime",
+    "ping": "Latency",
+    "roundtrip": "Round trip",
+    "gateway": "Gateway",
+    "database": "Database",
+    "api": "API",
+    "shard": "Shard",
+    "guilds": "Servers",
+    "members": "Members",
+    "version": "Version",
+    "commands": "Commands",
+    "startedAt": "Started at",
+    "node": "Node.js",
+    "memory": "Memory"
+  },
+  "footer": {
+    "requestedBy": "Requested by {{user}}",
+    "poweredBy": "Powered by xXx Family"
+  },
+  "pagination": {
+    "page": "Page {{current}} of {{total}}",
+    "next": "Next",
+    "previous": "Back"
+  },
+  "time": {
+    "days": "{{count}}d",
+    "hours": "{{count}}h",
+    "minutes": "{{count}}m",
+    "seconds": "{{count}}s",
+    "justNow": "just now"
+  }
+}

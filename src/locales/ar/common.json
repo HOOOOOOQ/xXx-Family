@@ -1,0 +1,78 @@
+{
+  "brand": {
+    "name": "xXx Family",
+    "tagline": "منظومة مجتمع دولية"
+  },
+  "greeting": "مرحباً، {{user}}!",
+  "yes": "نعم",
+  "no": "لا",
+  "enabled": "مُفعَّل",
+  "disabled": "معطَّل",
+  "none": "لا شيء",
+  "unknown": "غير معروف",
+  "language": {
+    "title": "اللغة",
+    "current": "اللغة الحالية",
+    "server": "لغة الخادم",
+    "personal": "لغتك",
+    "source": "مطبَّقة من",
+    "sourceUser": "اختيارك الشخصي",
+    "sourceDiscordUser": "لغة عميل دسكورد لديك",
+    "sourceGuild": "الافتراضي لهذا الخادم",
+    "sourceDiscordGuild": "لغة مجتمع دسكورد لهذا الخادم",
+    "sourceDefault": "افتراضي البوت",
+    "sourceFallback": "احتياطي (الإنجليزية)",
+    "updatedPersonal": "أصبحت لغتك الشخصية الآن **{{language}}**.",
+    "updatedServer": "أصبحت اللغة الافتراضية لهذا الخادم الآن **{{language}}**.",
+    "reset": "تمت إعادة تعيين لغتك الشخصية. يُستخدم الآن الافتراضي الخاص بالخادم.",
+    "alreadyActive": "أنت تستخدم **{{language}}** بالفعل.",
+    "selectPlaceholder": "اختر لغتك",
+    "availableTitle": "اللغات المتاحة",
+    "availableCount_zero": "لا توجد لغات متاحة",
+    "availableCount_one": "لغة واحدة متاحة",
+    "availableCount": "{{count}} لغة متاحة",
+    "availableCount_two": "لغتان متاحتان",
+    "availableCount_few": "{{count}} لغات متاحة",
+    "availableCount_many": "{{count}} لغة متاحة",
+    "availableCount_other": "{{count}} لغة متاحة"
+  },
+  "status": {
+    "online": "متصل",
+    "offline": "غير متصل",
+    "degraded": "متدهور",
+    "unknown": "غير معروف",
+    "healthy": "سليم"
+  },
+  "fields": {
+    "uptime": "مدة التشغيل",
+    "ping": "زمن الاستجابة",
+    "roundtrip": "ذهاب وعودة",
+    "gateway": "البوابة",
+    "database": "قاعدة البيانات",
+    "api": "واجهة البرمجة",
+    "shard": "الشريحة",
+    "guilds": "الخوادم",
+    "members": "الأعضاء",
+    "version": "الإصدار",
+    "commands": "الأوامر",
+    "startedAt": "بدأ التشغيل في",
+    "node": "Node.js",
+    "memory": "الذاكرة"
+  },
+  "footer": {
+    "requestedBy": "طُلب بواسطة {{user}}",
+    "poweredBy": "مدعوم من xXx Family"
+  },
+  "pagination": {
+    "page": "الصفحة {{current}} من {{total}}",
+    "next": "التالي",
+    "previous": "السابق"
+  },
+  "time": {
+    "days": "{{count}} يوم",
+    "hours": "{{count}} ساعة",
+    "minutes": "{{count}} دقيقة",
+    "seconds": "{{count}} ثانية",
+    "justNow": "الآن"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "name": "xXx Family",
+    "tagline": "Ekosistem Komunitas Internasional"
+  },
+  "greeting": "Halo, {{user}}!",
+  "yes": "Ya",
+  "no": "Tidak",
+  "enabled": "Aktif",
+  "disabled": "Nonaktif",
+  "none": "Tidak ada",
+  "unknown": "Tidak diketahui",
+  "language": {
+    "title": "Bahasa",
+    "current": "Bahasa saat ini",
+    "server": "Bahasa server",
+    "personal": "Bahasa kamu",
+    "source": "Diambil dari",
+    "sourceUser": "Pilihan pribadi kamu",
+    "sourceDiscordUser": "Bahasa aplikasi Discord kamu",
+    "sourceGuild": "Bawaan server ini",
+    "sourceDiscordGuild": "Bahasa komunitas Discord server ini",
+    "sourceDefault": "Bawaan bot",
+    "sourceFallback": "Cadangan (Bahasa Inggris)",
+    "updatedPersonal": "Bahasa pribadi kamu sekarang **{{language}}**.",
+    "updatedServer": "Bahasa bawaan server ini sekarang **{{language}}**.",
+    "reset": "Bahasa pribadi kamu telah direset. Bahasa bawaan server kini digunakan.",
+    "alreadyActive": "Kamu sudah menggunakan **{{language}}**.",
+    "selectPlaceholder": "Pilih bahasa kamu",
+    "availableTitle": "Bahasa yang tersedia",
+    "availableCount_one": "{{count}} bahasa tersedia",
+    "availableCount": "{{count}} bahasa tersedia",
+    "availableCount_other": "{{count}} bahasa tersedia"
+  },
+  "status": {
+    "online": "Daring",
+    "offline": "Luring",
+    "degraded": "Terganggu",
+    "unknown": "Tidak diketahui",
+    "healthy": "Sehat"
+  },
+  "fields": {
+    "uptime": "Waktu aktif",
+    "ping": "Latensi",
+    "roundtrip": "Bolak-balik",
+    "gateway": "Gateway",
+    "database": "Basis data",
+    "api": "API",
+    "shard": "Shard",
+    "guilds": "Server",
+    "members": "Anggota",
+    "version": "Versi",
+    "commands": "Perintah",
+    "startedAt": "Dijalankan sejak",
+    "node": "Node.js",
+    "memory": "Memori"
+  },
+  "footer": {
+    "requestedBy": "Diminta oleh {{user}}",
+    "poweredBy": "Ditenagai oleh xXx Family"
+  },
+  "pagination": {
+    "page": "Halaman {{current}} dari {{total}}",
+    "next": "Berikutnya",
+    "previous": "Kembali"
+  },
+  "time": {
+    "days": "{{count}}h",
+    "hours": "{{count}}j",
+    "minutes": "{{count}}m",
+    "seconds": "{{count}}d",
+    "justNow": "baru saja"
+  }
+}

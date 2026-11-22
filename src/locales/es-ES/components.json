@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "refresh": "Actualizar",
+    "next": "Siguiente",
+    "previous": "Atrás",
+    "support": "Servidor de soporte",
+    "invite": "Invitar a xXx Family",
+    "dashboard": "Abrir panel",
+    "dismiss": "Descartar"
+  },
+  "selects": { "languagePlaceholder": "Selecciona un idioma", "categoryPlaceholder": "Selecciona una categoría" },
+  "modals": {
+    "feedbackTitle": "Enviar comentarios",
+    "feedbackLabel": "Tu mensaje",
+    "feedbackPlaceholder": "Escribe aquí tus comentarios…"
+  },
+  "menu": { "back": "Volver al menú", "home": "Menú principal" }
+}

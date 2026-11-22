@@ -1,0 +1,90 @@
+{
+  "ping": {
+    "name": "핑",
+    "description": "봇, 게이트웨이, 데이터베이스 지연 시간을 확인합니다."
+  },
+  "uptime": {
+    "name": "가동시간",
+    "description": "xXx Family가 실행된 시간을 표시합니다."
+  },
+  "help": {
+    "name": "도움말",
+    "description": "모든 명령어 또는 특정 명령어의 상세 정보를 표시합니다.",
+    "options": {
+      "command": {
+        "name": "명령어",
+        "description": "상세 정보를 볼 명령어."
+      }
+    }
+  },
+  "language": {
+    "name": "언어",
+    "description": "내 언어 또는 이 서버의 언어를 관리합니다.",
+    "options": {
+      "set": {
+        "name": "설정",
+        "description": "개인 언어를 설정합니다."
+      },
+      "list": {
+        "name": "목록",
+        "description": "사용 가능한 언어를 모두 표시합니다."
+      },
+      "reset": {
+        "name": "초기화",
+        "description": "개인 언어를 초기화합니다."
+      },
+      "server": {
+        "name": "서버",
+        "description": "이 서버의 기본 언어를 설정합니다."
+      },
+      "user": {
+        "name": "사용자",
+        "description": "현재 적용된 언어를 표시합니다."
+      },
+      "language": {
+        "name": "언어",
+        "description": "사용할 언어."
+      }
+    }
+  },
+  "settings": {
+    "name": "설정",
+    "description": "이 서버의 xXx Family 설정을 확인하거나 초기화합니다.",
+    "options": {
+      "view": {
+        "name": "보기",
+        "description": "이 서버의 설정을 표시합니다."
+      },
+      "reset": {
+        "name": "초기화",
+        "description": "서버의 모든 설정을 초기화합니다."
+      },
+      "confirm": {
+        "name": "확인",
+        "description": "CONFIRM을 입력하면 초기화됩니다. 되돌릴 수 없습니다."
+      }
+    }
+  },
+  "responses": {
+    "pong": "퐁!",
+    "pingTitle": "연결 상태",
+    "uptimeTitle": "시스템 가동 시간",
+    "helpTitle": "명령어 목록",
+    "helpDescription": "모든 명령어는 당신의 언어로 제공됩니다. 카테고리를 선택하면 목록을 좁힐 수 있습니다.",
+    "helpUsage": "사용법",
+    "helpCooldown": "대기 시간",
+    "helpPermissions": "필요한 권한",
+    "helpCategory": "카테고리",
+    "helpSelectPlaceholder": "카테고리를 선택하세요",
+    "helpNoCommands": "등록된 명령어가 아직 없습니다.",
+    "helpEveryone": "모두",
+    "languageTitle": "언어 설정",
+    "settingsTitle": "서버 구성",
+    "settingsGuildId": "서버 ID",
+    "settingsPrefix": "모듈",
+    "settingsResetDone": "이 서버의 모든 설정을 기본값으로 되돌렸습니다.",
+    "settingsResetConfirm": "이 서버의 모든 설정을 초기화할까요? 되돌릴 수 없습니다.",
+    "modulesLoaded": "활성 모듈",
+    "noModules": "활성 모듈이 아직 없습니다."
+  }
+}

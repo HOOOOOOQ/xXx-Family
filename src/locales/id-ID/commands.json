@@ -1,0 +1,90 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Periksa latensi bot, gateway, dan basis data."
+  },
+  "uptime": {
+    "name": "uptime",
+    "description": "Tampilkan berapa lama xXx Family telah berjalan."
+  },
+  "help": {
+    "name": "bantuan",
+    "description": "Tampilkan semua perintah atau detail satu perintah.",
+    "options": {
+      "command": {
+        "name": "perintah",
+        "description": "Perintah yang ingin kamu lihat detailnya."
+      }
+    }
+  },
+  "language": {
+    "name": "bahasa",
+    "description": "Kelola bahasa kamu atau bahasa server ini.",
+    "options": {
+      "set": {
+        "name": "atur",
+        "description": "Atur bahasa pribadi kamu."
+      },
+      "list": {
+        "name": "daftar",
+        "description": "Tampilkan semua bahasa yang tersedia."
+      },
+      "reset": {
+        "name": "reset",
+        "description": "Reset bahasa pribadi kamu ke bawaan server."
+      },
+      "server": {
+        "name": "server",
+        "description": "Atur bahasa bawaan server ini."
+      },
+      "user": {
+        "name": "pengguna",
+        "description": "Tampilkan bahasa yang dipakai untuk kamu."
+      },
+      "language": {
+        "name": "bahasa",
+        "description": "Bahasa yang ingin digunakan."
+      }
+    }
+  },
+  "settings": {
+    "name": "pengaturan",
+    "description": "Lihat atau reset konfigurasi xXx Family server ini.",
+    "options": {
+      "view": {
+        "name": "lihat",
+        "description": "Tampilkan konfigurasi server ini."
+      },
+      "reset": {
+        "name": "reset",
+        "description": "Reset semua pengaturan server ini ke bawaan."
+      },
+      "confirm": {
+        "name": "konfirmasi",
+        "description": "Ketik CONFIRM untuk mereset. Tindakan ini tidak bisa dibatalkan."
+      }
+    }
+  },
+  "responses": {
+    "pong": "Pong!",
+    "pingTitle": "Status koneksi",
+    "uptimeTitle": "Waktu aktif sistem",
+    "helpTitle": "Daftar perintah",
+    "helpDescription": "Semua perintah tersedia dalam bahasa kamu. Pilih kategori untuk mempersempit daftar.",
+    "helpUsage": "Cara pakai",
+    "helpCooldown": "Jeda",
+    "helpPermissions": "Izin yang diperlukan",
+    "helpCategory": "Kategori",
+    "helpSelectPlaceholder": "Pilih kategori",
+    "helpNoCommands": "Belum ada perintah yang terdaftar.",
+    "helpEveryone": "Semua orang",
+    "languageTitle": "Pengaturan bahasa",
+    "settingsTitle": "Konfigurasi server",
+    "settingsGuildId": "ID Server",
+    "settingsPrefix": "Modul",
+    "settingsResetDone": "Semua pengaturan server ini telah dikembalikan ke bawaan.",
+    "settingsResetConfirm": "Reset semua pengaturan server ini? Tindakan ini tidak bisa dibatalkan.",
+    "modulesLoaded": "Modul aktif",
+    "noModules": "Belum ada modul yang aktif."
+  }
+}

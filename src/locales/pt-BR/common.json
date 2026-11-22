@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "name": "xXx Family",
+    "tagline": "Ecossistema de comunidade internacional"
+  },
+  "greeting": "Olá, {{user}}!",
+  "yes": "Sim",
+  "no": "Não",
+  "enabled": "Ativado",
+  "disabled": "Desativado",
+  "none": "Nenhum",
+  "unknown": "Desconhecido",
+  "language": {
+    "title": "Idioma",
+    "current": "Idioma atual",
+    "server": "Idioma do servidor",
+    "personal": "Seu idioma",
+    "source": "Aplicado a partir de",
+    "sourceUser": "Sua escolha pessoal",
+    "sourceDiscordUser": "Idioma do seu cliente Discord",
+    "sourceGuild": "Padrão deste servidor",
+    "sourceDiscordGuild": "Idioma da comunidade Discord deste servidor",
+    "sourceDefault": "Padrão do bot",
+    "sourceFallback": "Reserva (inglês)",
+    "updatedPersonal": "Seu idioma pessoal agora é **{{language}}**.",
+    "updatedServer": "O idioma padrão deste servidor agora é **{{language}}**.",
+    "reset": "Seu idioma pessoal foi redefinido. O padrão do servidor está em uso.",
+    "alreadyActive": "Você já está usando **{{language}}**.",
+    "selectPlaceholder": "Escolha seu idioma",
+    "availableTitle": "Idiomas disponíveis",
+    "availableCount_one": "{{count}} idioma disponível",
+    "availableCount": "{{count}} idiomas disponíveis",
+    "availableCount_other": "{{count}} idiomas disponíveis"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "degraded": "Degradado",
+    "unknown": "Desconhecido",
+    "healthy": "Saudável"
+  },
+  "fields": {
+    "uptime": "Tempo ativo",
+    "ping": "Latência",
+    "roundtrip": "Ida e volta",
+    "gateway": "Gateway",
+    "database": "Banco de dados",
+    "api": "API",
+    "shard": "Shard",
+    "guilds": "Servidores",
+    "members": "Membros",
+    "version": "Versão",
+    "commands": "Comandos",
+    "startedAt": "Iniciado em",
+    "node": "Node.js",
+    "memory": "Memória"
+  },
+  "footer": {
+    "requestedBy": "Solicitado por {{user}}",
+    "poweredBy": "Desenvolvido por xXx Family"
+  },
+  "pagination": {
+    "page": "Página {{current}} de {{total}}",
+    "next": "Próxima",
+    "previous": "Voltar"
+  },
+  "time": {
+    "days": "{{count}} d",
+    "hours": "{{count}} h",
+    "minutes": "{{count}} min",
+    "seconds": "{{count}} s",
+    "justNow": "agora mesmo"
+  }
+}

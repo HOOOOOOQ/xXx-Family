@@ -1,0 +1,44 @@
+{
+  "name": "xxx-family",
+  "version": "1.0.0",
+  "private": true,
+  "description": "xXx Family \u2014 International all-in-one Discord community ecosystem: bot + Express API + Next.js dashboard. Premium Cyberpunk Edition.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "main": "src/bot/index.js",
+  "scripts": {
+    "start": "node src/bot/index.js",
+    "start:api": "node src/api/standalone.js",
+    "dev": "node --watch src/bot/index.js",
+    "deploy:commands": "node scripts/deploy-commands.js",
+    "doctor": "node scripts/doctor.js",
+    "db:check": "node scripts/db-check.js",
+    "health": "node scripts/health-check.js",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "test:unit": "node --test \"tests/unit/**/*.test.js\"",
+    "test:integration": "node --test \"tests/integration/**/*.test.js\"",
+    "locales:verify": "node scripts/verify-locales.js",
+    "deploy:commands:dry": "node scripts/deploy-commands.js --dry-run",
+    "deploy:commands:guild": "node scripts/deploy-commands.js"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "discord.js",
+    "i18n",
+    "dashboard",
+    "mongodb",
+    "termux"
+  ],
+  "dependencies": {
+    "discord.js": "^14.28.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "i18next": "^27.2.3",
+    "mongoose": "^9.12.3",
+    "zod": "^4.4.3"
+  }
+}

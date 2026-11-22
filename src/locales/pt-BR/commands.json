@@ -1,0 +1,90 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Verifica a latência do bot, do gateway e do banco de dados."
+  },
+  "uptime": {
+    "name": "uptime",
+    "description": "Mostra há quanto tempo o xXx Family está ativo."
+  },
+  "help": {
+    "name": "ajuda",
+    "description": "Mostra todos os comandos ou o detalhe de um comando.",
+    "options": {
+      "command": {
+        "name": "comando",
+        "description": "O comando que você quer detalhar."
+      }
+    }
+  },
+  "language": {
+    "name": "idioma",
+    "description": "Gerencie seu idioma ou o idioma deste servidor.",
+    "options": {
+      "set": {
+        "name": "definir",
+        "description": "Defina seu idioma pessoal."
+      },
+      "list": {
+        "name": "lista",
+        "description": "Liste todos os idiomas disponíveis."
+      },
+      "reset": {
+        "name": "redefinir",
+        "description": "Redefina seu idioma pessoal para o do servidor."
+      },
+      "server": {
+        "name": "servidor",
+        "description": "Defina o idioma padrão deste servidor."
+      },
+      "user": {
+        "name": "usuario",
+        "description": "Mostre o idioma usado para você."
+      },
+      "language": {
+        "name": "idioma",
+        "description": "O idioma a ser usado."
+      }
+    }
+  },
+  "settings": {
+    "name": "config",
+    "description": "Veja ou redefina a configuração do xXx Family deste servidor.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostra a configuração deste servidor."
+      },
+      "reset": {
+        "name": "redefinir",
+        "description": "Redefina todas as configurações do servidor."
+      },
+      "confirm": {
+        "name": "confirmar",
+        "description": "Digite CONFIRM para redefinir. Não dá para desfazer."
+      }
+    }
+  },
+  "responses": {
+    "pong": "Pong!",
+    "pingTitle": "Status da conexão",
+    "uptimeTitle": "Tempo ativo do sistema",
+    "helpTitle": "Diretório de comandos",
+    "helpDescription": "Todos os comandos estão disponíveis no seu idioma. Escolha uma categoria para filtrar a lista.",
+    "helpUsage": "Uso",
+    "helpCooldown": "Espera",
+    "helpPermissions": "Permissões necessárias",
+    "helpCategory": "Categoria",
+    "helpSelectPlaceholder": "Escolha uma categoria",
+    "helpNoCommands": "Nenhum comando registrado ainda.",
+    "helpEveryone": "Todos",
+    "languageTitle": "Configurações de idioma",
+    "settingsTitle": "Configuração do servidor",
+    "settingsGuildId": "ID do servidor",
+    "settingsPrefix": "Módulos",
+    "settingsResetDone": "Todas as configurações deste servidor voltaram ao padrão.",
+    "settingsResetConfirm": "Redefinir todas as configurações deste servidor? Não dá para desfazer.",
+    "modulesLoaded": "Módulos ativos",
+    "noModules": "Nenhum módulo ativo ainda."
+  }
+}

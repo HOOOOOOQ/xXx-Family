@@ -1,0 +1,90 @@
+{
+  "ping": {
+    "name": "ぴんぐ",
+    "description": "ボット、ゲートウェイ、データベースの遅延を確認します。"
+  },
+  "uptime": {
+    "name": "かどうじかん",
+    "description": "xXx Family の稼働時間を表示します。"
+  },
+  "help": {
+    "name": "へるぷ",
+    "description": "すべてのコマンド、または特定のコマンドの詳細を表示します。",
+    "options": {
+      "command": {
+        "name": "こまんど",
+        "description": "詳細を見たいコマンド。"
+      }
+    }
+  },
+  "language": {
+    "name": "げんご",
+    "description": "自分の言語やサーバーの言語を管理します。",
+    "options": {
+      "set": {
+        "name": "せってい",
+        "description": "個人の言語を設定します。"
+      },
+      "list": {
+        "name": "いちらん",
+        "description": "利用可能な言語を一覧表示します。"
+      },
+      "reset": {
+        "name": "りせっと",
+        "description": "個人の言語をリセットします。"
+      },
+      "server": {
+        "name": "さーばー",
+        "description": "サーバーの既定言語を設定します。"
+      },
+      "user": {
+        "name": "ゆーざー",
+        "description": "あなたに適用されている言語を表示します。"
+      },
+      "language": {
+        "name": "げんご",
+        "description": "使用する言語。"
+      }
+    }
+  },
+  "settings": {
+    "name": "せっていかんり",
+    "description": "このサーバーの xXx Family 設定を表示・リセットします。",
+    "options": {
+      "view": {
+        "name": "ひょうじ",
+        "description": "このサーバーの設定を表示します。"
+      },
+      "reset": {
+        "name": "りせっと",
+        "description": "サーバーの全設定を初期化します。"
+      },
+      "confirm": {
+        "name": "かくにん",
+        "description": "CONFIRM と入力して初期化します。元に戻せません。"
+      }
+    }
+  },
+  "responses": {
+    "pong": "ポン！",
+    "pingTitle": "接続状態",
+    "uptimeTitle": "システムの稼働時間",
+    "helpTitle": "コマンド一覧",
+    "helpDescription": "すべてのコマンドはあなたの言語で利用できます。カテゴリを選ぶと絞り込めます。",
+    "helpUsage": "使い方",
+    "helpCooldown": "クールダウン",
+    "helpPermissions": "必要な権限",
+    "helpCategory": "カテゴリ",
+    "helpSelectPlaceholder": "カテゴリを選択",
+    "helpNoCommands": "登録されているコマンドはまだありません。",
+    "helpEveryone": "全員",
+    "languageTitle": "言語設定",
+    "settingsTitle": "サーバー設定",
+    "settingsGuildId": "サーバーID",
+    "settingsPrefix": "モジュール",
+    "settingsResetDone": "このサーバーの設定をすべて初期値に戻しました。",
+    "settingsResetConfirm": "このサーバーの設定をすべて初期化しますか？元に戻せません。",
+    "modulesLoaded": "有効なモジュール",
+    "noModules": "有効なモジュールはまだありません。"
+  }
+}

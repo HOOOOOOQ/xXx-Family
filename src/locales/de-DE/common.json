@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "name": "xXx Family",
+    "tagline": "Internationales Community-Ökosystem"
+  },
+  "greeting": "Hallo, {{user}}!",
+  "yes": "Ja",
+  "no": "Nein",
+  "enabled": "Aktiviert",
+  "disabled": "Deaktiviert",
+  "none": "Keine",
+  "unknown": "Unbekannt",
+  "language": {
+    "title": "Sprache",
+    "current": "Aktuelle Sprache",
+    "server": "Serversprache",
+    "personal": "Deine Sprache",
+    "source": "Übernommen aus",
+    "sourceUser": "Deine persönliche Wahl",
+    "sourceDiscordUser": "Sprache deines Discord-Clients",
+    "sourceGuild": "Standard dieses Servers",
+    "sourceDiscordGuild": "Community-Sprache dieses Discord-Servers",
+    "sourceDefault": "Bot-Standard",
+    "sourceFallback": "Fallback (Englisch)",
+    "updatedPersonal": "Deine persönliche Sprache ist jetzt **{{language}}**.",
+    "updatedServer": "Die Standardsprache dieses Servers ist jetzt **{{language}}**.",
+    "reset": "Deine persönliche Sprache wurde zurückgesetzt. Der Server-Standard wird verwendet.",
+    "alreadyActive": "Du verwendest bereits **{{language}}**.",
+    "selectPlaceholder": "Wähle deine Sprache",
+    "availableTitle": "Verfügbare Sprachen",
+    "availableCount_one": "{{count}} Sprache verfügbar",
+    "availableCount": "{{count}} Sprachen verfügbar",
+    "availableCount_other": "{{count}} Sprachen verfügbar"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "degraded": "Eingeschränkt",
+    "unknown": "Unbekannt",
+    "healthy": "Funktionsfähig"
+  },
+  "fields": {
+    "uptime": "Laufzeit",
+    "ping": "Latenz",
+    "roundtrip": "Hin und zurück",
+    "gateway": "Gateway",
+    "database": "Datenbank",
+    "api": "API",
+    "shard": "Shard",
+    "guilds": "Server",
+    "members": "Mitglieder",
+    "version": "Version",
+    "commands": "Befehle",
+    "startedAt": "Gestartet am",
+    "node": "Node.js",
+    "memory": "Speicher"
+  },
+  "footer": {
+    "requestedBy": "Angefordert von {{user}}",
+    "poweredBy": "Betrieben von xXx Family"
+  },
+  "pagination": {
+    "page": "Seite {{current}} von {{total}}",
+    "next": "Weiter",
+    "previous": "Zurück"
+  },
+  "time": {
+    "days": "{{count}} T",
+    "hours": "{{count}} Std",
+    "minutes": "{{count}} Min",
+    "seconds": "{{count}} Sek",
+    "justNow": "gerade eben"
+  }
+}

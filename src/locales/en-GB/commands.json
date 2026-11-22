@@ -1,0 +1,90 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Check the bot, gateway and database latency."
+  },
+  "uptime": {
+    "name": "uptime",
+    "description": "Show how long xXx Family has been running."
+  },
+  "help": {
+    "name": "help",
+    "description": "Show every command or the details of a single command.",
+    "options": {
+      "command": {
+        "name": "command",
+        "description": "The command you want details for."
+      }
+    }
+  },
+  "language": {
+    "name": "language",
+    "description": "Manage your language or the language of this server.",
+    "options": {
+      "set": {
+        "name": "set",
+        "description": "Set your personal language."
+      },
+      "list": {
+        "name": "list",
+        "description": "List every available language."
+      },
+      "reset": {
+        "name": "reset",
+        "description": "Reset your personal language to the server default."
+      },
+      "server": {
+        "name": "server",
+        "description": "Set the default language of this server."
+      },
+      "user": {
+        "name": "user",
+        "description": "Show the language currently used for you."
+      },
+      "language": {
+        "name": "language",
+        "description": "The language to use."
+      }
+    }
+  },
+  "settings": {
+    "name": "settings",
+    "description": "View or reset the xXx Family configuration of this server.",
+    "options": {
+      "view": {
+        "name": "view",
+        "description": "Show this server configuration."
+      },
+      "reset": {
+        "name": "reset",
+        "description": "Reset every setting of this server to its default."
+      },
+      "confirm": {
+        "name": "confirm",
+        "description": "Type CONFIRM to reset. This cannot be undone."
+      }
+    }
+  },
+  "responses": {
+    "pong": "Pong!",
+    "pingTitle": "Connection status",
+    "uptimeTitle": "System uptime",
+    "helpTitle": "Command directory",
+    "helpDescription": "Every command is available in your language. Select a category to narrow the list.",
+    "helpUsage": "Usage",
+    "helpCooldown": "Cooldown",
+    "helpPermissions": "Required permissions",
+    "helpCategory": "Category",
+    "helpSelectPlaceholder": "Choose a category",
+    "helpNoCommands": "No commands are registered yet.",
+    "helpEveryone": "Everyone",
+    "languageTitle": "Language settings",
+    "settingsTitle": "Server configuration",
+    "settingsGuildId": "Server ID",
+    "settingsPrefix": "Modules",
+    "settingsResetDone": "Every setting of this server has been reset to its default.",
+    "settingsResetConfirm": "Reset every setting of this server? This cannot be undone.",
+    "modulesLoaded": "Active modules",
+    "noModules": "No modules are active yet."
+  }
+}

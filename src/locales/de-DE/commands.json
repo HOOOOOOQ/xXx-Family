@@ -1,0 +1,90 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Prüft die Latenz von Bot, Gateway und Datenbank."
+  },
+  "uptime": {
+    "name": "laufzeit",
+    "description": "Zeigt, wie lange xXx Family bereits läuft."
+  },
+  "help": {
+    "name": "hilfe",
+    "description": "Zeigt alle Befehle oder die Details eines Befehls.",
+    "options": {
+      "command": {
+        "name": "befehl",
+        "description": "Der Befehl, den du ansehen möchtest."
+      }
+    }
+  },
+  "language": {
+    "name": "sprache",
+    "description": "Verwalte deine Sprache oder die Sprache dieses Servers.",
+    "options": {
+      "set": {
+        "name": "setzen",
+        "description": "Lege deine persönliche Sprache fest."
+      },
+      "list": {
+        "name": "liste",
+        "description": "Liste alle verfügbaren Sprachen auf."
+      },
+      "reset": {
+        "name": "zuruecksetzen",
+        "description": "Setze deine persönliche Sprache zurück."
+      },
+      "server": {
+        "name": "server",
+        "description": "Lege die Standardsprache dieses Servers fest."
+      },
+      "user": {
+        "name": "nutzer",
+        "description": "Zeige die für dich verwendete Sprache."
+      },
+      "language": {
+        "name": "sprache",
+        "description": "Die zu verwendende Sprache."
+      }
+    }
+  },
+  "settings": {
+    "name": "einstellungen",
+    "description": "Zeige oder setze die xXx-Family-Konfiguration dieses Servers zurück.",
+    "options": {
+      "view": {
+        "name": "anzeigen",
+        "description": "Zeigt die Konfiguration dieses Servers."
+      },
+      "reset": {
+        "name": "zuruecksetzen",
+        "description": "Setze alle Einstellungen dieses Servers zurück."
+      },
+      "confirm": {
+        "name": "bestaetigen",
+        "description": "Tippe CONFIRM zum Zurücksetzen. Nicht umkehrbar."
+      }
+    }
+  },
+  "responses": {
+    "pong": "Pong!",
+    "pingTitle": "Verbindungsstatus",
+    "uptimeTitle": "Systemlaufzeit",
+    "helpTitle": "Befehlsübersicht",
+    "helpDescription": "Jeder Befehl ist in deiner Sprache verfügbar. Wähle eine Kategorie, um die Liste zu filtern.",
+    "helpUsage": "Verwendung",
+    "helpCooldown": "Abklingzeit",
+    "helpPermissions": "Erforderliche Berechtigungen",
+    "helpCategory": "Kategorie",
+    "helpSelectPlaceholder": "Wähle eine Kategorie",
+    "helpNoCommands": "Es sind noch keine Befehle registriert.",
+    "helpEveryone": "Alle",
+    "languageTitle": "Spracheinstellungen",
+    "settingsTitle": "Serverkonfiguration",
+    "settingsGuildId": "Server-ID",
+    "settingsPrefix": "Module",
+    "settingsResetDone": "Alle Einstellungen dieses Servers wurden zurückgesetzt.",
+    "settingsResetConfirm": "Alle Einstellungen dieses Servers zurücksetzen? Das ist nicht umkehrbar.",
+    "modulesLoaded": "Aktive Module",
+    "noModules": "Es sind noch keine Module aktiv."
+  }
+}
