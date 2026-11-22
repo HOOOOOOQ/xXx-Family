@@ -74,5 +74,20 @@
     "minutes": "{{count}} دقيقة",
     "seconds": "{{count}} ثانية",
     "justNow": "الآن"
+  },
+  "welcome": {
+    "title": "أهلاً بك!",
+    "message": "أهلاً بك في **{server.name}**، {user.mention}! أنت العضو رقم **#{memberCount}**.",
+    "rejoin": "أهلاً بعودتك، {user.mention}!",
+    "milestone": "🎉 {user.mention} هو عضونا رقم **#{memberCount}**!",
+    "dm": "أهلاً بك في **{server.name}**! سعداء بانضمامك.",
+    "accountAge": "أُنشئ الحساب {user.created}",
+    "botJoined": "انضم بوت إلى الخادم"
+  },
+  "goodbye": {
+    "title": "وداعاً",
+    "message": "غادر **{user.name}** الخادم. أصبحنا الآن **{memberCount}** عضواً.",
+    "duration": "بقي لمدة {duration}.",
+    "removed": "تمت إزالة **{user.name}** من الخادم."
   }
 }

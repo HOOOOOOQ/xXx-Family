@@ -16,20 +16,22 @@ import GuildSettings from './GuildSettings.js';
 import UserSettings from './UserSettings.js';
 import LanguageOverride from './LanguageOverride.js';
 import AuditLog from './AuditLog.js';
+import WelcomeConfig from './WelcomeConfig.js';
+import GoodbyeConfig from './GoodbyeConfig.js';
 
 export const models = {
   GuildSettings,
   UserSettings,
   LanguageOverride,
   AuditLog,
+  WelcomeConfig,
+  GoodbyeConfig,
 };
 
 /** Collections planned for later phases (declared so the roadmap is explicit). */
 export const PLANNED_MODELS = Object.freeze([
   'MemberProfile',
   'MemberCard',
-  'WelcomeConfig',
-  'GoodbyeConfig',
   'TemporaryVoice',
   'BoosterRecord',
   'Ticket',
@@ -54,6 +56,6 @@ export const PLANNED_MODELS = Object.freeze([
   'ScheduledTask',
 ]);
 
-export { GuildSettings, UserSettings, LanguageOverride, AuditLog };
+export { GuildSettings, UserSettings, LanguageOverride, AuditLog, WelcomeConfig, GoodbyeConfig };
 export { AUDIT_TYPES } from './AuditLog.js';
 export default models;

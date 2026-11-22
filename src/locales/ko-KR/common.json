@@ -1,5 +1,8 @@
 {
-  "brand": { "name": "xXx Family", "tagline": "글로벌 커뮤니티 생태계" },
+  "brand": {
+    "name": "xXx Family",
+    "tagline": "글로벌 커뮤니티 생태계"
+  },
   "greeting": "안녕하세요, {{user}}님!",
   "yes": "예",
   "no": "아니요",
@@ -29,7 +32,13 @@
     "availableCount_one": "{{count}}개 언어를 사용할 수 있습니다",
     "availableCount_other": "{{count}}개 언어를 사용할 수 있습니다"
   },
-  "status": { "online": "온라인", "offline": "오프라인", "degraded": "성능 저하", "unknown": "알 수 없음", "healthy": "정상" },
+  "status": {
+    "online": "온라인",
+    "offline": "오프라인",
+    "degraded": "성능 저하",
+    "unknown": "알 수 없음",
+    "healthy": "정상"
+  },
   "fields": {
     "uptime": "가동 시간",
     "ping": "지연 시간",
@@ -46,7 +55,35 @@
     "node": "Node.js",
     "memory": "메모리"
   },
-  "footer": { "requestedBy": "{{user}}님이 요청함", "poweredBy": "Powered by xXx Family" },
-  "pagination": { "page": "{{total}}페이지 중 {{current}}페이지", "next": "다음", "previous": "이전" },
-  "time": { "days": "{{count}}일", "hours": "{{count}}시간", "minutes": "{{count}}분", "seconds": "{{count}}초", "justNow": "방금 전" }
+  "footer": {
+    "requestedBy": "{{user}}님이 요청함",
+    "poweredBy": "Powered by xXx Family"
+  },
+  "pagination": {
+    "page": "{{total}}페이지 중 {{current}}페이지",
+    "next": "다음",
+    "previous": "이전"
+  },
+  "time": {
+    "days": "{{count}}일",
+    "hours": "{{count}}시간",
+    "minutes": "{{count}}분",
+    "seconds": "{{count}}초",
+    "justNow": "방금 전"
+  },
+  "welcome": {
+    "title": "환영합니다!",
+    "message": "**{server.name}**에 오신 것을 환영합니다, {user.mention}님! **#{memberCount}**번째 멤버입니다.",
+    "rejoin": "다시 오신 것을 환영합니다, {user.mention}님!",
+    "milestone": "🎉 {user.mention}님이 **#{memberCount}**번째 멤버입니다!",
+    "dm": "**{server.name}**에 오신 것을 환영합니다! 함께해 주셔서 감사합니다.",
+    "accountAge": "계정 생성일 {user.created}",
+    "botJoined": "봇이 서버에 참가했습니다"
+  },
+  "goodbye": {
+    "title": "안녕히 가세요",
+    "message": "**{user.name}**님이 서버를 나갔습니다. 현재 **{memberCount}**명입니다.",
+    "duration": "{duration} 동안 머물렀습니다.",
+    "removed": "**{user.name}**님이 서버에서 추방되었습니다."
+  }
 }

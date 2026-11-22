@@ -1,5 +1,8 @@
 {
-  "brand": { "name": "xXx Family", "tagline": "インターナショナル・コミュニティ・エコシステム" },
+  "brand": {
+    "name": "xXx Family",
+    "tagline": "インターナショナル・コミュニティ・エコシステム"
+  },
   "greeting": "こんにちは、{{user}}さん！",
   "yes": "はい",
   "no": "いいえ",
@@ -29,7 +32,13 @@
     "availableCount_one": "{{count}} 件の言語が利用可能です",
     "availableCount_other": "{{count}} 件の言語が利用可能です"
   },
-  "status": { "online": "オンライン", "offline": "オフライン", "degraded": "低下", "unknown": "不明", "healthy": "正常" },
+  "status": {
+    "online": "オンライン",
+    "offline": "オフライン",
+    "degraded": "低下",
+    "unknown": "不明",
+    "healthy": "正常"
+  },
   "fields": {
     "uptime": "稼働時間",
     "ping": "遅延",
@@ -46,7 +55,35 @@
     "node": "Node.js",
     "memory": "メモリ"
   },
-  "footer": { "requestedBy": "{{user}} によるリクエスト", "poweredBy": "Powered by xXx Family" },
-  "pagination": { "page": "{{total}} ページ中 {{current}} ページ目", "next": "次へ", "previous": "戻る" },
-  "time": { "days": "{{count}}日", "hours": "{{count}}時間", "minutes": "{{count}}分", "seconds": "{{count}}秒", "justNow": "たった今" }
+  "footer": {
+    "requestedBy": "{{user}} によるリクエスト",
+    "poweredBy": "Powered by xXx Family"
+  },
+  "pagination": {
+    "page": "{{total}} ページ中 {{current}} ページ目",
+    "next": "次へ",
+    "previous": "戻る"
+  },
+  "time": {
+    "days": "{{count}}日",
+    "hours": "{{count}}時間",
+    "minutes": "{{count}}分",
+    "seconds": "{{count}}秒",
+    "justNow": "たった今"
+  },
+  "welcome": {
+    "title": "ようこそ！",
+    "message": "**{server.name}** へようこそ、{user.mention} さん！あなたは **#{memberCount}** 人目のメンバーです。",
+    "rejoin": "おかえりなさい、{user.mention} さん！",
+    "milestone": "🎉 {user.mention} さんが **#{memberCount}** 人目のメンバーです！",
+    "dm": "**{server.name}** へようこそ！参加してくれて嬉しいです。",
+    "accountAge": "アカウント作成日 {user.created}",
+    "botJoined": "ボットがサーバーに参加しました"
+  },
+  "goodbye": {
+    "title": "さようなら",
+    "message": "**{user.name}** さんがサーバーを退出しました。現在 **{memberCount}** 人です。",
+    "duration": "滞在時間は {duration} でした。",
+    "removed": "**{user.name}** さんはサーバーから削除されました。"
+  }
 }

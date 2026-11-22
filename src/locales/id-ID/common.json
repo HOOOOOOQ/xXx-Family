@@ -70,5 +70,20 @@
     "minutes": "{{count}}m",
     "seconds": "{{count}}d",
     "justNow": "baru saja"
+  },
+  "welcome": {
+    "title": "Selamat datang!",
+    "message": "Selamat datang di **{server.name}**, {user.mention}! Kamu anggota ke-**#{memberCount}**.",
+    "rejoin": "Selamat datang kembali, {user.mention}!",
+    "milestone": "🎉 {user.mention} adalah anggota ke-**#{memberCount}** kita!",
+    "dm": "Selamat datang di **{server.name}**! Senang kamu bergabung.",
+    "accountAge": "Akun dibuat {user.created}",
+    "botJoined": "Sebuah bot bergabung ke server"
+  },
+  "goodbye": {
+    "title": "Sampai jumpa",
+    "message": "**{user.name}** keluar dari server. Sekarang kita **{memberCount}** anggota.",
+    "duration": "Ia bertahan selama {duration}.",
+    "removed": "**{user.name}** dikeluarkan dari server."
   }
 }

@@ -70,5 +70,20 @@
     "minutes": "{{count}} min",
     "seconds": "{{count}} s",
     "justNow": "agora mesmo"
+  },
+  "welcome": {
+    "title": "Bem-vindo!",
+    "message": "Boas-vindas a **{server.name}**, {user.mention}! Você é o membro **#{memberCount}**.",
+    "rejoin": "Bem-vindo de volta, {user.mention}!",
+    "milestone": "🎉 {user.mention} é o nosso membro **#{memberCount}**!",
+    "dm": "Bem-vindo a **{server.name}**! Que bom ter você aqui.",
+    "accountAge": "Conta criada {user.created}",
+    "botJoined": "Um bot entrou no servidor"
+  },
+  "goodbye": {
+    "title": "Adeus",
+    "message": "**{user.name}** saiu do servidor. Agora somos **{memberCount}** membros.",
+    "duration": "Ficou por {duration}.",
+    "removed": "**{user.name}** foi removido do servidor."
   }
 }
