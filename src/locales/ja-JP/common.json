@@ -218,5 +218,57 @@
     "roleCleared": "ブースターロールを解除しました。",
     "roleAboveBot": "{{role}} は付与できません — 私の最高ロールより上位です。",
     "monthsLabel": "月数"
+  },
+  "moderation": {
+    "noReason": "理由は指定されていません。",
+    "dm": {
+      "ban": "あなたは **{server.name}** から BAN されました。\n理由: {reason}",
+      "kick": "あなたは **{server.name}** からキックされました。\n理由: {reason}",
+      "timeout": "あなたは **{server.name}** でタイムアウトされました。\n理由: {reason}",
+      "warn": "あなたは **{server.name}** で警告を受けました。\n理由: {reason}",
+      "quarantine": "**{server.name}** でのあなたのアクセスが制限されました。\n理由: {reason}"
+    },
+    "done": {
+      "ban": "**{{target}}** を BAN しました。",
+      "kick": "**{{target}}** をキックしました。",
+      "timeout": "**{{target}}** に {{duration}} のタイムアウトを付与しました。",
+      "untimeout": "**{{target}}** のタイムアウトを解除しました。",
+      "warn": "**{{target}}** に警告しました。",
+      "unban": "**{{target}}** の BAN を解除しました。",
+      "purge": "**{{count}}** 件のメッセージを削除しました。",
+      "slowmode": "{{channel}} のスローモードを {{duration}} に設定しました。",
+      "slowmodeOff": "{{channel}} のスローモードを解除しました。",
+      "lock": "{{channel}} をロックしました。",
+      "unlock": "{{channel}} のロックを解除しました。",
+      "revoked": "ケース **#{{caseNumber}}** を取り消しました。",
+      "quarantine": "**{{target}}** を隔離しました。"
+    },
+    "panel": {
+      "title": "モデレーション",
+      "case": "ケース",
+      "type": "アクション",
+      "target": "メンバー",
+      "moderator": "モデレーター",
+      "reason": "理由",
+      "expires": "期限",
+      "noReason": "理由なし",
+      "history": "モデレーション履歴",
+      "noHistory": "そのメンバーのモデレーション履歴はありません。",
+      "totalCases": "アクション合計",
+      "activeCases": "有効",
+      "dmSent": "通知済み",
+      "dmFailed": "DM を送信できませんでした",
+      "notSaved": "未保存 — データベースがオフラインです",
+      "automod": "オートモッド",
+      "automodStatus": "状態",
+      "enabled": "有効",
+      "disabled": "無効",
+      "rules": "有効なルール",
+      "noRules": "ルールは設定されていません",
+      "threshold": "しきい値",
+      "action": "アクション",
+      "whitelist": "除外ロール",
+      "noWhitelist": "なし"
+    }
   }
 }

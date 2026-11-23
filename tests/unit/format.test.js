@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 
 import {
   formatDuration,
+  parseDuration,
   formatNumber,
   formatBytes,
   discordTimestamp,
@@ -84,6 +85,71 @@ describe('formatDuration', () => {
     assert.equal(formatDuration(Number.NaN, tEn()), 'Unknown');
   });
 });
+
+describe('parseDuration', () => {
+  test('parses the common single-unit forms', () => {
+    assert.equal(parseDuration('90s'), 90_000);
+    assert.equal(parseDuration('10m'), 600_000);
+    assert.equal(parseDuration('2h'), 7_200_000);
+    assert.equal(parseDuration('1d'), 86_400_000);
+    assert.equal(parseDuration('2 weeks'), 1_209_600_000);
+  });
+
+  test('parses a bare number as minutes', () => {
+    // "10" is what most moderators type when they mean a ten minute timeout.
+    assert.equal(parseDuration('10'), 600_000);
+  });
+
+  test('parses compound forms', () => {
+    assert.equal(parseDuration('1h30m'), 5_400_000);
+    assert.equal(parseDuration('2 h 30 m'), 9_000_000);
+    assert.equal(parseDuration('1.5h'), 5_400_000);
+  });
+
+  test('is case and whitespace insensitive', () => {
+    assert.equal(parseDuration('  2H  '), 7_200_000);
+    assert.equal(parseDuration('10M'), 600_000);
+  });
+
+  test('an unknown unit is rejected rather than read as zero', () => {
+    // Reading "5 fortnights" as 0 would hand out an instant timeout to a
+    // moderator who asked for two weeks.
+    assert.equal(parseDuration('5 fortnights'), null);
+    assert.equal(parseDuration('10x'), null);
+  });
+
+  test('trailing junk is rejected rather than ignored', () => {
+    assert.equal(parseDuration('10m please'), null);
+    assert.equal(parseDuration('about 10m'), null);
+  });
+
+  test('non-durations return null', () => {
+    for (const value of ['', '   ', 'abc', null, undefined, {}, [], Number.NaN, -5]) {
+      assert.equal(parseDuration(value), null, `${String(value)} should be null`);
+    }
+  });
+
+  test('zero is a valid duration and negative is not', () => {
+    assert.equal(parseDuration('0'), 0);
+    assert.equal(parseDuration('0s'), 0);
+  });
+
+  test('a number passes through unchanged', () => {
+    assert.equal(parseDuration(5000), 5000);
+    assert.equal(parseDuration(0), 0);
+  });
+
+  test('every unit the docs mention actually parses', () => {
+    // Guards against renaming a unit in DURATION_UNITS and breaking the
+    // documented syntax.
+    for (const text of ['1s', '1sec', '1secs', '1second', '1seconds', '1m', '1min', '1mins',
+                        '1minute', '1minutes', '1h', '1hr', '1hrs', '1hour', '1hours',
+                        '1d', '1day', '1days', '1w', '1week', '1weeks']) {
+      assert.ok(parseDuration(text) !== null, `${text} failed to parse`);
+    }
+  });
+});
+
 
 describe('locale aware primitives', () => {
   test('formats numbers per locale', () => {

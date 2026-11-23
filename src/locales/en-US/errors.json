@@ -20,5 +20,9 @@
   "cooldown": "Please wait {{seconds}} seconds before using this command again.",
   "maintenance": "This feature is currently under maintenance.",
   "timeout": "That action took too long and was cancelled.",
-  "unknownInteraction": "That interaction is no longer valid."
+  "unknownInteraction": "That interaction is no longer valid.",
+  "hierarchy": "Your highest role is not above {target}, so you cannot do that to them.",
+  "hierarchyBot": "My highest role is not above {target}, so I cannot do that to them.",
+  "self": "You cannot do that to yourself.",
+  "owner": "The server owner cannot be moderated."
 }

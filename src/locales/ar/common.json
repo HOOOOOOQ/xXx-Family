@@ -222,5 +222,57 @@
     "roleCleared": "تمت إزالة دور المعزّز.",
     "roleAboveBot": "لا أستطيع منح {{role}} — إنه أعلى من أعلى أدواري.",
     "monthsLabel": "الأشهر"
+  },
+  "moderation": {
+    "noReason": "لم يُقدَّم سبب.",
+    "dm": {
+      "ban": "تم حظرك من **{server.name}**.\nالسبب: {reason}",
+      "kick": "تم طردك من **{server.name}**.\nالسبب: {reason}",
+      "timeout": "تم منحك مهلة في **{server.name}**.\nالسبب: {reason}",
+      "warn": "تلقيت تحذيراً في **{server.name}**.\nالسبب: {reason}",
+      "quarantine": "تم تقييد وصولك في **{server.name}**.\nالسبب: {reason}"
+    },
+    "done": {
+      "ban": "تم حظر **{{target}}**.",
+      "kick": "تم طرد **{{target}}**.",
+      "timeout": "تم منح **{{target}}** مهلة لمدة {{duration}}.",
+      "untimeout": "رُفعت المهلة عن **{{target}}**.",
+      "warn": "تم تحذير **{{target}}**.",
+      "unban": "رُفع الحظر عن **{{target}}**.",
+      "purge": "حُذفت **{{count}}** رسالة.",
+      "slowmode": "ضُبط الإبطاء على {{duration}} في {{channel}}.",
+      "slowmodeOff": "أُلغي الإبطاء في {{channel}}.",
+      "lock": "القناة {{channel}} مقفلة الآن.",
+      "unlock": "القناة {{channel}} مفتوحة الآن.",
+      "revoked": "أُلغيت القضية **#{{caseNumber}}**.",
+      "quarantine": "تم عزل **{{target}}**."
+    },
+    "panel": {
+      "title": "الإشراف",
+      "case": "القضية",
+      "type": "الإجراء",
+      "target": "العضو",
+      "moderator": "المشرف",
+      "reason": "السبب",
+      "expires": "ينتهي",
+      "noReason": "لا سبب",
+      "history": "سجل الإشراف",
+      "noHistory": "لا يوجد سجل إشراف لهذا العضو.",
+      "totalCases": "إجمالي الإجراءات",
+      "activeCases": "نشطة",
+      "dmSent": "تم الإشعار",
+      "dmFailed": "تعذّر إرسال رسالة خاصة",
+      "notSaved": "لم يُحفظ — قاعدة البيانات غير متصلة",
+      "automod": "الإشراف التلقائي",
+      "automodStatus": "الحالة",
+      "enabled": "مفعّل",
+      "disabled": "معطّل",
+      "rules": "القواعد النشطة",
+      "noRules": "لا توجد قواعد مضبوطة",
+      "threshold": "الحد",
+      "action": "الإجراء",
+      "whitelist": "أدوار مستثناة",
+      "noWhitelist": "لا شيء"
+    }
   }
 }

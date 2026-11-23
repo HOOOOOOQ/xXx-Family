@@ -204,5 +204,177 @@
         }
       }
     }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Actions de modération : bannir, expulser, rendre muet, avertir, purger, verrouiller et historique.",
+    "options": {
+      "ban": {
+        "name": "bannir",
+        "description": "Bannir un membre du serveur.",
+        "options": {
+          "user": {
+            "name": "utilisateur",
+            "description": "Le membre à bannir."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "La raison du bannissement."
+          },
+          "delete_days": {
+            "name": "jours_suppr",
+            "description": "Jours de messages à supprimer (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "debannir",
+        "description": "Lever un bannissement par ID.",
+        "options": {
+          "user_id": {
+            "name": "id_utilisateur",
+            "description": "L'ID de l'utilisateur banni."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "La raison de la levée du bannissement."
+          }
+        }
+      },
+      "kick": {
+        "name": "expulser",
+        "description": "Expulser un membre du serveur.",
+        "options": {
+          "user": {
+            "name": "utilisateur",
+            "description": "Le membre à expulser."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "La raison de l'expulsion."
+          }
+        }
+      },
+      "timeout": {
+        "name": "rendre_muet",
+        "description": "Empêcher temporairement un membre de parler.",
+        "options": {
+          "user": {
+            "name": "utilisateur",
+            "description": "Le membre à rendre muet."
+          },
+          "duration": {
+            "name": "duree",
+            "description": "Combien de temps, ex. 10m, 2h, 1d (max 28j)."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "La raison de la mise en muet."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "lever_muet",
+        "description": "Lever un mode muet en avance.",
+        "options": {
+          "user": {
+            "name": "utilisateur",
+            "description": "Le membre à libérer."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "La raison de la levée du mode muet."
+          }
+        }
+      },
+      "warn": {
+        "name": "avertir",
+        "description": "Enregistrer un avertissement contre un membre.",
+        "options": {
+          "user": {
+            "name": "utilisateur",
+            "description": "Le membre à avertir."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "Ce qu'il a fait."
+          }
+        }
+      },
+      "purge": {
+        "name": "purger",
+        "description": "Supprimer en masse des messages récents.",
+        "options": {
+          "count": {
+            "name": "nombre",
+            "description": "Combien de messages supprimer (1-100)."
+          },
+          "user": {
+            "name": "utilisateur",
+            "description": "Supprimer uniquement les messages de ce membre."
+          },
+          "channel": {
+            "name": "salon",
+            "description": "Le salon à purger. Par défaut, celui-ci."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "La raison de la suppression des messages."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "mode_lent",
+        "description": "Définir le délai d'envoi par utilisateur.",
+        "options": {
+          "seconds": {
+            "name": "secondes",
+            "description": "Délai en secondes. 0 le désactive."
+          },
+          "channel": {
+            "name": "salon",
+            "description": "Le salon à modifier. Par défaut, celui-ci."
+          }
+        }
+      },
+      "lock": {
+        "name": "verrouiller",
+        "description": "Empêcher tout le monde d'écrire dans un salon.",
+        "options": {
+          "channel": {
+            "name": "salon",
+            "description": "Le salon à verrouiller. Par défaut, celui-ci."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "La raison du verrouillage du salon."
+          }
+        }
+      },
+      "unlock": {
+        "name": "deverrouiller",
+        "description": "Rouvrir un salon verrouillé.",
+        "options": {
+          "channel": {
+            "name": "salon",
+            "description": "Le salon à déverrouiller. Par défaut, celui-ci."
+          },
+          "reason": {
+            "name": "motif",
+            "description": "La raison de la réouverture du salon."
+          }
+        }
+      },
+      "history": {
+        "name": "historique",
+        "description": "Afficher l'historique de modération.",
+        "options": {
+          "user": {
+            "name": "utilisateur",
+            "description": "Le membre à consulter. Par défaut, vous."
+          }
+        }
+      }
+    }
   }
 }

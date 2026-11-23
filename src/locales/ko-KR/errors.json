@@ -20,5 +20,9 @@
   "cooldown": "이 명령어를 다시 사용하려면 {{seconds}}초 기다려 주세요.",
   "maintenance": "이 기능은 현재 점검 중입니다.",
   "timeout": "작업 시간이 너무 길어 취소되었습니다.",
-  "unknownInteraction": "해당 상호작용은 더 이상 유효하지 않습니다."
+  "unknownInteraction": "해당 상호작용은 더 이상 유효하지 않습니다.",
+  "hierarchy": "당신의 최상위 역할이 {target}보다 높지 않아 해당 작업을 할 수 없습니다.",
+  "hierarchyBot": "제 최상위 역할이 {target}보다 높지 않아 해당 작업을 할 수 없습니다.",
+  "self": "자기 자신에게는 할 수 없습니다.",
+  "owner": "서버 소유자는 관리할 수 없습니다."
 }

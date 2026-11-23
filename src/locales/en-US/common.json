@@ -218,5 +218,57 @@
     "roleCleared": "The booster role was removed.",
     "roleAboveBot": "I cannot grant {{role}} — it is above my highest role.",
     "monthsLabel": "Months"
+  },
+  "moderation": {
+    "noReason": "No reason provided.",
+    "dm": {
+      "ban": "You have been banned from **{server.name}**.\nReason: {reason}",
+      "kick": "You have been kicked from **{server.name}**.\nReason: {reason}",
+      "timeout": "You have been timed out in **{server.name}**.\nReason: {reason}",
+      "warn": "You received a warning in **{server.name}**.\nReason: {reason}",
+      "quarantine": "Your access in **{server.name}** has been restricted.\nReason: {reason}"
+    },
+    "done": {
+      "ban": "**{{target}}** has been banned.",
+      "kick": "**{{target}}** has been kicked.",
+      "timeout": "**{{target}}** has been timed out for {{duration}}.",
+      "untimeout": "The timeout for **{{target}}** was removed.",
+      "warn": "**{{target}}** was warned.",
+      "unban": "**{{target}}** was unbanned.",
+      "purge": "**{{count}}** messages were deleted.",
+      "slowmode": "Slowmode set to {{duration}} in {{channel}}.",
+      "slowmodeOff": "Slowmode was turned off in {{channel}}.",
+      "lock": "{{channel}} is now locked.",
+      "unlock": "{{channel}} is now unlocked.",
+      "revoked": "Case **#{{caseNumber}}** was revoked.",
+      "quarantine": "**{{target}}** was quarantined."
+    },
+    "panel": {
+      "title": "Moderation",
+      "case": "Case",
+      "type": "Action",
+      "target": "Member",
+      "moderator": "Moderator",
+      "reason": "Reason",
+      "expires": "Expires",
+      "noReason": "No reason",
+      "history": "Moderation history",
+      "noHistory": "No moderation history for that member.",
+      "totalCases": "Total actions",
+      "activeCases": "Active",
+      "dmSent": "Notified",
+      "dmFailed": "Could not DM the member",
+      "notSaved": "Not saved — the database is offline",
+      "automod": "Automod",
+      "automodStatus": "Status",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "rules": "Active rules",
+      "noRules": "No rules configured",
+      "threshold": "Threshold",
+      "action": "Action",
+      "whitelist": "Whitelisted roles",
+      "noWhitelist": "None"
+    }
   }
 }

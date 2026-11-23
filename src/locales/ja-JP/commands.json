@@ -204,5 +204,177 @@
         }
       }
     }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "モデレーション操作：BAN、キック、タイムアウト、警告、削除、ロック、履歴。",
+    "options": {
+      "ban": {
+        "name": "ban",
+        "description": "メンバーをサーバーから BAN します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "BAN するメンバー。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "BAN の理由。"
+          },
+          "delete_days": {
+            "name": "削除日数",
+            "description": "削除するメッセージの日数（0〜7）。"
+          }
+        }
+      },
+      "unban": {
+        "name": "ban解除",
+        "description": "ユーザー ID で BAN を解除します。",
+        "options": {
+          "user_id": {
+            "name": "ユーザー番号",
+            "description": "BAN されたユーザーの ID。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "BAN 解除の理由。"
+          }
+        }
+      },
+      "kick": {
+        "name": "キック",
+        "description": "メンバーをサーバーから退出させます。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "キックするメンバー。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "キックの理由。"
+          }
+        }
+      },
+      "timeout": {
+        "name": "タイムアウト",
+        "description": "メンバーの発言を一時的に制限します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "タイムアウトするメンバー。"
+          },
+          "duration": {
+            "name": "期間",
+            "description": "期間（例：10m、2h、1d、最大28d）。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "タイムアウトの理由。"
+          }
+        }
+      },
+      "untimeout": {
+        "name": "タイムアウト解除",
+        "description": "タイムアウトを早期に解除します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "解除するメンバー。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "タイムアウト解除の理由。"
+          }
+        }
+      },
+      "warn": {
+        "name": "警告",
+        "description": "メンバーに警告を記録します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "警告するメンバー。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "何をしたか。"
+          }
+        }
+      },
+      "purge": {
+        "name": "一括削除",
+        "description": "直近のメッセージを一括削除します。",
+        "options": {
+          "count": {
+            "name": "件数",
+            "description": "削除する件数（1〜100）。"
+          },
+          "user": {
+            "name": "ユーザー",
+            "description": "このメンバーのメッセージのみ削除。"
+          },
+          "channel": {
+            "name": "チャンネル",
+            "description": "削除するチャンネル。既定は現在地。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "メッセージを削除する理由。"
+          }
+        }
+      },
+      "slowmode": {
+        "name": "スローモード",
+        "description": "ユーザーごとの送信間隔を設定します。",
+        "options": {
+          "seconds": {
+            "name": "秒",
+            "description": "秒単位の間隔。0 で解除。"
+          },
+          "channel": {
+            "name": "チャンネル",
+            "description": "変更するチャンネル。既定は現在地。"
+          }
+        }
+      },
+      "lock": {
+        "name": "ロック",
+        "description": "チャンネルの全員発言を停止します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "ロックするチャンネル。既定は現在地。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "チャンネルをロックする理由。"
+          }
+        }
+      },
+      "unlock": {
+        "name": "ロック解除",
+        "description": "ロックされたチャンネルを再開します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "解除するチャンネル。既定は現在地。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "チャンネルを再開する理由。"
+          }
+        }
+      },
+      "history": {
+        "name": "履歴",
+        "description": "メンバーのモデレーション履歴を表示します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "表示するメンバー。既定はあなた。"
+          }
+        }
+      }
+    }
   }
 }

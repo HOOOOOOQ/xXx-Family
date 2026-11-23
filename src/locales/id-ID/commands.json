@@ -204,5 +204,177 @@
         }
       }
     }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Tindakan moderasi: banned, kick, timeout, peringatan, purge, kunci dan riwayat.",
+    "options": {
+      "ban": {
+        "name": "banned",
+        "description": "Ban anggota dari server.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang akan dibanned."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pembannedan."
+          },
+          "delete_days": {
+            "name": "hapus_hari",
+            "description": "Jumlah hari pesan yang dihapus (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "cabut_ban",
+        "description": "Cabut banned melalui ID pengguna.",
+        "options": {
+          "user_id": {
+            "name": "id_pengguna",
+            "description": "ID pengguna yang dibanned."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pencabutan banned."
+          }
+        }
+      },
+      "kick": {
+        "name": "keluarkan",
+        "description": "Keluarkan anggota dari server.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang akan dikeluarkan."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pengeluaran."
+          }
+        }
+      },
+      "timeout": {
+        "name": "timeout",
+        "description": "Cegah anggota berbicara sementara.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang diberi timeout."
+          },
+          "duration": {
+            "name": "durasi",
+            "description": "Berapa lama, mis. 10m, 2h, 1d (maks 28d)."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pemberian timeout."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "cabut_timeout",
+        "description": "Cabut timeout lebih awal.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang dibebaskan."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pencabutan timeout."
+          }
+        }
+      },
+      "warn": {
+        "name": "peringatan",
+        "description": "Catat peringatan untuk anggota.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang diberi peringatan."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Apa yang mereka lakukan."
+          }
+        }
+      },
+      "purge": {
+        "name": "hapus_pesan",
+        "description": "Hapus banyak pesan terbaru di channel.",
+        "options": {
+          "count": {
+            "name": "jumlah",
+            "description": "Jumlah pesan yang dihapus (1-100)."
+          },
+          "user": {
+            "name": "anggota",
+            "description": "Hapus pesan anggota ini saja."
+          },
+          "channel": {
+            "name": "channel",
+            "description": "Channel yang dibersihkan. Default: channel ini."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan penghapusan pesan."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "slowmode",
+        "description": "Atur jeda kirim pesan per pengguna.",
+        "options": {
+          "seconds": {
+            "name": "detik",
+            "description": "Jeda dalam detik. 0 untuk mematikan."
+          },
+          "channel": {
+            "name": "channel",
+            "description": "Channel yang diubah. Default: channel ini."
+          }
+        }
+      },
+      "lock": {
+        "name": "kunci",
+        "description": "Hentikan semua orang mengirim pesan di channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Channel yang dikunci. Default: channel ini."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan penguncian channel."
+          }
+        }
+      },
+      "unlock": {
+        "name": "buka_kunci",
+        "description": "Buka kembali channel yang dikunci.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Channel yang dibuka. Default: channel ini."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pembukaan channel."
+          }
+        }
+      },
+      "history": {
+        "name": "riwayat",
+        "description": "Tampilkan riwayat moderasi anggota.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang dilihat. Default: kamu."
+          }
+        }
+      }
+    }
   }
 }

@@ -204,5 +204,177 @@
         }
       }
     }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "관리 조치: 차단, 추방, 타임아웃, 경고, 삭제, 잠금, 기록.",
+    "options": {
+      "ban": {
+        "name": "차단",
+        "description": "멤버를 서버에서 차단합니다.",
+        "options": {
+          "user": {
+            "name": "사용자",
+            "description": "차단할 멤버."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "차단하는 이유."
+          },
+          "delete_days": {
+            "name": "삭제_일수",
+            "description": "삭제할 메시지의 일수(0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "차단해제",
+        "description": "사용자 ID로 차단을 해제합니다.",
+        "options": {
+          "user_id": {
+            "name": "사용자_id",
+            "description": "차단된 사용자의 ID."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "차단을 해제하는 이유."
+          }
+        }
+      },
+      "kick": {
+        "name": "추방",
+        "description": "멤버를 서버에서 내보냅니다.",
+        "options": {
+          "user": {
+            "name": "사용자",
+            "description": "추방할 멤버."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "추방하는 이유."
+          }
+        }
+      },
+      "timeout": {
+        "name": "타임아웃",
+        "description": "멤버의 발언을 일시적으로 제한합니다.",
+        "options": {
+          "user": {
+            "name": "사용자",
+            "description": "타임아웃할 멤버."
+          },
+          "duration": {
+            "name": "기간",
+            "description": "기간 예: 10m, 2h, 1d (최대 28d)."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "타임아웃하는 이유."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "타임아웃해제",
+        "description": "타임아웃을 조기 해제합니다.",
+        "options": {
+          "user": {
+            "name": "사용자",
+            "description": "해제할 멤버."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "타임아웃을 해제하는 이유."
+          }
+        }
+      },
+      "warn": {
+        "name": "경고",
+        "description": "멤버에게 경고를 기록합니다.",
+        "options": {
+          "user": {
+            "name": "사용자",
+            "description": "경고할 멤버."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "무엇을 했는지."
+          }
+        }
+      },
+      "purge": {
+        "name": "일괄삭제",
+        "description": "최근 메시지를 일괄 삭제합니다.",
+        "options": {
+          "count": {
+            "name": "개수",
+            "description": "삭제할 메시지 개수(1-100)."
+          },
+          "user": {
+            "name": "사용자",
+            "description": "이 멤버의 메시지만 삭제."
+          },
+          "channel": {
+            "name": "채널",
+            "description": "삭제할 채널. 기본값은 현재 채널."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "메시지를 삭제하는 이유."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "슬로우모드",
+        "description": "사용자별 메시지 간격을 설정합니다.",
+        "options": {
+          "seconds": {
+            "name": "초",
+            "description": "초 단위 간격. 0이면 해제."
+          },
+          "channel": {
+            "name": "채널",
+            "description": "변경할 채널. 기본값은 현재 채널."
+          }
+        }
+      },
+      "lock": {
+        "name": "잠금",
+        "description": "채널에서 모든 사용자의 메시지 전송을 막습니다.",
+        "options": {
+          "channel": {
+            "name": "채널",
+            "description": "잠글 채널. 기본값은 현재 채널."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "채널을 잠그는 이유."
+          }
+        }
+      },
+      "unlock": {
+        "name": "잠금해제",
+        "description": "잠긴 채널을 다시 엽니다.",
+        "options": {
+          "channel": {
+            "name": "채널",
+            "description": "잠금 해제할 채널. 기본값은 현재 채널."
+          },
+          "reason": {
+            "name": "사유",
+            "description": "채널을 다시 여는 이유."
+          }
+        }
+      },
+      "history": {
+        "name": "기록",
+        "description": "멤버의 관리 기록을 표시합니다.",
+        "options": {
+          "user": {
+            "name": "사용자",
+            "description": "조회할 멤버. 기본값은 본인."
+          }
+        }
+      }
+    }
   }
 }

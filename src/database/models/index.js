@@ -20,6 +20,8 @@ import WelcomeConfig from './WelcomeConfig.js';
 import GoodbyeConfig from './GoodbyeConfig.js';
 import BoosterConfig from './BoosterConfig.js';
 import BoosterRecord from './BoosterRecord.js';
+import ModerationCase from './ModerationCase.js';
+import Counter from './Counter.js';
 
 export const models = {
   GuildSettings,
@@ -30,6 +32,8 @@ export const models = {
   GoodbyeConfig,
   BoosterConfig,
   BoosterRecord,
+  ModerationCase,
+  Counter,
 };
 
 /** Collections planned for later phases (declared so the roadmap is explicit). */
@@ -45,8 +49,6 @@ export const PLANNED_MODELS = Object.freeze([
   'EconomyAccount',
   'Inventory',
   'Achievement',
-  'Warning',
-  'ModerationCase',
   'AutomodConfig',
   'CustomTag',
   'Announcement',
@@ -59,6 +61,19 @@ export const PLANNED_MODELS = Object.freeze([
   'ScheduledTask',
 ]);
 
-export { GuildSettings, UserSettings, LanguageOverride, AuditLog, WelcomeConfig, GoodbyeConfig, BoosterConfig, BoosterRecord };
+export {
+  GuildSettings,
+  UserSettings,
+  LanguageOverride,
+  AuditLog,
+  WelcomeConfig,
+  GoodbyeConfig,
+  BoosterConfig,
+  BoosterRecord,
+  ModerationCase,
+  Counter,
+};
+export { CASE_TYPES, TEMPORARY_TYPES } from './ModerationCase.js';
+export { COUNTER_SCOPES } from './Counter.js';
 export { AUDIT_TYPES } from './AuditLog.js';
 export default models;

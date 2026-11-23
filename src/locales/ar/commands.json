@@ -204,5 +204,177 @@
         }
       }
     }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "إجراءات الإشراف: حظر، طرد، مهلة، تحذير، حذف، قفل والسجل.",
+    "options": {
+      "ban": {
+        "name": "حظر",
+        "description": "حظر عضو من الخادم.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد حظره."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب الحظر."
+          },
+          "delete_days": {
+            "name": "أيام_الحذف",
+            "description": "عدد أيام الرسائل المراد حذفها (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "رفع_الحظر",
+        "description": "رفع الحظر عبر معرّف المستخدم.",
+        "options": {
+          "user_id": {
+            "name": "معرف_المستخدم",
+            "description": "معرّف المستخدم المحظور."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب رفع الحظر."
+          }
+        }
+      },
+      "kick": {
+        "name": "طرد",
+        "description": "إخراج عضو من الخادم.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد طرده."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب الطرد."
+          }
+        }
+      },
+      "timeout": {
+        "name": "مهلة",
+        "description": "منع عضو مؤقتاً من التحدث.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد منحه مهلة."
+          },
+          "duration": {
+            "name": "المدة",
+            "description": "المدة مثل 10m أو 2h أو 1d (بحد أقصى 28d)."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب المهلة."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "رفع_المهلة",
+        "description": "رفع المهلة مبكراً.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد تحريره."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب رفع المهلة."
+          }
+        }
+      },
+      "warn": {
+        "name": "تحذير",
+        "description": "تسجيل تحذير على عضو.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد تحذيره."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "ما الذي فعله."
+          }
+        }
+      },
+      "purge": {
+        "name": "حذف_جماعي",
+        "description": "حذف الرسائل الأخيرة دفعة واحدة.",
+        "options": {
+          "count": {
+            "name": "العدد",
+            "description": "عدد الرسائل المراد حذفها (1-100)."
+          },
+          "user": {
+            "name": "المستخدم",
+            "description": "حذف رسائل هذا العضو فقط."
+          },
+          "channel": {
+            "name": "القناة",
+            "description": "القناة المراد تنظيفها. الافتراضي: الحالية."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب حذف الرسائل."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "إبطاء",
+        "description": "ضبط تأخير الرسائل لكل مستخدم.",
+        "options": {
+          "seconds": {
+            "name": "الثواني",
+            "description": "التأخير بالثواني. 0 لإلغائه."
+          },
+          "channel": {
+            "name": "القناة",
+            "description": "القناة المراد تعديلها. الافتراضي: الحالية."
+          }
+        }
+      },
+      "lock": {
+        "name": "قفل",
+        "description": "منع الجميع من إرسال الرسائل في قناة.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "القناة المراد قفلها. الافتراضي: الحالية."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب قفل القناة."
+          }
+        }
+      },
+      "unlock": {
+        "name": "فتح",
+        "description": "إعادة فتح قناة مقفلة.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "القناة المراد فتحها. الافتراضي: الحالية."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب إعادة فتح القناة."
+          }
+        }
+      },
+      "history": {
+        "name": "السجل",
+        "description": "عرض سجل إشراف عضو.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد استعلامه. الافتراضي: أنت."
+          }
+        }
+      }
+    }
   }
 }

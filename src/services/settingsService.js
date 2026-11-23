@@ -283,6 +283,64 @@ export class SettingsService {
     return result;
   }
 
+  /**
+   * Read a feature block out of the guild document.
+   *
+   * Automod rules live under `features.automod` rather than in their own
+   * collection: the block is small, it is read on every message, and it is
+   * already covered by the guild settings cache. Returns null when nothing has
+   * been configured, so the caller can merge over its own defaults.
+   *
+   * @param {string} guildId
+   * @param {string} name e.g. `automod`
+   * @returns {Promise<object|null>}
+   */
+  async getFeatureConfig(guildId, name) {
+    const settings = await this.getGuildSettings(guildId);
+    const value = settings?.features?.[name];
+    return value && typeof value === 'object' ? value : null;
+  }
+
+  /** Automod rules for a guild, or null when unconfigured. */
+  async getAutomodConfig(guildId) {
+    return this.getFeatureConfig(guildId, 'automod');
+  }
+
+  /**
+   * Merge a partial feature block into the guild document.
+   *
+   * Merges rather than replaces so a caller updating one rule cannot silently
+   * delete the others.
+   *
+   * @param {string} guildId
+   * @param {string} name
+   * @param {object} patch
+   */
+  async setFeatureConfig(guildId, name, patch) {
+    if (!guildId) throw new ValidationError('guildId is required');
+    if (!this.isDbReady()) throw new NotFoundError('Settings cannot be saved while the database is offline');
+    if (!patch || typeof patch !== 'object') {
+      throw new ValidationError(`The ${name} configuration must be an object`);
+    }
+
+    // A dotted path targets one key of the Map without rewriting the whole
+    // thing, so other features survive the update.
+    await this.models.GuildSettings.findOneAndUpdate(
+      { guildId },
+      { $set: { [`features.${name}`]: patch }, $setOnInsert: { guildId } },
+      { upsert: true, new: true, setDefaultsOnInsert: true },
+    ).exec();
+
+    this.cache.delete(GUILD_KEY(guildId));
+    this.logger.info('Feature configuration updated', { guildId, feature: name });
+    return this.getFeatureConfig(guildId, name);
+  }
+
+  /** Persist automod rules for a guild. */
+  async setAutomodConfig(guildId, patch) {
+    return this.setFeatureConfig(guildId, 'automod', patch);
+  }
+
   /** @param {string} guildId */
   invalidateGuild(guildId) {
     this.cache.deleteByPrefix(`override:${guildId}`);

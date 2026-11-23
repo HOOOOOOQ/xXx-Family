@@ -37,6 +37,8 @@ import { LocaleService, localeService } from '../services/localeService.js';
 import { LoggingService } from '../services/loggingService.js';
 import { WelcomeService } from '../services/welcomeService.js';
 import { BoosterService } from '../services/boosterService.js';
+import { ModerationService } from '../services/moderationService.js';
+import { AutomodService } from '../services/automodService.js';
 import { healthService } from '../services/healthService.js';
 import { metrics } from '../services/metrics.js';
 import { settingsCache } from '../services/cacheManager.js';
@@ -138,6 +140,29 @@ export class XxxFamilyClient extends Client {
         localeService: this.localeService,
         resolveChannel,
         isDbReady: () => isDatabaseConfigured(),
+        logger: this.logger,
+        metrics: this.metrics,
+      });
+
+    this.moderation =
+      deps.moderation ??
+      new ModerationService({
+        models,
+        logging: this.logging,
+        localeService: this.localeService,
+        isDbReady: () => isDatabaseConfigured(),
+        logger: this.logger,
+        metrics: this.metrics,
+      });
+
+    // Automod escalates through moderation, so it needs the instance above
+    // rather than the module-level singleton — otherwise it would write cases
+    // against a different logging service than the one this client boots.
+    this.automod =
+      deps.automod ??
+      new AutomodService({
+        moderation: this.moderation,
+        settings: this.settings,
         logger: this.logger,
         metrics: this.metrics,
       });
@@ -258,6 +283,8 @@ export class XxxFamilyClient extends Client {
         logging: this.logging,
         welcome: this.welcome,
         booster: this.booster,
+        moderation: this.moderation,
+        automod: this.automod,
         health: this.health,
         metrics: this.metrics,
       });

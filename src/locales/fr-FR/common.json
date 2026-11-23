@@ -218,5 +218,57 @@
     "roleCleared": "Le rôle de booster a été retiré.",
     "roleAboveBot": "Je ne peux pas attribuer {{role}} — il est au-dessus de mon rôle le plus haut.",
     "monthsLabel": "Mois"
+  },
+  "moderation": {
+    "noReason": "Aucun motif indiqué.",
+    "dm": {
+      "ban": "Tu as été banni de **{server.name}**.\nMotif : {reason}",
+      "kick": "Tu as été expulsé de **{server.name}**.\nMotif : {reason}",
+      "timeout": "Tu as été rendu muet sur **{server.name}**.\nMotif : {reason}",
+      "warn": "Tu as reçu un avertissement sur **{server.name}**.\nMotif : {reason}",
+      "quarantine": "Ton accès sur **{server.name}** a été restreint.\nMotif : {reason}"
+    },
+    "done": {
+      "ban": "**{{target}}** a été banni.",
+      "kick": "**{{target}}** a été expulsé.",
+      "timeout": "**{{target}}** a été rendu muet pendant {{duration}}.",
+      "untimeout": "Le mode muet de **{{target}}** a été retiré.",
+      "warn": "**{{target}}** a reçu un avertissement.",
+      "unban": "**{{target}}** a été débanni.",
+      "purge": "**{{count}}** messages ont été supprimés.",
+      "slowmode": "Mode lent de {{duration}} dans {{channel}}.",
+      "slowmodeOff": "Le mode lent a été désactivé dans {{channel}}.",
+      "lock": "{{channel}} est verrouillé.",
+      "unlock": "{{channel}} est déverrouillé.",
+      "revoked": "Le cas **#{{caseNumber}}** a été révoqué.",
+      "quarantine": "**{{target}}** a été mis en quarantaine."
+    },
+    "panel": {
+      "title": "Modération",
+      "case": "Cas",
+      "type": "Action",
+      "target": "Membre",
+      "moderator": "Modérateur",
+      "reason": "Motif",
+      "expires": "Expire",
+      "noReason": "Aucun motif",
+      "history": "Historique de modération",
+      "noHistory": "Ce membre n'a aucun historique de modération.",
+      "totalCases": "Actions totales",
+      "activeCases": "Actives",
+      "dmSent": "Notifié",
+      "dmFailed": "Impossible d'envoyer le MP",
+      "notSaved": "Non enregistré — la base de données est hors ligne",
+      "automod": "Automod",
+      "automodStatus": "État",
+      "enabled": "Activé",
+      "disabled": "Désactivé",
+      "rules": "Règles actives",
+      "noRules": "Aucune règle configurée",
+      "threshold": "Seuil",
+      "action": "Action",
+      "whitelist": "Rôles exemptés",
+      "noWhitelist": "Aucun"
+    }
   }
 }

@@ -204,5 +204,177 @@
         }
       }
     }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Moderation actions: ban, kick, timeout, warn, purge, lock and history.",
+    "options": {
+      "ban": {
+        "name": "ban",
+        "description": "Ban a member from the server.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to ban."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why they are being banned."
+          },
+          "delete_days": {
+            "name": "delete_days",
+            "description": "Days of their messages to delete (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "unban",
+        "description": "Remove a ban by user ID.",
+        "options": {
+          "user_id": {
+            "name": "user_id",
+            "description": "The banned user's ID."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the ban is being lifted."
+          }
+        }
+      },
+      "kick": {
+        "name": "kick",
+        "description": "Remove a member from the server.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to kick."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why they are being kicked."
+          }
+        }
+      },
+      "timeout": {
+        "name": "timeout",
+        "description": "Temporarily prevent a member from talking.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to time out."
+          },
+          "duration": {
+            "name": "duration",
+            "description": "How long, e.g. 10m, 2h, 1d (max 28d)."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why they are being timed out."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "untimeout",
+        "description": "Lift a timeout early.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to release."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the timeout is being lifted."
+          }
+        }
+      },
+      "warn": {
+        "name": "warn",
+        "description": "Record a warning against a member.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to warn."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "What they did."
+          }
+        }
+      },
+      "purge": {
+        "name": "purge",
+        "description": "Bulk-delete recent messages in a channel.",
+        "options": {
+          "count": {
+            "name": "count",
+            "description": "How many messages to delete (1-100)."
+          },
+          "user": {
+            "name": "user",
+            "description": "Only delete this member's messages."
+          },
+          "channel": {
+            "name": "channel",
+            "description": "The channel to purge. Defaults to this one."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the messages are being removed."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "slowmode",
+        "description": "Set the per-user message delay for a channel.",
+        "options": {
+          "seconds": {
+            "name": "seconds",
+            "description": "Delay in seconds. 0 turns it off."
+          },
+          "channel": {
+            "name": "channel",
+            "description": "The channel to change. Defaults to this one."
+          }
+        }
+      },
+      "lock": {
+        "name": "lock",
+        "description": "Stop everyone from sending messages in a channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The channel to lock. Defaults to this one."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the channel is being locked."
+          }
+        }
+      },
+      "unlock": {
+        "name": "unlock",
+        "description": "Reopen a locked channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The channel to unlock. Defaults to this one."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the channel is being reopened."
+          }
+        }
+      },
+      "history": {
+        "name": "history",
+        "description": "Show a member's moderation history.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to look up. Defaults to you."
+          }
+        }
+      }
+    }
   }
 }

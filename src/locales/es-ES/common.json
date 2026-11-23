@@ -218,5 +218,57 @@
     "roleCleared": "El rol de booster se eliminó.",
     "roleAboveBot": "No puedo asignar {{role}} — está por encima de mi rol más alto.",
     "monthsLabel": "Meses"
+  },
+  "moderation": {
+    "noReason": "Sin motivo indicado.",
+    "dm": {
+      "ban": "Has sido baneado de **{server.name}**.\nMotivo: {reason}",
+      "kick": "Has sido expulsado de **{server.name}**.\nMotivo: {reason}",
+      "timeout": "Has sido silenciado en **{server.name}**.\nMotivo: {reason}",
+      "warn": "Recibiste una advertencia en **{server.name}**.\nMotivo: {reason}",
+      "quarantine": "Tu acceso en **{server.name}** fue restringido.\nMotivo: {reason}"
+    },
+    "done": {
+      "ban": "**{{target}}** fue baneado.",
+      "kick": "**{{target}}** fue expulsado.",
+      "timeout": "**{{target}}** fue silenciado durante {{duration}}.",
+      "untimeout": "Se retiró el silencio de **{{target}}**.",
+      "warn": "**{{target}}** recibió una advertencia.",
+      "unban": "**{{target}}** fue desbaneado.",
+      "purge": "Se eliminaron **{{count}}** mensajes.",
+      "slowmode": "Silencio lento de {{duration}} en {{channel}}.",
+      "slowmodeOff": "El silencio lento se desactivó en {{channel}}.",
+      "lock": "{{channel}} está bloqueado.",
+      "unlock": "{{channel}} está desbloqueado.",
+      "revoked": "El caso **#{{caseNumber}}** fue revocado.",
+      "quarantine": "**{{target}}** fue puesto en cuarentena."
+    },
+    "panel": {
+      "title": "Moderación",
+      "case": "Caso",
+      "type": "Acción",
+      "target": "Miembro",
+      "moderator": "Moderador",
+      "reason": "Motivo",
+      "expires": "Expira",
+      "noReason": "Sin motivo",
+      "history": "Historial de moderación",
+      "noHistory": "Ese miembro no tiene historial de moderación.",
+      "totalCases": "Acciones totales",
+      "activeCases": "Activas",
+      "dmSent": "Notificado",
+      "dmFailed": "No se pudo enviar el DM",
+      "notSaved": "No guardado — la base de datos está desconectada",
+      "automod": "Automod",
+      "automodStatus": "Estado",
+      "enabled": "Activado",
+      "disabled": "Desactivado",
+      "rules": "Reglas activas",
+      "noRules": "Sin reglas configuradas",
+      "threshold": "Umbral",
+      "action": "Acción",
+      "whitelist": "Roles exentos",
+      "noWhitelist": "Ninguno"
+    }
   }
 }

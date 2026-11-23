@@ -109,6 +109,14 @@ export function createFakeInteraction(params = {}) {
     kind = 'chatInput',
     /** Position of the bot's highest role — used for hierarchy checks. */
     botRolePosition = 10,
+    /** Position of the acting member's highest role — used for hierarchy checks. */
+    memberRolePosition = 5,
+    /**
+     * Replace the synthesised guild entirely. Moderation commands call
+     * `guild.members.ban()` and read `guild.ownerId`, which the default
+     * stub does not model.
+     */
+    guild = null,
     guildName = 'Test Guild',
     memberCount = 1284,
   } = params;
@@ -138,7 +146,10 @@ export function createFakeInteraction(params = {}) {
       ? {
           id: userId,
           permissions: new FakePermissions(permissions),
-          roles: { cache: new Map() },
+          // `highest` is what every hierarchy check reads; a real GuildMember
+          // always has it, so a helper without it makes the actor look like
+          // position -1 and every moderation check fails for the wrong reason.
+          roles: { cache: new Map(), highest: { position: memberRolePosition } },
           joinedTimestamp: Date.now() - 3600_000,
           send: async () => ({ id: 'dm-1' }),
           // A real GuildMember always carries its guild; code that reads
@@ -149,7 +160,7 @@ export function createFakeInteraction(params = {}) {
         }
       : null,
     guild: guildId
-      ? {
+      ? (guild ?? {
           id: guildId,
           name: guildName,
           memberCount,
@@ -160,8 +171,8 @@ export function createFakeInteraction(params = {}) {
               roles: { highest: { position: botRolePosition } },
             },
           },
-          roles: { cache: new Map() },
-        }
+          roles: { cache: new Map(), everyone: { id: guildId, position: 0 } },
+        })
       : null,
     channel: { id: '333333333333333333', nsfw: false },
     client: client ?? { ws: { ping: 42, status: 0 }, guilds: { cache: new Map() }, commands: new Map() },

@@ -204,5 +204,177 @@
         }
       }
     }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Moderationsaktionen: Bann, Kick, Timeout, Verwarnung, Löschen, Sperren und Verlauf.",
+    "options": {
+      "ban": {
+        "name": "bannen",
+        "description": "Ein Mitglied vom Server bannen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das zu bannende Mitglied."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum es gebannt wird."
+          },
+          "delete_days": {
+            "name": "tage_loeschen",
+            "description": "Tage an Nachrichten zum Löschen (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "entbannen",
+        "description": "Einen Bann per Benutzer-ID aufheben.",
+        "options": {
+          "user_id": {
+            "name": "benutzer_id",
+            "description": "Die ID des gebannten Benutzers."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum der Bann aufgehoben wird."
+          }
+        }
+      },
+      "kick": {
+        "name": "kicken",
+        "description": "Ein Mitglied vom Server entfernen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das zu kickende Mitglied."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum es gekickt wird."
+          }
+        }
+      },
+      "timeout": {
+        "name": "stummschalten",
+        "description": "Ein Mitglied vorübergehend am Schreiben hindern.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das stummzuschaltende Mitglied."
+          },
+          "duration": {
+            "name": "dauer",
+            "description": "Wie lange, z. B. 10m, 2h, 1d (max. 28d)."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum es stummgeschaltet wird."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "stummschaltung_aufheben",
+        "description": "Eine Stummschaltung vorzeitig aufheben.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das freizugebende Mitglied."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum die Stummschaltung aufgehoben wird."
+          }
+        }
+      },
+      "warn": {
+        "name": "verwarnen",
+        "description": "Eine Verwarnung gegen ein Mitglied erfassen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das zu verwarnende Mitglied."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Was es getan hat."
+          }
+        }
+      },
+      "purge": {
+        "name": "loeschen",
+        "description": "Letzte Nachrichten massenhaft löschen.",
+        "options": {
+          "count": {
+            "name": "anzahl",
+            "description": "Wie viele Nachrichten gelöscht werden (1-100)."
+          },
+          "user": {
+            "name": "mitglied",
+            "description": "Nur die Nachrichten dieses Mitglieds löschen."
+          },
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu bereinigende Kanal. Standard: dieser."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum die Nachrichten entfernt werden."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "zeitlupe",
+        "description": "Die Nachrichtenverzögerung pro Benutzer setzen.",
+        "options": {
+          "seconds": {
+            "name": "sekunden",
+            "description": "Verzögerung in Sekunden. 0 schaltet sie aus."
+          },
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu ändernde Kanal. Standard: dieser."
+          }
+        }
+      },
+      "lock": {
+        "name": "sperren",
+        "description": "Allen das Schreiben in einem Kanal verbieten.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu sperrende Kanal. Standard: dieser."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum der Kanal gesperrt wird."
+          }
+        }
+      },
+      "unlock": {
+        "name": "entsperren",
+        "description": "Einen gesperrten Kanal wieder öffnen.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu entsperrrende Kanal. Standard: dieser."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum der Kanal wieder geöffnet wird."
+          }
+        }
+      },
+      "history": {
+        "name": "verlauf",
+        "description": "Den Moderationsverlauf anzeigen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das gesuchte Mitglied. Standard: du."
+          }
+        }
+      }
+    }
   }
 }

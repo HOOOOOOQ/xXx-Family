@@ -50,6 +50,79 @@ export function formatDuration(ms, t, options = {}) {
   return parts.slice(0, maxUnits).join(' ');
 }
 
+/** Unit suffixes accepted by parseDuration, in milliseconds. */
+const DURATION_UNITS = Object.freeze({
+  s: 1000,
+  sec: 1000,
+  secs: 1000,
+  second: 1000,
+  seconds: 1000,
+  m: 60_000,
+  min: 60_000,
+  mins: 60_000,
+  minute: 60_000,
+  minutes: 60_000,
+  h: 3_600_000,
+  hr: 3_600_000,
+  hrs: 3_600_000,
+  hour: 3_600_000,
+  hours: 3_600_000,
+  d: 86_400_000,
+  day: 86_400_000,
+  days: 86_400_000,
+  w: 604_800_000,
+  week: 604_800_000,
+  weeks: 604_800_000,
+});
+
+/** Matches one `<number><unit>` pair, e.g. `90s` or `2 days`. */
+const DURATION_PART_RE = /(\d+(?:\.\d+)?)\s*([a-zA-Z]+)/g;
+
+/**
+ * Parse a human duration string into milliseconds.
+ *
+ * Accepts `90s`, `10m`, `2h`, `1d`, `2 weeks` and combinations such as `1h30m`.
+ * A bare number is read as minutes, because "10" is what most people type when
+ * they mean a ten-minute timeout.
+ *
+ * @param {string|number} input
+ * @returns {number|null} milliseconds, or null when nothing could be parsed
+ */
+export function parseDuration(input) {
+  if (typeof input === 'number') return Number.isFinite(input) && input >= 0 ? input : null;
+  if (typeof input !== 'string') return null;
+
+  const text = input.trim().toLowerCase();
+  if (text.length === 0) return null;
+
+  // A bare number means minutes.
+  if (/^\d+(\.\d+)?$/.test(text)) {
+    const value = Number.parseFloat(text);
+    return Number.isFinite(value) ? Math.round(value * 60_000) : null;
+  }
+
+  let total = 0;
+  let matchedLength = 0;
+
+  for (const match of text.matchAll(DURATION_PART_RE)) {
+    const amount = Number.parseFloat(match[1]);
+    const unit = DURATION_UNITS[match[2]];
+    // An unrecognised suffix (e.g. "5 fortnights") must not be silently read as
+    // zero, or a moderator asking for two weeks would get an instant timeout.
+    if (!unit) return null;
+    total += amount * unit;
+    matchedLength += match[0].replace(/\s+/g, '').length;
+  }
+
+  if (matchedLength === 0) return null;
+
+  // Everything in the input must have been consumed, so "10m please" is not
+  // quietly accepted as 10 minutes.
+  if (matchedLength !== text.replace(/\s+/g, '').length) return null;
+
+  return Math.round(total);
+}
+
 /**
  * @param {number} value
  * @param {string} locale BCP-47 tag

@@ -218,5 +218,57 @@
     "roleCleared": "Peran booster dihapus.",
     "roleAboveBot": "Aku tidak bisa memberikan {{role}} — peran itu di atas peran tertinggiku.",
     "monthsLabel": "Bulan"
+  },
+  "moderation": {
+    "noReason": "Tidak ada alasan yang diberikan.",
+    "dm": {
+      "ban": "Kamu telah dibanned dari **{server.name}**.\nAlasan: {reason}",
+      "kick": "Kamu telah dikeluarkan dari **{server.name}**.\nAlasan: {reason}",
+      "timeout": "Kamu diberi timeout di **{server.name}**.\nAlasan: {reason}",
+      "warn": "Kamu menerima peringatan di **{server.name}**.\nAlasan: {reason}",
+      "quarantine": "Aksesmu di **{server.name}** dibatasi.\nAlasan: {reason}"
+    },
+    "done": {
+      "ban": "**{{target}}** telah dibanned.",
+      "kick": "**{{target}}** telah dikeluarkan.",
+      "timeout": "**{{target}}** diberi timeout selama {{duration}}.",
+      "untimeout": "Timeout **{{target}}** telah dicabut.",
+      "warn": "**{{target}}** diberi peringatan.",
+      "unban": "Banned **{{target}}** telah dicabut.",
+      "purge": "**{{count}}** pesan dihapus.",
+      "slowmode": "Slowmode diatur ke {{duration}} di {{channel}}.",
+      "slowmodeOff": "Slowmode dimatikan di {{channel}}.",
+      "lock": "{{channel}} sekarang dikunci.",
+      "unlock": "{{channel}} sekarang dibuka.",
+      "revoked": "Kasus **#{{caseNumber}}** dicabut.",
+      "quarantine": "**{{target}}** dikarantina."
+    },
+    "panel": {
+      "title": "Moderasi",
+      "case": "Kasus",
+      "type": "Tindakan",
+      "target": "Anggota",
+      "moderator": "Moderator",
+      "reason": "Alasan",
+      "expires": "Berakhir",
+      "noReason": "Tidak ada alasan",
+      "history": "Riwayat moderasi",
+      "noHistory": "Tidak ada riwayat moderasi untuk anggota itu.",
+      "totalCases": "Total tindakan",
+      "activeCases": "Aktif",
+      "dmSent": "Diberitahu",
+      "dmFailed": "Tidak bisa mengirim DM ke anggota",
+      "notSaved": "Tidak tersimpan — basis data offline",
+      "automod": "Automod",
+      "automodStatus": "Status",
+      "enabled": "Aktif",
+      "disabled": "Nonaktif",
+      "rules": "Aturan aktif",
+      "noRules": "Tidak ada aturan yang diatur",
+      "threshold": "Ambang batas",
+      "action": "Tindakan",
+      "whitelist": "Peran yang dikecualikan",
+      "noWhitelist": "Tidak ada"
+    }
   }
 }

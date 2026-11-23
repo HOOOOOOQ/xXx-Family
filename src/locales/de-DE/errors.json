@@ -20,5 +20,9 @@
   "cooldown": "Bitte warte {{seconds}} Sekunden, bevor du diesen Befehl erneut verwendest.",
   "maintenance": "Diese Funktion wird gerade gewartet.",
   "timeout": "Diese Aktion hat zu lange gedauert und wurde abgebrochen.",
-  "unknownInteraction": "Diese Interaktion ist nicht mehr gültig."
+  "unknownInteraction": "Diese Interaktion ist nicht mehr gültig.",
+  "hierarchy": "Deine höchste Rolle liegt nicht über {target}, du kannst das also nicht tun.",
+  "hierarchyBot": "Meine höchste Rolle liegt nicht über {target}, ich kann das also nicht tun.",
+  "self": "Das kannst du dir selbst nicht antun.",
+  "owner": "Der Serverinhaber kann nicht moderiert werden."
 }

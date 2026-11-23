@@ -20,5 +20,9 @@
   "cooldown": "Mohon tunggu {{seconds}} detik sebelum menggunakan perintah ini lagi.",
   "maintenance": "Fitur ini sedang dalam pemeliharaan.",
   "timeout": "Tindakan tersebut memakan waktu terlalu lama dan dibatalkan.",
-  "unknownInteraction": "Interaksi tersebut sudah tidak berlaku."
+  "unknownInteraction": "Interaksi tersebut sudah tidak berlaku.",
+  "hierarchy": "Peran tertinggimu tidak lebih tinggi dari {target}, jadi kamu tidak bisa melakukan itu kepadanya.",
+  "hierarchyBot": "Peran tertinggi saya tidak lebih tinggi dari {target}, jadi saya tidak bisa melakukan itu kepadanya.",
+  "self": "Kamu tidak bisa melakukan itu pada dirimu sendiri.",
+  "owner": "Pemilik server tidak bisa dimoderasi."
 }

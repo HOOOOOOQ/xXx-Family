@@ -218,5 +218,57 @@
     "roleCleared": "부스터 역할이 제거되었습니다.",
     "roleAboveBot": "{{role}} 역할을 부여할 수 없습니다 — 제 가장 높은 역할보다 위입니다.",
     "monthsLabel": "개월"
+  },
+  "moderation": {
+    "noReason": "사유가 제공되지 않았습니다.",
+    "dm": {
+      "ban": "**{server.name}**에서 차단되었습니다.\n사유: {reason}",
+      "kick": "**{server.name}**에서 추방되었습니다.\n사유: {reason}",
+      "timeout": "**{server.name}**에서 타임아웃되었습니다.\n사유: {reason}",
+      "warn": "**{server.name}**에서 경고를 받았습니다.\n사유: {reason}",
+      "quarantine": "**{server.name}**에서의 접근이 제한되었습니다.\n사유: {reason}"
+    },
+    "done": {
+      "ban": "**{{target}}**님을 차단했습니다.",
+      "kick": "**{{target}}**님을 추방했습니다.",
+      "timeout": "**{{target}}**님에게 {{duration}} 타임아웃을 부여했습니다.",
+      "untimeout": "**{{target}}**님의 타임아웃을 해제했습니다.",
+      "warn": "**{{target}}**님에게 경고했습니다.",
+      "unban": "**{{target}}**님의 차단을 해제했습니다.",
+      "purge": "메시지 **{{count}}**개를 삭제했습니다.",
+      "slowmode": "{{channel}}의 슬로우 모드를 {{duration}}(으)로 설정했습니다.",
+      "slowmodeOff": "{{channel}}의 슬로우 모드를 해제했습니다.",
+      "lock": "{{channel}} 채널을 잠갔습니다.",
+      "unlock": "{{channel}} 채널을 열었습니다.",
+      "revoked": "사례 **#{{caseNumber}}**을(를) 철회했습니다.",
+      "quarantine": "**{{target}}**님을 격리했습니다."
+    },
+    "panel": {
+      "title": "관리",
+      "case": "사례",
+      "type": "조치",
+      "target": "멤버",
+      "moderator": "관리자",
+      "reason": "사유",
+      "expires": "만료",
+      "noReason": "사유 없음",
+      "history": "관리 기록",
+      "noHistory": "해당 멤버의 관리 기록이 없습니다.",
+      "totalCases": "총 조치 수",
+      "activeCases": "활성",
+      "dmSent": "알림 전송됨",
+      "dmFailed": "DM을 보낼 수 없습니다",
+      "notSaved": "저장되지 않음 — 데이터베이스가 오프라인입니다",
+      "automod": "자동 관리",
+      "automodStatus": "상태",
+      "enabled": "켜짐",
+      "disabled": "꺼짐",
+      "rules": "활성 규칙",
+      "noRules": "설정된 규칙이 없습니다",
+      "threshold": "기준값",
+      "action": "조치",
+      "whitelist": "예외 역할",
+      "noWhitelist": "없음"
+    }
   }
 }

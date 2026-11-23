@@ -218,5 +218,57 @@
     "roleCleared": "O cargo de booster foi removido.",
     "roleAboveBot": "Não posso dar {{role}} — está acima do meu cargo mais alto.",
     "monthsLabel": "Meses"
+  },
+  "moderation": {
+    "noReason": "Nenhum motivo informado.",
+    "dm": {
+      "ban": "Você foi banido de **{server.name}**.\nMotivo: {reason}",
+      "kick": "Você foi expulso de **{server.name}**.\nMotivo: {reason}",
+      "timeout": "Você foi silenciado em **{server.name}**.\nMotivo: {reason}",
+      "warn": "Você recebeu um aviso em **{server.name}**.\nMotivo: {reason}",
+      "quarantine": "Seu acesso em **{server.name}** foi restrito.\nMotivo: {reason}"
+    },
+    "done": {
+      "ban": "**{{target}}** foi banido.",
+      "kick": "**{{target}}** foi expulso.",
+      "timeout": "**{{target}}** foi silenciado por {{duration}}.",
+      "untimeout": "O silêncio de **{{target}}** foi removido.",
+      "warn": "**{{target}}** recebeu um aviso.",
+      "unban": "**{{target}}** foi desbanido.",
+      "purge": "**{{count}}** mensagens foram apagadas.",
+      "slowmode": "Modo lento de {{duration}} em {{channel}}.",
+      "slowmodeOff": "O modo lento foi desativado em {{channel}}.",
+      "lock": "{{channel}} está bloqueado.",
+      "unlock": "{{channel}} está desbloqueado.",
+      "revoked": "O caso **#{{caseNumber}}** foi revogado.",
+      "quarantine": "**{{target}}** foi colocado em quarentena."
+    },
+    "panel": {
+      "title": "Moderação",
+      "case": "Caso",
+      "type": "Ação",
+      "target": "Membro",
+      "moderator": "Moderador",
+      "reason": "Motivo",
+      "expires": "Expira",
+      "noReason": "Sem motivo",
+      "history": "Histórico de moderação",
+      "noHistory": "Esse membro não tem histórico de moderação.",
+      "totalCases": "Ações totais",
+      "activeCases": "Ativas",
+      "dmSent": "Notificado",
+      "dmFailed": "Não foi possível enviar a DM",
+      "notSaved": "Não salvo — o banco de dados está offline",
+      "automod": "Automod",
+      "automodStatus": "Estado",
+      "enabled": "Ativado",
+      "disabled": "Desativado",
+      "rules": "Regras ativas",
+      "noRules": "Nenhuma regra configurada",
+      "threshold": "Limite",
+      "action": "Ação",
+      "whitelist": "Cargos isentos",
+      "noWhitelist": "Nenhum"
+    }
   }
 }

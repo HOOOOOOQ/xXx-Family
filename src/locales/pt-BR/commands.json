@@ -204,5 +204,177 @@
         }
       }
     }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Ações de moderação: banir, expulsar, silenciar, avisar, limpar, bloquear e histórico.",
+    "options": {
+      "ban": {
+        "name": "banir",
+        "description": "Banir um membro do servidor.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a banir."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que ele está sendo banido."
+          },
+          "delete_days": {
+            "name": "dias_apagar",
+            "description": "Dias de mensagens a apagar (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "desbanir",
+        "description": "Remover um banimento pelo ID do usuário.",
+        "options": {
+          "user_id": {
+            "name": "id_usuario",
+            "description": "O ID do usuário banido."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que o banimento está sendo removido."
+          }
+        }
+      },
+      "kick": {
+        "name": "expulsar",
+        "description": "Remover um membro do servidor.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a expulsar."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que ele está sendo expulso."
+          }
+        }
+      },
+      "timeout": {
+        "name": "silenciar",
+        "description": "Impedir temporariamente que um membro fale.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a silenciar."
+          },
+          "duration": {
+            "name": "duracao",
+            "description": "Por quanto tempo, ex. 10m, 2h, 1d (máx. 28d)."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que ele está sendo silenciado."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "remover_silencio",
+        "description": "Remover um silenciamento antes do prazo.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a liberar."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que o silenciamento está sendo removido."
+          }
+        }
+      },
+      "warn": {
+        "name": "avisar",
+        "description": "Registrar um aviso contra um membro.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a avisar."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "O que ele fez."
+          }
+        }
+      },
+      "purge": {
+        "name": "limpar",
+        "description": "Apagar em lote mensagens recentes.",
+        "options": {
+          "count": {
+            "name": "quantidade",
+            "description": "Quantas mensagens apagar (1-100)."
+          },
+          "user": {
+            "name": "usuario",
+            "description": "Apagar apenas as mensagens deste membro."
+          },
+          "channel": {
+            "name": "canal",
+            "description": "O canal a limpar. Padrão: este."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que as mensagens estão sendo removidas."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "modo_lento",
+        "description": "Definir o atraso de mensagens por usuário.",
+        "options": {
+          "seconds": {
+            "name": "segundos",
+            "description": "Atraso em segundos. 0 desativa."
+          },
+          "channel": {
+            "name": "canal",
+            "description": "O canal a alterar. Padrão: este."
+          }
+        }
+      },
+      "lock": {
+        "name": "bloquear",
+        "description": "Impedir que todos enviem mensagens em um canal.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal a bloquear. Padrão: este."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que o canal está sendo bloqueado."
+          }
+        }
+      },
+      "unlock": {
+        "name": "desbloquear",
+        "description": "Reabrir um canal bloqueado.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal a desbloquear. Padrão: este."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que o canal está sendo reaberto."
+          }
+        }
+      },
+      "history": {
+        "name": "historico",
+        "description": "Mostrar o histórico de moderação.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a consultar. Padrão: você."
+          }
+        }
+      }
+    }
   }
 }

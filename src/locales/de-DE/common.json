@@ -218,5 +218,57 @@
     "roleCleared": "Die Booster-Rolle wurde entfernt.",
     "roleAboveBot": "Ich kann {{role}} nicht vergeben — die Rolle liegt über meiner höchsten Rolle.",
     "monthsLabel": "Monate"
+  },
+  "moderation": {
+    "noReason": "Kein Grund angegeben.",
+    "dm": {
+      "ban": "Du wurdest von **{server.name}** gebannt.\nGrund: {reason}",
+      "kick": "Du wurdest von **{server.name}** gekickt.\nGrund: {reason}",
+      "timeout": "Du wurdest auf **{server.name}** stummgeschaltet.\nGrund: {reason}",
+      "warn": "Du hast eine Verwarnung auf **{server.name}** erhalten.\nGrund: {reason}",
+      "quarantine": "Dein Zugriff auf **{server.name}** wurde eingeschränkt.\nGrund: {reason}"
+    },
+    "done": {
+      "ban": "**{{target}}** wurde gebannt.",
+      "kick": "**{{target}}** wurde gekickt.",
+      "timeout": "**{{target}}** wurde für {{duration}} stummgeschaltet.",
+      "untimeout": "Die Stummschaltung von **{{target}}** wurde aufgehoben.",
+      "warn": "**{{target}}** wurde verwarnt.",
+      "unban": "**{{target}}** wurde entbannt.",
+      "purge": "**{{count}}** Nachrichten wurden gelöscht.",
+      "slowmode": "Zeitlupe auf {{duration}} in {{channel}} gesetzt.",
+      "slowmodeOff": "Die Zeitlupe wurde in {{channel}} deaktiviert.",
+      "lock": "{{channel}} ist jetzt gesperrt.",
+      "unlock": "{{channel}} ist jetzt entsperrt.",
+      "revoked": "Fall **#{{caseNumber}}** wurde widerrufen.",
+      "quarantine": "**{{target}}** wurde in Quarantäne versetzt."
+    },
+    "panel": {
+      "title": "Moderation",
+      "case": "Fall",
+      "type": "Aktion",
+      "target": "Mitglied",
+      "moderator": "Moderator",
+      "reason": "Grund",
+      "expires": "Läuft ab",
+      "noReason": "Kein Grund",
+      "history": "Moderationsverlauf",
+      "noHistory": "Dieses Mitglied hat keinen Moderationsverlauf.",
+      "totalCases": "Aktionen gesamt",
+      "activeCases": "Aktiv",
+      "dmSent": "Benachrichtigt",
+      "dmFailed": "DM konnte nicht gesendet werden",
+      "notSaved": "Nicht gespeichert — die Datenbank ist offline",
+      "automod": "Automod",
+      "automodStatus": "Status",
+      "enabled": "Aktiviert",
+      "disabled": "Deaktiviert",
+      "rules": "Aktive Regeln",
+      "noRules": "Keine Regeln konfiguriert",
+      "threshold": "Schwellenwert",
+      "action": "Aktion",
+      "whitelist": "Ausgenommene Rollen",
+      "noWhitelist": "Keine"
+    }
   }
 }
