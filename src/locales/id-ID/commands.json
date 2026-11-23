@@ -1,0 +1,684 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Periksa latensi bot, gateway, dan basis data."
+  },
+  "uptime": {
+    "name": "uptime",
+    "description": "Tampilkan berapa lama xXx Family telah berjalan."
+  },
+  "help": {
+    "name": "bantuan",
+    "description": "Tampilkan semua perintah atau detail satu perintah.",
+    "options": {
+      "command": {
+        "name": "perintah",
+        "description": "Perintah yang ingin kamu lihat detailnya."
+      }
+    }
+  },
+  "language": {
+    "name": "bahasa",
+    "description": "Kelola bahasa kamu atau bahasa server ini.",
+    "options": {
+      "set": {
+        "name": "atur",
+        "description": "Atur bahasa pribadi kamu."
+      },
+      "list": {
+        "name": "daftar",
+        "description": "Tampilkan semua bahasa yang tersedia."
+      },
+      "reset": {
+        "name": "reset",
+        "description": "Reset bahasa pribadi kamu ke bawaan server."
+      },
+      "server": {
+        "name": "server",
+        "description": "Atur bahasa bawaan server ini."
+      },
+      "user": {
+        "name": "pengguna",
+        "description": "Tampilkan bahasa yang dipakai untuk kamu."
+      },
+      "language": {
+        "name": "bahasa",
+        "description": "Bahasa yang ingin digunakan."
+      }
+    }
+  },
+  "settings": {
+    "name": "pengaturan",
+    "description": "Lihat atau reset konfigurasi xXx Family server ini.",
+    "options": {
+      "view": {
+        "name": "lihat",
+        "description": "Tampilkan konfigurasi server ini."
+      },
+      "reset": {
+        "name": "reset",
+        "description": "Reset semua pengaturan server ini ke bawaan."
+      },
+      "confirm": {
+        "name": "konfirmasi",
+        "description": "Ketik CONFIRM untuk mereset. Tindakan ini tidak bisa dibatalkan."
+      }
+    }
+  },
+  "responses": {
+    "pong": "Pong!",
+    "pingTitle": "Status koneksi",
+    "uptimeTitle": "Waktu aktif sistem",
+    "helpTitle": "Daftar perintah",
+    "helpDescription": "Semua perintah tersedia dalam bahasa kamu. Pilih kategori untuk mempersempit daftar.",
+    "helpUsage": "Cara pakai",
+    "helpCooldown": "Jeda",
+    "helpPermissions": "Izin yang diperlukan",
+    "helpCategory": "Kategori",
+    "helpSelectPlaceholder": "Pilih kategori",
+    "helpNoCommands": "Belum ada perintah yang terdaftar.",
+    "helpEveryone": "Semua orang",
+    "languageTitle": "Pengaturan bahasa",
+    "settingsTitle": "Konfigurasi server",
+    "settingsGuildId": "ID Server",
+    "settingsPrefix": "Modul",
+    "settingsResetDone": "Semua pengaturan server ini telah dikembalikan ke bawaan.",
+    "settingsResetConfirm": "Reset semua pengaturan server ini? Tindakan ini tidak bisa dibatalkan.",
+    "modulesLoaded": "Modul aktif",
+    "noModules": "Belum ada modul yang aktif."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Atur pesan sambutan dan perpisahan untuk server ini.",
+    "options": {
+      "view": {
+        "name": "tampilan",
+        "description": "Tampilkan konfigurasi sambutan saat ini."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan pesan sambutan."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan pesan sambutan."
+      },
+      "channel": {
+        "name": "kanal",
+        "description": "Atur kanal tujuan pesan sambutan.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Kanal yang dipakai. Pilih none untuk menghapus."
+          }
+        }
+      },
+      "message": {
+        "name": "pesan",
+        "description": "Atur templat pesan sambutan khusus.",
+        "options": {
+          "text": {
+            "name": "teks",
+            "description": "Templat pesan. Gunakan {user.mention} dan {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "tes",
+        "description": "Kirim pesan sambutan percobaan ke dirimu."
+      },
+      "roles": {
+        "name": "peran",
+        "description": "Kelola peran yang diberikan saat bergabung.",
+        "options": {
+          "role": {
+            "name": "peran",
+            "description": "Peran yang ditambahkan atau dihapus."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "perpisahan",
+        "description": "Atur templat pesan perpisahan khusus.",
+        "options": {
+          "text": {
+            "name": "teks",
+            "description": "Templat pesan. Gunakan {user.mention} dan {server.name}."
+          }
+        }
+      }
+    }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Boost server: pengumuman, peran booster, papan peringkat dan riwayat.",
+    "options": {
+      "stats": {
+        "name": "statistik",
+        "description": "Tampilkan statistik boost server ini."
+      },
+      "leaderboard": {
+        "name": "peringkat",
+        "description": "Tampilkan booster terlama."
+      },
+      "history": {
+        "name": "riwayat",
+        "description": "Tampilkan riwayat boost seorang anggota.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang dicari."
+          }
+        }
+      },
+      "view": {
+        "name": "tampilan",
+        "description": "Tampilkan konfigurasi booster."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan pengumuman booster."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan pengumuman booster."
+      },
+      "channel": {
+        "name": "kanal",
+        "description": "Atur kanal tujuan pesan booster.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Kanal yang dipakai. Pilih none untuk menghapus."
+          }
+        }
+      },
+      "role": {
+        "name": "peran",
+        "description": "Atur peran yang diberikan selama mem-boost.",
+        "options": {
+          "role": {
+            "name": "peran",
+            "description": "Peran yang dipakai. Pilih none untuk menghapus."
+          }
+        }
+      }
+    }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Tindakan moderasi: banned, kick, timeout, peringatan, purge, kunci dan riwayat.",
+    "options": {
+      "ban": {
+        "name": "banned",
+        "description": "Ban anggota dari server.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang akan dibanned."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pembannedan."
+          },
+          "delete_days": {
+            "name": "hapus_hari",
+            "description": "Jumlah hari pesan yang dihapus (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "cabut_ban",
+        "description": "Cabut banned melalui ID pengguna.",
+        "options": {
+          "user_id": {
+            "name": "id_pengguna",
+            "description": "ID pengguna yang dibanned."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pencabutan banned."
+          }
+        }
+      },
+      "kick": {
+        "name": "keluarkan",
+        "description": "Keluarkan anggota dari server.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang akan dikeluarkan."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pengeluaran."
+          }
+        }
+      },
+      "timeout": {
+        "name": "timeout",
+        "description": "Cegah anggota berbicara sementara.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang diberi timeout."
+          },
+          "duration": {
+            "name": "durasi",
+            "description": "Berapa lama, mis. 10m, 2h, 1d (maks 28d)."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pemberian timeout."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "cabut_timeout",
+        "description": "Cabut timeout lebih awal.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang dibebaskan."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pencabutan timeout."
+          }
+        }
+      },
+      "warn": {
+        "name": "peringatan",
+        "description": "Catat peringatan untuk anggota.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang diberi peringatan."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Apa yang mereka lakukan."
+          }
+        }
+      },
+      "purge": {
+        "name": "hapus_pesan",
+        "description": "Hapus banyak pesan terbaru di channel.",
+        "options": {
+          "count": {
+            "name": "jumlah",
+            "description": "Jumlah pesan yang dihapus (1-100)."
+          },
+          "user": {
+            "name": "anggota",
+            "description": "Hapus pesan anggota ini saja."
+          },
+          "channel": {
+            "name": "channel",
+            "description": "Channel yang dibersihkan. Default: channel ini."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan penghapusan pesan."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "slowmode",
+        "description": "Atur jeda kirim pesan per pengguna.",
+        "options": {
+          "seconds": {
+            "name": "detik",
+            "description": "Jeda dalam detik. 0 untuk mematikan."
+          },
+          "channel": {
+            "name": "channel",
+            "description": "Channel yang diubah. Default: channel ini."
+          }
+        }
+      },
+      "lock": {
+        "name": "kunci",
+        "description": "Hentikan semua orang mengirim pesan di channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Channel yang dikunci. Default: channel ini."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan penguncian channel."
+          }
+        }
+      },
+      "unlock": {
+        "name": "buka_kunci",
+        "description": "Buka kembali channel yang dikunci.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Channel yang dibuka. Default: channel ini."
+          },
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan pembukaan channel."
+          }
+        }
+      },
+      "history": {
+        "name": "riwayat",
+        "description": "Tampilkan riwayat moderasi anggota.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang dilihat. Default: kamu."
+          }
+        }
+      }
+    }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Atur penyaringan pesan otomatis.",
+    "options": {
+      "view": {
+        "name": "lihat",
+        "description": "Tampilkan aturan automod saat ini."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan penyaringan otomatis."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan penyaringan otomatis."
+      },
+      "rule": {
+        "name": "aturan",
+        "description": "Atur satu aturan automod.",
+        "options": {
+          "rule": {
+            "name": "aturan",
+            "description": "Aturan yang akan diatur."
+          },
+          "enabled": {
+            "name": "aktif",
+            "description": "Nyalakan atau matikan aturan ini."
+          },
+          "action": {
+            "name": "tindakan",
+            "description": "Apa yang dilakukan saat aturan terpicu."
+          },
+          "threshold": {
+            "name": "ambang",
+            "description": "Berapa kali pemicu sebelum bertindak."
+          },
+          "word": {
+            "name": "kata",
+            "description": "Untuk aturan kata: tambah kata ini. Awali dengan - untuk menghapus."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "pengecualian",
+        "description": "Kecualikan sebuah peran dari penyaringan.",
+        "options": {
+          "role": {
+            "name": "peran",
+            "description": "Peran yang dikecualikan."
+          },
+          "remove": {
+            "name": "hapus",
+            "description": "Hapus pengecualian, bukan menambah."
+          }
+        }
+      },
+      "test": {
+        "name": "uji",
+        "description": "Periksa apa yang dipicu pesan contoh. Tidak ada yang dihapus.",
+        "options": {
+          "text": {
+            "name": "teks",
+            "description": "Pesan yang diuji."
+          }
+        }
+      }
+    }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Room voice sementara yang dibuat saat bergabung.",
+    "options": {
+      "view": {
+        "name": "lihat",
+        "description": "Tampilkan konfigurasi voice sementara."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan buat-saat-bergabung."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan buat-saat-bergabung."
+      },
+      "trigger": {
+        "name": "pemicu",
+        "description": "Atur channel yang membuat room saat dimasuki.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Channel pemicu. Pilih kosong untuk menghapus."
+          }
+        }
+      },
+      "category": {
+        "name": "kategori",
+        "description": "Atur kategori tempat room baru dibuat.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Kategori. Pilih kosong untuk menghapus."
+          }
+        }
+      },
+      "roomname": {
+        "name": "nama_room",
+        "description": "Atur templat nama room. Placeholder: {user} {number}",
+        "options": {
+          "template": {
+            "name": "templat",
+            "description": "Templatnya, mis. room {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "batas_bawaan",
+        "description": "Atur batas anggota bawaan untuk room baru.",
+        "options": {
+          "limit": {
+            "name": "batas",
+            "description": "0 untuk tak terbatas."
+          }
+        }
+      },
+      "privacy": {
+        "name": "privasi",
+        "description": "Pilih apakah room baru mulai tersembunyi.",
+        "options": {
+          "private": {
+            "name": "privat",
+            "description": "True untuk menyembunyikan room baru."
+          }
+        }
+      },
+      "grace": {
+        "name": "tenggang",
+        "description": "Berapa lama room kosong bertahan sebelum dihapus.",
+        "options": {
+          "seconds": {
+            "name": "detik",
+            "description": "Detik menunggu. 0 langsung menghapus."
+          }
+        }
+      },
+      "rename": {
+        "name": "ganti_nama",
+        "description": "Ganti nama room sementara kamu.",
+        "options": {
+          "name": {
+            "name": "nama",
+            "description": "Nama baru."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "batas_room",
+        "description": "Ubah batas anggota room sementara kamu.",
+        "options": {
+          "limit": {
+            "name": "batas",
+            "description": "0 untuk tak terbatas."
+          }
+        }
+      },
+      "lock": {
+        "name": "kunci",
+        "description": "Cegah orang lain masuk room sementara kamu."
+      },
+      "unlock": {
+        "name": "buka",
+        "description": "Izinkan orang lain masuk lagi."
+      },
+      "transfer": {
+        "name": "alihkan",
+        "description": "Berikan room sementara kamu ke anggota lain di dalamnya.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Pemilik baru."
+          }
+        }
+      }
+    }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Tiket dukungan: buka tiket, atau kelola sistemnya.",
+    "options": {
+      "open": {
+        "name": "buka",
+        "description": "Buka tiket baru.",
+        "options": {
+          "subject": {
+            "name": "subjek",
+            "description": "Apa yang kamu butuhkan."
+          },
+          "category": {
+            "name": "kategori",
+            "description": "Jenis tiket."
+          }
+        }
+      },
+      "close": {
+        "name": "tutup",
+        "description": "Tutup tiket ini.",
+        "options": {
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan penutupan."
+          }
+        }
+      },
+      "claim": {
+        "name": "ambil",
+        "description": "Ambil tiket ini agar tidak dijawab orang lain."
+      },
+      "add": {
+        "name": "tambah",
+        "description": "Tambahkan anggota ke tiket ini.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang ditambahkan."
+          }
+        }
+      },
+      "priority": {
+        "name": "prioritas",
+        "description": "Atur prioritas tiket ini.",
+        "options": {
+          "level": {
+            "name": "tingkat",
+            "description": "Seberapa mendesak."
+          }
+        }
+      },
+      "stats": {
+        "name": "statistik",
+        "description": "Tampilkan statistik tiket server ini."
+      },
+      "view": {
+        "name": "lihat",
+        "description": "Tampilkan konfigurasi tiket."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan sistem tiket."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan sistem tiket."
+      },
+      "panel": {
+        "name": "panel",
+        "description": "Posting panel tiket di sebuah channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Tempat memposting. Default: channel ini."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "peran_staf",
+        "description": "Atur peran yang bisa melihat dan menjawab tiket.",
+        "options": {
+          "role": {
+            "name": "peran",
+            "description": "Peran staf. Pilih kosong untuk menghapus."
+          }
+        }
+      },
+      "transcript": {
+        "name": "transkrip",
+        "description": "Atur tempat transkrip tiket yang ditutup diposting.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Channel transkrip. Pilih kosong untuk menghapus."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "jeda",
+        "description": "Atur jeda antar pembukaan tiket oleh anggota.",
+        "options": {
+          "seconds": {
+            "name": "detik",
+            "description": "Detik. 0 mematikan jeda."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "maks_terbuka",
+        "description": "Atur jumlah tiket terbuka yang boleh dipegang satu anggota.",
+        "options": {
+          "count": {
+            "name": "jumlah",
+            "description": "Jumlah tiket."
+          }
+        }
+      }
+    }
+  }
+}

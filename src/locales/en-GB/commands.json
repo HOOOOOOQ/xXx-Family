@@ -1,0 +1,684 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Check the bot, gateway and database latency."
+  },
+  "uptime": {
+    "name": "uptime",
+    "description": "Show how long xXx Family has been running."
+  },
+  "help": {
+    "name": "help",
+    "description": "Show every command or the details of a single command.",
+    "options": {
+      "command": {
+        "name": "command",
+        "description": "The command you want details for."
+      }
+    }
+  },
+  "language": {
+    "name": "language",
+    "description": "Manage your language or the language of this server.",
+    "options": {
+      "set": {
+        "name": "set",
+        "description": "Set your personal language."
+      },
+      "list": {
+        "name": "list",
+        "description": "List every available language."
+      },
+      "reset": {
+        "name": "reset",
+        "description": "Reset your personal language to the server default."
+      },
+      "server": {
+        "name": "server",
+        "description": "Set the default language of this server."
+      },
+      "user": {
+        "name": "user",
+        "description": "Show the language currently used for you."
+      },
+      "language": {
+        "name": "language",
+        "description": "The language to use."
+      }
+    }
+  },
+  "settings": {
+    "name": "settings",
+    "description": "View or reset the xXx Family configuration of this server.",
+    "options": {
+      "view": {
+        "name": "view",
+        "description": "Show this server configuration."
+      },
+      "reset": {
+        "name": "reset",
+        "description": "Reset every setting of this server to its default."
+      },
+      "confirm": {
+        "name": "confirm",
+        "description": "Type CONFIRM to reset. This cannot be undone."
+      }
+    }
+  },
+  "responses": {
+    "pong": "Pong!",
+    "pingTitle": "Connection status",
+    "uptimeTitle": "System uptime",
+    "helpTitle": "Command directory",
+    "helpDescription": "Every command is available in your language. Select a category to narrow the list.",
+    "helpUsage": "Usage",
+    "helpCooldown": "Cooldown",
+    "helpPermissions": "Required permissions",
+    "helpCategory": "Category",
+    "helpSelectPlaceholder": "Choose a category",
+    "helpNoCommands": "No commands are registered yet.",
+    "helpEveryone": "Everyone",
+    "languageTitle": "Language settings",
+    "settingsTitle": "Server configuration",
+    "settingsGuildId": "Server ID",
+    "settingsPrefix": "Modules",
+    "settingsResetDone": "Every setting of this server has been reset to its default.",
+    "settingsResetConfirm": "Reset every setting of this server? This cannot be undone.",
+    "modulesLoaded": "Active modules",
+    "noModules": "No modules are active yet."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Configure welcome and goodbye messages for this server.",
+    "options": {
+      "view": {
+        "name": "view",
+        "description": "Show the current welcome configuration."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn welcome messages on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn welcome messages off."
+      },
+      "channel": {
+        "name": "channel",
+        "description": "Set the channel welcome messages are sent to.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The channel to use. Choose none to clear."
+          }
+        }
+      },
+      "message": {
+        "name": "message",
+        "description": "Set a custom welcome message template.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "The message template. Use {user.mention} and {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "test",
+        "description": "Send yourself a test welcome message."
+      },
+      "roles": {
+        "name": "roles",
+        "description": "Manage the roles granted on join.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "The role to add or remove."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "goodbye",
+        "description": "Set a custom goodbye message template.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "The message template. Use {user.mention} and {server.name}."
+          }
+        }
+      }
+    }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Server boosting: announcements, booster role, leaderboard and history.",
+    "options": {
+      "stats": {
+        "name": "stats",
+        "description": "Show boosting statistics for this server."
+      },
+      "leaderboard": {
+        "name": "leaderboard",
+        "description": "Show the longest-running boosters."
+      },
+      "history": {
+        "name": "history",
+        "description": "Show one member's boost history.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to look up."
+          }
+        }
+      },
+      "view": {
+        "name": "view",
+        "description": "Show the booster configuration."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn booster announcements on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn booster announcements off."
+      },
+      "channel": {
+        "name": "channel",
+        "description": "Set the channel booster messages are sent to.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The channel to use. Choose none to clear."
+          }
+        }
+      },
+      "role": {
+        "name": "role",
+        "description": "Set the role granted while boosting.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "The role to use. Choose none to clear."
+          }
+        }
+      }
+    }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Moderation actions: ban, kick, timeout, warn, purge, lock and history.",
+    "options": {
+      "ban": {
+        "name": "ban",
+        "description": "Ban a member from the server.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to ban."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why they are being banned."
+          },
+          "delete_days": {
+            "name": "delete_days",
+            "description": "Days of their messages to delete (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "unban",
+        "description": "Remove a ban by user ID.",
+        "options": {
+          "user_id": {
+            "name": "user_id",
+            "description": "The banned user's ID."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the ban is being lifted."
+          }
+        }
+      },
+      "kick": {
+        "name": "kick",
+        "description": "Remove a member from the server.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to kick."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why they are being kicked."
+          }
+        }
+      },
+      "timeout": {
+        "name": "timeout",
+        "description": "Temporarily prevent a member from talking.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to time out."
+          },
+          "duration": {
+            "name": "duration",
+            "description": "How long, e.g. 10m, 2h, 1d (max 28d)."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why they are being timed out."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "untimeout",
+        "description": "Lift a timeout early.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to release."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the timeout is being lifted."
+          }
+        }
+      },
+      "warn": {
+        "name": "warn",
+        "description": "Record a warning against a member.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to warn."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "What they did."
+          }
+        }
+      },
+      "purge": {
+        "name": "purge",
+        "description": "Bulk-delete recent messages in a channel.",
+        "options": {
+          "count": {
+            "name": "count",
+            "description": "How many messages to delete (1-100)."
+          },
+          "user": {
+            "name": "user",
+            "description": "Only delete this member's messages."
+          },
+          "channel": {
+            "name": "channel",
+            "description": "The channel to purge. Defaults to this one."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the messages are being removed."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "slowmode",
+        "description": "Set the per-user message delay for a channel.",
+        "options": {
+          "seconds": {
+            "name": "seconds",
+            "description": "Delay in seconds. 0 turns it off."
+          },
+          "channel": {
+            "name": "channel",
+            "description": "The channel to change. Defaults to this one."
+          }
+        }
+      },
+      "lock": {
+        "name": "lock",
+        "description": "Stop everyone from sending messages in a channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The channel to lock. Defaults to this one."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the channel is being locked."
+          }
+        }
+      },
+      "unlock": {
+        "name": "unlock",
+        "description": "Reopen a locked channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The channel to unlock. Defaults to this one."
+          },
+          "reason": {
+            "name": "reason",
+            "description": "Why the channel is being reopened."
+          }
+        }
+      },
+      "history": {
+        "name": "history",
+        "description": "Show a member's moderation history.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to look up. Defaults to you."
+          }
+        }
+      }
+    }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Configure automatic message screening.",
+    "options": {
+      "view": {
+        "name": "view",
+        "description": "Show the current automod rules."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn automatic screening on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn automatic screening off."
+      },
+      "rule": {
+        "name": "rule",
+        "description": "Configure one automod rule.",
+        "options": {
+          "rule": {
+            "name": "rule",
+            "description": "Which rule to configure."
+          },
+          "enabled": {
+            "name": "enabled",
+            "description": "Turn this rule on or off."
+          },
+          "action": {
+            "name": "action",
+            "description": "What to do when the rule fires."
+          },
+          "threshold": {
+            "name": "threshold",
+            "description": "How many hits before it fires (spam, mentions, caps, repeats)."
+          },
+          "word": {
+            "name": "word",
+            "description": "For the words rule: add this word. Prefix with - to remove it."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "whitelist",
+        "description": "Exempt a role from screening.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "The role to exempt."
+          },
+          "remove": {
+            "name": "remove",
+            "description": "Remove the exemption instead of adding it."
+          }
+        }
+      },
+      "test": {
+        "name": "test",
+        "description": "Check what a sample message would trigger. Nothing is deleted.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "The message to test."
+          }
+        }
+      }
+    }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Join-to-create temporary voice rooms.",
+    "options": {
+      "view": {
+        "name": "view",
+        "description": "Show the temporary voice configuration."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn join-to-create on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn join-to-create off."
+      },
+      "trigger": {
+        "name": "trigger",
+        "description": "Set the channel that creates a room when joined.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The trigger channel. Choose none to clear."
+          }
+        }
+      },
+      "category": {
+        "name": "category",
+        "description": "Set the category new rooms are created in.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The category. Choose none to clear."
+          }
+        }
+      },
+      "roomname": {
+        "name": "roomname",
+        "description": "Set the room name template. Placeholders: {user} {number}",
+        "options": {
+          "template": {
+            "name": "template",
+            "description": "The template, e.g. {user}'s room"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "defaultlimit",
+        "description": "Set the default member limit for new rooms.",
+        "options": {
+          "limit": {
+            "name": "limit",
+            "description": "0 for unlimited."
+          }
+        }
+      },
+      "privacy": {
+        "name": "privacy",
+        "description": "Choose whether new rooms start hidden.",
+        "options": {
+          "private": {
+            "name": "private",
+            "description": "True to hide new rooms."
+          }
+        }
+      },
+      "grace": {
+        "name": "grace",
+        "description": "How long an empty room survives before deletion.",
+        "options": {
+          "seconds": {
+            "name": "seconds",
+            "description": "Seconds to wait. 0 deletes immediately."
+          }
+        }
+      },
+      "rename": {
+        "name": "rename",
+        "description": "Rename your temporary room.",
+        "options": {
+          "name": {
+            "name": "name",
+            "description": "The new name."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "roomlimit",
+        "description": "Change the member limit of your temporary room.",
+        "options": {
+          "limit": {
+            "name": "limit",
+            "description": "0 for unlimited."
+          }
+        }
+      },
+      "lock": {
+        "name": "lock",
+        "description": "Stop others from joining your temporary room."
+      },
+      "unlock": {
+        "name": "unlock",
+        "description": "Let others join your temporary room again."
+      },
+      "transfer": {
+        "name": "transfer",
+        "description": "Give your temporary room to another member in it.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The new owner."
+          }
+        }
+      }
+    }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Support tickets: open one, or manage the system.",
+    "options": {
+      "open": {
+        "name": "open",
+        "description": "Open a new ticket.",
+        "options": {
+          "subject": {
+            "name": "subject",
+            "description": "What you need help with."
+          },
+          "category": {
+            "name": "category",
+            "description": "The kind of ticket."
+          }
+        }
+      },
+      "close": {
+        "name": "close",
+        "description": "Close this ticket.",
+        "options": {
+          "reason": {
+            "name": "reason",
+            "description": "Why it is being closed."
+          }
+        }
+      },
+      "claim": {
+        "name": "claim",
+        "description": "Claim this ticket so nobody else answers it."
+      },
+      "add": {
+        "name": "add",
+        "description": "Add a member to this ticket.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to add."
+          }
+        }
+      },
+      "priority": {
+        "name": "priority",
+        "description": "Set the priority of this ticket.",
+        "options": {
+          "level": {
+            "name": "level",
+            "description": "How urgent it is."
+          }
+        }
+      },
+      "stats": {
+        "name": "stats",
+        "description": "Show ticket statistics for this server."
+      },
+      "view": {
+        "name": "view",
+        "description": "Show the ticket configuration."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn the ticket system on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn the ticket system off."
+      },
+      "panel": {
+        "name": "panel",
+        "description": "Post the ticket panel in a channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Where to post it. Defaults to this channel."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "staffrole",
+        "description": "Set the role that can see and answer tickets.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "The staff role. Choose none to clear."
+          }
+        }
+      },
+      "transcript": {
+        "name": "transcript",
+        "description": "Set where closed ticket transcripts are posted.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The transcript channel. Choose none to clear."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "cooldown",
+        "description": "Set how long a member waits between opening tickets.",
+        "options": {
+          "seconds": {
+            "name": "seconds",
+            "description": "Seconds. 0 disables the wait."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "maxopen",
+        "description": "Set how many tickets one member may hold open.",
+        "options": {
+          "count": {
+            "name": "count",
+            "description": "Number of tickets."
+          }
+        }
+      }
+    }
+  }
+}

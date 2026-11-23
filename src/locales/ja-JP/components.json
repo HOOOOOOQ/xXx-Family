@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "confirm": "確定",
+    "cancel": "キャンセル",
+    "close": "閉じる",
+    "refresh": "更新",
+    "next": "次へ",
+    "previous": "戻る",
+    "support": "サポートサーバー",
+    "invite": "xXx Family を招待",
+    "dashboard": "ダッシュボードを開く",
+    "dismiss": "閉じる"
+  },
+  "selects": { "languagePlaceholder": "言語を選択", "categoryPlaceholder": "カテゴリを選択" },
+  "modals": {
+    "feedbackTitle": "フィードバックを送信",
+    "feedbackLabel": "メッセージ",
+    "feedbackPlaceholder": "フィードバックを入力してください…"
+  },
+  "menu": { "back": "メニューに戻る", "home": "メインメニュー" }
+}

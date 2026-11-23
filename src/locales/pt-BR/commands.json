@@ -1,0 +1,684 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Verifica a latência do bot, do gateway e do banco de dados."
+  },
+  "uptime": {
+    "name": "uptime",
+    "description": "Mostra há quanto tempo o xXx Family está ativo."
+  },
+  "help": {
+    "name": "ajuda",
+    "description": "Mostra todos os comandos ou o detalhe de um comando.",
+    "options": {
+      "command": {
+        "name": "comando",
+        "description": "O comando que você quer detalhar."
+      }
+    }
+  },
+  "language": {
+    "name": "idioma",
+    "description": "Gerencie seu idioma ou o idioma deste servidor.",
+    "options": {
+      "set": {
+        "name": "definir",
+        "description": "Defina seu idioma pessoal."
+      },
+      "list": {
+        "name": "lista",
+        "description": "Liste todos os idiomas disponíveis."
+      },
+      "reset": {
+        "name": "redefinir",
+        "description": "Redefina seu idioma pessoal para o do servidor."
+      },
+      "server": {
+        "name": "servidor",
+        "description": "Defina o idioma padrão deste servidor."
+      },
+      "user": {
+        "name": "usuario",
+        "description": "Mostre o idioma usado para você."
+      },
+      "language": {
+        "name": "idioma",
+        "description": "O idioma a ser usado."
+      }
+    }
+  },
+  "settings": {
+    "name": "config",
+    "description": "Veja ou redefina a configuração do xXx Family deste servidor.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostra a configuração deste servidor."
+      },
+      "reset": {
+        "name": "redefinir",
+        "description": "Redefina todas as configurações do servidor."
+      },
+      "confirm": {
+        "name": "confirmar",
+        "description": "Digite CONFIRM para redefinir. Não dá para desfazer."
+      }
+    }
+  },
+  "responses": {
+    "pong": "Pong!",
+    "pingTitle": "Status da conexão",
+    "uptimeTitle": "Tempo ativo do sistema",
+    "helpTitle": "Diretório de comandos",
+    "helpDescription": "Todos os comandos estão disponíveis no seu idioma. Escolha uma categoria para filtrar a lista.",
+    "helpUsage": "Uso",
+    "helpCooldown": "Espera",
+    "helpPermissions": "Permissões necessárias",
+    "helpCategory": "Categoria",
+    "helpSelectPlaceholder": "Escolha uma categoria",
+    "helpNoCommands": "Nenhum comando registrado ainda.",
+    "helpEveryone": "Todos",
+    "languageTitle": "Configurações de idioma",
+    "settingsTitle": "Configuração do servidor",
+    "settingsGuildId": "ID do servidor",
+    "settingsPrefix": "Módulos",
+    "settingsResetDone": "Todas as configurações deste servidor voltaram ao padrão.",
+    "settingsResetConfirm": "Redefinir todas as configurações deste servidor? Não dá para desfazer.",
+    "modulesLoaded": "Módulos ativos",
+    "noModules": "Nenhum módulo ativo ainda."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Configure as mensagens de boas-vindas e despedida deste servidor.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostra a configuração de boas-vindas atual."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativa as mensagens de boas-vindas."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativa as mensagens de boas-vindas."
+      },
+      "channel": {
+        "name": "canal",
+        "description": "Define o canal das mensagens de boas-vindas.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal a usar. Escolha none para limpar."
+          }
+        }
+      },
+      "message": {
+        "name": "mensagem",
+        "description": "Define um modelo de boas-vindas personalizado.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "O modelo de mensagem. Use {user.mention} e {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "testar",
+        "description": "Envia a você uma mensagem de boas-vindas de teste."
+      },
+      "roles": {
+        "name": "cargos",
+        "description": "Gerencia os cargos dados ao entrar.",
+        "options": {
+          "role": {
+            "name": "cargo",
+            "description": "O cargo a adicionar ou remover."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "despedida",
+        "description": "Define um modelo de despedida personalizado.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "O modelo de mensagem. Use {user.mention} e {server.name}."
+          }
+        }
+      }
+    }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Boosts do servidor: anúncios, cargo de booster, ranking e histórico.",
+    "options": {
+      "stats": {
+        "name": "estatisticas",
+        "description": "Mostra as estatísticas de boost do servidor."
+      },
+      "leaderboard": {
+        "name": "ranking",
+        "description": "Mostra os boosters mais antigos."
+      },
+      "history": {
+        "name": "historico",
+        "description": "Mostra o histórico de boost de um membro.",
+        "options": {
+          "user": {
+            "name": "membro",
+            "description": "O membro a consultar."
+          }
+        }
+      },
+      "view": {
+        "name": "ver",
+        "description": "Mostra a configuração de boosters."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativa os anúncios de boosters."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativa os anúncios de boosters."
+      },
+      "channel": {
+        "name": "canal",
+        "description": "Define o canal das mensagens de boosters.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal a usar. Escolha none para limpar."
+          }
+        }
+      },
+      "role": {
+        "name": "cargo",
+        "description": "Define o cargo dado durante o boost.",
+        "options": {
+          "role": {
+            "name": "cargo",
+            "description": "O cargo a usar. Escolha none para limpar."
+          }
+        }
+      }
+    }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Ações de moderação: banir, expulsar, silenciar, avisar, limpar, bloquear e histórico.",
+    "options": {
+      "ban": {
+        "name": "banir",
+        "description": "Banir um membro do servidor.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a banir."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que ele está sendo banido."
+          },
+          "delete_days": {
+            "name": "dias_apagar",
+            "description": "Dias de mensagens a apagar (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "desbanir",
+        "description": "Remover um banimento pelo ID do usuário.",
+        "options": {
+          "user_id": {
+            "name": "id_usuario",
+            "description": "O ID do usuário banido."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que o banimento está sendo removido."
+          }
+        }
+      },
+      "kick": {
+        "name": "expulsar",
+        "description": "Remover um membro do servidor.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a expulsar."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que ele está sendo expulso."
+          }
+        }
+      },
+      "timeout": {
+        "name": "silenciar",
+        "description": "Impedir temporariamente que um membro fale.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a silenciar."
+          },
+          "duration": {
+            "name": "duracao",
+            "description": "Por quanto tempo, ex. 10m, 2h, 1d (máx. 28d)."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que ele está sendo silenciado."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "remover_silencio",
+        "description": "Remover um silenciamento antes do prazo.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a liberar."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que o silenciamento está sendo removido."
+          }
+        }
+      },
+      "warn": {
+        "name": "avisar",
+        "description": "Registrar um aviso contra um membro.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a avisar."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "O que ele fez."
+          }
+        }
+      },
+      "purge": {
+        "name": "limpar",
+        "description": "Apagar em lote mensagens recentes.",
+        "options": {
+          "count": {
+            "name": "quantidade",
+            "description": "Quantas mensagens apagar (1-100)."
+          },
+          "user": {
+            "name": "usuario",
+            "description": "Apagar apenas as mensagens deste membro."
+          },
+          "channel": {
+            "name": "canal",
+            "description": "O canal a limpar. Padrão: este."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que as mensagens estão sendo removidas."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "modo_lento",
+        "description": "Definir o atraso de mensagens por usuário.",
+        "options": {
+          "seconds": {
+            "name": "segundos",
+            "description": "Atraso em segundos. 0 desativa."
+          },
+          "channel": {
+            "name": "canal",
+            "description": "O canal a alterar. Padrão: este."
+          }
+        }
+      },
+      "lock": {
+        "name": "bloquear",
+        "description": "Impedir que todos enviem mensagens em um canal.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal a bloquear. Padrão: este."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que o canal está sendo bloqueado."
+          }
+        }
+      },
+      "unlock": {
+        "name": "desbloquear",
+        "description": "Reabrir um canal bloqueado.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal a desbloquear. Padrão: este."
+          },
+          "reason": {
+            "name": "motivo",
+            "description": "Por que o canal está sendo reaberto."
+          }
+        }
+      },
+      "history": {
+        "name": "historico",
+        "description": "Mostrar o histórico de moderação.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a consultar. Padrão: você."
+          }
+        }
+      }
+    }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Configurar a triagem automática de mensagens.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostrar as regras atuais do automod."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativar a triagem automática."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativar a triagem automática."
+      },
+      "rule": {
+        "name": "regra",
+        "description": "Configurar uma regra do automod.",
+        "options": {
+          "rule": {
+            "name": "regra",
+            "description": "Qual regra configurar."
+          },
+          "enabled": {
+            "name": "ativada",
+            "description": "Ativar ou desativar esta regra."
+          },
+          "action": {
+            "name": "acao",
+            "description": "O que fazer quando a regra disparar."
+          },
+          "threshold": {
+            "name": "limite",
+            "description": "Quantos acertos antes de agir."
+          },
+          "word": {
+            "name": "palavra",
+            "description": "Para a regra de palavras: adicione esta palavra. Prefixe com - para remover."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "isencao",
+        "description": "Isentar um cargo da triagem.",
+        "options": {
+          "role": {
+            "name": "cargo",
+            "description": "O cargo a isentar."
+          },
+          "remove": {
+            "name": "remover",
+            "description": "Remover a isenção em vez de adicionar."
+          }
+        }
+      },
+      "test": {
+        "name": "testar",
+        "description": "Ver o que uma mensagem de exemplo acionaria. Nada é apagado.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "A mensagem a testar."
+          }
+        }
+      }
+    }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Salas de voz temporárias ao entrar.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostrar a configuração de voz temporária."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativar a criação ao entrar."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativar a criação ao entrar."
+      },
+      "trigger": {
+        "name": "gatilho",
+        "description": "Defina o canal que cria uma sala ao entrar.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal gatilho. Escolha nenhum para limpar."
+          }
+        }
+      },
+      "category": {
+        "name": "categoria",
+        "description": "Defina a categoria onde as salas são criadas.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "A categoria. Escolha nenhuma para limpar."
+          }
+        }
+      },
+      "roomname": {
+        "name": "nome_sala",
+        "description": "Defina o modelo do nome. Marcadores: {user} {number}",
+        "options": {
+          "template": {
+            "name": "modelo",
+            "description": "O modelo, ex. sala de {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "limite_padrao",
+        "description": "Defina o limite padrão de membros.",
+        "options": {
+          "limit": {
+            "name": "limite",
+            "description": "0 para ilimitado."
+          }
+        }
+      },
+      "privacy": {
+        "name": "privacidade",
+        "description": "Escolha se as salas novas começam ocultas.",
+        "options": {
+          "private": {
+            "name": "privada",
+            "description": "True para ocultar as salas novas."
+          }
+        }
+      },
+      "grace": {
+        "name": "espera",
+        "description": "Quanto tempo uma sala vazia dura antes de ser apagada.",
+        "options": {
+          "seconds": {
+            "name": "segundos",
+            "description": "Segundos de espera. 0 apaga imediatamente."
+          }
+        }
+      },
+      "rename": {
+        "name": "renomear",
+        "description": "Renomeie sua sala temporária.",
+        "options": {
+          "name": {
+            "name": "nome",
+            "description": "O novo nome."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "limite_sala",
+        "description": "Altere o limite de membros da sua sala.",
+        "options": {
+          "limit": {
+            "name": "limite",
+            "description": "0 para ilimitado."
+          }
+        }
+      },
+      "lock": {
+        "name": "bloquear",
+        "description": "Impeça que outros entrem na sua sala."
+      },
+      "unlock": {
+        "name": "desbloquear",
+        "description": "Deixe outros entrarem novamente."
+      },
+      "transfer": {
+        "name": "transferir",
+        "description": "Passe sua sala temporária a outro membro nela.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O novo dono."
+          }
+        }
+      }
+    }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Tickets de suporte: abra um ou gerencie o sistema.",
+    "options": {
+      "open": {
+        "name": "abrir",
+        "description": "Abrir um novo ticket.",
+        "options": {
+          "subject": {
+            "name": "assunto",
+            "description": "Com o que você precisa de ajuda."
+          },
+          "category": {
+            "name": "categoria",
+            "description": "O tipo de ticket."
+          }
+        }
+      },
+      "close": {
+        "name": "fechar",
+        "description": "Fechar este ticket.",
+        "options": {
+          "reason": {
+            "name": "motivo",
+            "description": "Por que está sendo fechado."
+          }
+        }
+      },
+      "claim": {
+        "name": "assumir",
+        "description": "Assuma este ticket para que ninguém mais o atenda."
+      },
+      "add": {
+        "name": "adicionar",
+        "description": "Adicionar um membro a este ticket.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a adicionar."
+          }
+        }
+      },
+      "priority": {
+        "name": "prioridade",
+        "description": "Definir a prioridade deste ticket.",
+        "options": {
+          "level": {
+            "name": "nivel",
+            "description": "Quão urgente é."
+          }
+        }
+      },
+      "stats": {
+        "name": "estatisticas",
+        "description": "Mostrar as estatísticas de tickets."
+      },
+      "view": {
+        "name": "ver",
+        "description": "Mostrar a configuração de tickets."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativar o sistema de tickets."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativar o sistema de tickets."
+      },
+      "panel": {
+        "name": "painel",
+        "description": "Publicar o painel de tickets em um canal.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "Onde publicar. Padrão: este canal."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "cargo_equipe",
+        "description": "Defina o cargo que pode ver e responder tickets.",
+        "options": {
+          "role": {
+            "name": "cargo",
+            "description": "O cargo da equipe. Escolha nenhum para limpar."
+          }
+        }
+      },
+      "transcript": {
+        "name": "transcricao",
+        "description": "Defina onde as transcrições são publicadas.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal de transcrições. Escolha nenhum para limpar."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "espera",
+        "description": "Defina quanto um membro espera entre tickets.",
+        "options": {
+          "seconds": {
+            "name": "segundos",
+            "description": "Segundos. 0 desativa a espera."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "max_abertos",
+        "description": "Defina quantos tickets um membro pode ter abertos.",
+        "options": {
+          "count": {
+            "name": "quantidade",
+            "description": "Número de tickets."
+          }
+        }
+      }
+    }
+  }
+}

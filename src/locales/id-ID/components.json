@@ -1,0 +1,27 @@
+{
+  "buttons": {
+    "confirm": "Konfirmasi",
+    "cancel": "Batal",
+    "close": "Tutup",
+    "refresh": "Segarkan",
+    "next": "Berikutnya",
+    "previous": "Kembali",
+    "support": "Server bantuan",
+    "invite": "Undang xXx Family",
+    "dashboard": "Buka dashboard",
+    "dismiss": "Tutup"
+  },
+  "selects": {
+    "languagePlaceholder": "Pilih bahasa",
+    "categoryPlaceholder": "Pilih kategori"
+  },
+  "modals": {
+    "feedbackTitle": "Kirim masukan",
+    "feedbackLabel": "Pesan kamu",
+    "feedbackPlaceholder": "Tulis masukan kamu di sini…"
+  },
+  "menu": {
+    "back": "Kembali ke menu",
+    "home": "Menu utama"
+  }
+}

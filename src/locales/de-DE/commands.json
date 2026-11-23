@@ -1,0 +1,684 @@
+{
+  "ping": {
+    "name": "ping",
+    "description": "Prüft die Latenz von Bot, Gateway und Datenbank."
+  },
+  "uptime": {
+    "name": "laufzeit",
+    "description": "Zeigt, wie lange xXx Family bereits läuft."
+  },
+  "help": {
+    "name": "hilfe",
+    "description": "Zeigt alle Befehle oder die Details eines Befehls.",
+    "options": {
+      "command": {
+        "name": "befehl",
+        "description": "Der Befehl, den du ansehen möchtest."
+      }
+    }
+  },
+  "language": {
+    "name": "sprache",
+    "description": "Verwalte deine Sprache oder die Sprache dieses Servers.",
+    "options": {
+      "set": {
+        "name": "setzen",
+        "description": "Lege deine persönliche Sprache fest."
+      },
+      "list": {
+        "name": "liste",
+        "description": "Liste alle verfügbaren Sprachen auf."
+      },
+      "reset": {
+        "name": "zuruecksetzen",
+        "description": "Setze deine persönliche Sprache zurück."
+      },
+      "server": {
+        "name": "server",
+        "description": "Lege die Standardsprache dieses Servers fest."
+      },
+      "user": {
+        "name": "nutzer",
+        "description": "Zeige die für dich verwendete Sprache."
+      },
+      "language": {
+        "name": "sprache",
+        "description": "Die zu verwendende Sprache."
+      }
+    }
+  },
+  "settings": {
+    "name": "einstellungen",
+    "description": "Zeige oder setze die xXx-Family-Konfiguration dieses Servers zurück.",
+    "options": {
+      "view": {
+        "name": "anzeigen",
+        "description": "Zeigt die Konfiguration dieses Servers."
+      },
+      "reset": {
+        "name": "zuruecksetzen",
+        "description": "Setze alle Einstellungen dieses Servers zurück."
+      },
+      "confirm": {
+        "name": "bestaetigen",
+        "description": "Tippe CONFIRM zum Zurücksetzen. Nicht umkehrbar."
+      }
+    }
+  },
+  "responses": {
+    "pong": "Pong!",
+    "pingTitle": "Verbindungsstatus",
+    "uptimeTitle": "Systemlaufzeit",
+    "helpTitle": "Befehlsübersicht",
+    "helpDescription": "Jeder Befehl ist in deiner Sprache verfügbar. Wähle eine Kategorie, um die Liste zu filtern.",
+    "helpUsage": "Verwendung",
+    "helpCooldown": "Abklingzeit",
+    "helpPermissions": "Erforderliche Berechtigungen",
+    "helpCategory": "Kategorie",
+    "helpSelectPlaceholder": "Wähle eine Kategorie",
+    "helpNoCommands": "Es sind noch keine Befehle registriert.",
+    "helpEveryone": "Alle",
+    "languageTitle": "Spracheinstellungen",
+    "settingsTitle": "Serverkonfiguration",
+    "settingsGuildId": "Server-ID",
+    "settingsPrefix": "Module",
+    "settingsResetDone": "Alle Einstellungen dieses Servers wurden zurückgesetzt.",
+    "settingsResetConfirm": "Alle Einstellungen dieses Servers zurücksetzen? Das ist nicht umkehrbar.",
+    "modulesLoaded": "Aktive Module",
+    "noModules": "Es sind noch keine Module aktiv."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Konfiguriere die Willkommens- und Abschiedsnachrichten dieses Servers.",
+    "options": {
+      "view": {
+        "name": "anzeigen",
+        "description": "Zeigt die aktuelle Willkommens-Konfiguration."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Schaltet Willkommensnachrichten ein."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Schaltet Willkommensnachrichten aus."
+      },
+      "channel": {
+        "name": "kanal",
+        "description": "Legt den Kanal für Willkommensnachrichten fest.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu verwendende Kanal. Wähle none zum Löschen."
+          }
+        }
+      },
+      "message": {
+        "name": "nachricht",
+        "description": "Legt eine eigene Willkommensvorlage fest.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "Die Nachrichtenvorlage. Nutze {user.mention} und {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "testen",
+        "description": "Sendet dir eine Test-Willkommensnachricht."
+      },
+      "roles": {
+        "name": "rollen",
+        "description": "Verwaltet die Rollen beim Beitritt.",
+        "options": {
+          "role": {
+            "name": "rolle",
+            "description": "Die hinzuzufügende oder zu entfernende Rolle."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "abschied",
+        "description": "Legt eine eigene Abschiedsvorlage fest.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "Die Nachrichtenvorlage. Nutze {user.mention} und {server.name}."
+          }
+        }
+      }
+    }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Server-Boosting: Ankündigungen, Booster-Rolle, Rangliste und Verlauf.",
+    "options": {
+      "stats": {
+        "name": "statistik",
+        "description": "Zeigt die Boost-Statistik dieses Servers."
+      },
+      "leaderboard": {
+        "name": "rangliste",
+        "description": "Zeigt die dienstältesten Booster."
+      },
+      "history": {
+        "name": "verlauf",
+        "description": "Zeigt den Boost-Verlauf eines Mitglieds.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das gesuchte Mitglied."
+          }
+        }
+      },
+      "view": {
+        "name": "anzeigen",
+        "description": "Zeigt die Booster-Konfiguration."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Schaltet Booster-Ankündigungen ein."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Schaltet Booster-Ankündigungen aus."
+      },
+      "channel": {
+        "name": "kanal",
+        "description": "Legt den Kanal für Booster-Nachrichten fest.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu verwendende Kanal. Wähle none zum Löschen."
+          }
+        }
+      },
+      "role": {
+        "name": "rolle",
+        "description": "Legt die Rolle während des Boostens fest.",
+        "options": {
+          "role": {
+            "name": "rolle",
+            "description": "Die zu verwendende Rolle. Wähle none zum Löschen."
+          }
+        }
+      }
+    }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "Moderationsaktionen: Bann, Kick, Timeout, Verwarnung, Löschen, Sperren und Verlauf.",
+    "options": {
+      "ban": {
+        "name": "bannen",
+        "description": "Ein Mitglied vom Server bannen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das zu bannende Mitglied."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum es gebannt wird."
+          },
+          "delete_days": {
+            "name": "tage_loeschen",
+            "description": "Tage an Nachrichten zum Löschen (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "entbannen",
+        "description": "Einen Bann per Benutzer-ID aufheben.",
+        "options": {
+          "user_id": {
+            "name": "benutzer_id",
+            "description": "Die ID des gebannten Benutzers."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum der Bann aufgehoben wird."
+          }
+        }
+      },
+      "kick": {
+        "name": "kicken",
+        "description": "Ein Mitglied vom Server entfernen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das zu kickende Mitglied."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum es gekickt wird."
+          }
+        }
+      },
+      "timeout": {
+        "name": "stummschalten",
+        "description": "Ein Mitglied vorübergehend am Schreiben hindern.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das stummzuschaltende Mitglied."
+          },
+          "duration": {
+            "name": "dauer",
+            "description": "Wie lange, z. B. 10m, 2h, 1d (max. 28d)."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum es stummgeschaltet wird."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "stummschaltung_aufheben",
+        "description": "Eine Stummschaltung vorzeitig aufheben.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das freizugebende Mitglied."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum die Stummschaltung aufgehoben wird."
+          }
+        }
+      },
+      "warn": {
+        "name": "verwarnen",
+        "description": "Eine Verwarnung gegen ein Mitglied erfassen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das zu verwarnende Mitglied."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Was es getan hat."
+          }
+        }
+      },
+      "purge": {
+        "name": "loeschen",
+        "description": "Letzte Nachrichten massenhaft löschen.",
+        "options": {
+          "count": {
+            "name": "anzahl",
+            "description": "Wie viele Nachrichten gelöscht werden (1-100)."
+          },
+          "user": {
+            "name": "mitglied",
+            "description": "Nur die Nachrichten dieses Mitglieds löschen."
+          },
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu bereinigende Kanal. Standard: dieser."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum die Nachrichten entfernt werden."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "zeitlupe",
+        "description": "Die Nachrichtenverzögerung pro Benutzer setzen.",
+        "options": {
+          "seconds": {
+            "name": "sekunden",
+            "description": "Verzögerung in Sekunden. 0 schaltet sie aus."
+          },
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu ändernde Kanal. Standard: dieser."
+          }
+        }
+      },
+      "lock": {
+        "name": "sperren",
+        "description": "Allen das Schreiben in einem Kanal verbieten.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu sperrende Kanal. Standard: dieser."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum der Kanal gesperrt wird."
+          }
+        }
+      },
+      "unlock": {
+        "name": "entsperren",
+        "description": "Einen gesperrten Kanal wieder öffnen.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu entsperrrende Kanal. Standard: dieser."
+          },
+          "reason": {
+            "name": "grund",
+            "description": "Warum der Kanal wieder geöffnet wird."
+          }
+        }
+      },
+      "history": {
+        "name": "verlauf",
+        "description": "Den Moderationsverlauf anzeigen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das gesuchte Mitglied. Standard: du."
+          }
+        }
+      }
+    }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Automatische Nachrichtenprüfung konfigurieren.",
+    "options": {
+      "view": {
+        "name": "anzeigen",
+        "description": "Die aktuellen Automod-Regeln anzeigen."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Die automatische Prüfung einschalten."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Die automatische Prüfung ausschalten."
+      },
+      "rule": {
+        "name": "regel",
+        "description": "Eine Automod-Regel konfigurieren.",
+        "options": {
+          "rule": {
+            "name": "regel",
+            "description": "Welche Regel konfiguriert werden soll."
+          },
+          "enabled": {
+            "name": "aktiviert",
+            "description": "Diese Regel ein- oder ausschalten."
+          },
+          "action": {
+            "name": "aktion",
+            "description": "Was passieren soll, wenn die Regel greift."
+          },
+          "threshold": {
+            "name": "schwellenwert",
+            "description": "Wie viele Treffer vor einer Reaktion."
+          },
+          "word": {
+            "name": "wort",
+            "description": "Für die Wortregel: dieses Wort hinzufügen. Mit - voranstellen zum Entfernen."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "ausnahme",
+        "description": "Eine Rolle von der Prüfung ausnehmen.",
+        "options": {
+          "role": {
+            "name": "rolle",
+            "description": "Die auszunehmende Rolle."
+          },
+          "remove": {
+            "name": "entfernen",
+            "description": "Die Ausnahme entfernen statt hinzuzufügen."
+          }
+        }
+      },
+      "test": {
+        "name": "testen",
+        "description": "Prüfen, was eine Beispielnachricht auslösen würde. Nichts wird gelöscht.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "Die zu testende Nachricht."
+          }
+        }
+      }
+    }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Temporäre Voice-Räume beim Beitreten.",
+    "options": {
+      "view": {
+        "name": "anzeigen",
+        "description": "Die Temporär-Voice-Konfiguration anzeigen."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Erstellung beim Beitreten einschalten."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Erstellung beim Beitreten ausschalten."
+      },
+      "trigger": {
+        "name": "ausloeser",
+        "description": "Lege den Kanal fest, der einen Raum erstellt.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der Auslöser-Kanal. Wähle keinen zum Löschen."
+          }
+        }
+      },
+      "category": {
+        "name": "kategorie",
+        "description": "Lege die Kategorie für neue Räume fest.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Die Kategorie. Wähle keine zum Löschen."
+          }
+        }
+      },
+      "roomname": {
+        "name": "raumname",
+        "description": "Lege die Namensvorlage fest. Platzhalter: {user} {number}",
+        "options": {
+          "template": {
+            "name": "vorlage",
+            "description": "Die Vorlage, z. B. Raum von {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "standardlimit",
+        "description": "Lege das Standard-Mitgliederlimit fest.",
+        "options": {
+          "limit": {
+            "name": "limit",
+            "description": "0 für unbegrenzt."
+          }
+        }
+      },
+      "privacy": {
+        "name": "privatsphaere",
+        "description": "Wähle, ob neue Räume verborgen starten.",
+        "options": {
+          "private": {
+            "name": "privat",
+            "description": "True, um neue Räume zu verbergen."
+          }
+        }
+      },
+      "grace": {
+        "name": "frist",
+        "description": "Wie lange ein leerer Raum bestehen bleibt.",
+        "options": {
+          "seconds": {
+            "name": "sekunden",
+            "description": "Sekunden Wartezeit. 0 löscht sofort."
+          }
+        }
+      },
+      "rename": {
+        "name": "umbenennen",
+        "description": "Benenne deinen temporären Raum um.",
+        "options": {
+          "name": {
+            "name": "name",
+            "description": "Der neue Name."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "raumlimit",
+        "description": "Ändere das Mitgliederlimit deines Raums.",
+        "options": {
+          "limit": {
+            "name": "limit",
+            "description": "0 für unbegrenzt."
+          }
+        }
+      },
+      "lock": {
+        "name": "sperren",
+        "description": "Verhindere, dass andere deinem Raum beitreten."
+      },
+      "unlock": {
+        "name": "entsperren",
+        "description": "Lasse andere wieder beitreten."
+      },
+      "transfer": {
+        "name": "uebertragen",
+        "description": "Übergib deinen temporären Raum an ein Mitglied.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Der neue Besitzer."
+          }
+        }
+      }
+    }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Support-Tickets: eines eröffnen oder das System verwalten.",
+    "options": {
+      "open": {
+        "name": "eroeffnen",
+        "description": "Ein neues Ticket eröffnen.",
+        "options": {
+          "subject": {
+            "name": "betreff",
+            "description": "Wobei du Hilfe brauchst."
+          },
+          "category": {
+            "name": "kategorie",
+            "description": "Die Art des Tickets."
+          }
+        }
+      },
+      "close": {
+        "name": "schliessen",
+        "description": "Dieses Ticket schließen.",
+        "options": {
+          "reason": {
+            "name": "grund",
+            "description": "Warum es geschlossen wird."
+          }
+        }
+      },
+      "claim": {
+        "name": "uebernehmen",
+        "description": "Übernimm dieses Ticket, damit niemand sonst antwortet."
+      },
+      "add": {
+        "name": "hinzufuegen",
+        "description": "Ein Mitglied zu diesem Ticket hinzufügen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das hinzuzufügende Mitglied."
+          }
+        }
+      },
+      "priority": {
+        "name": "prioritaet",
+        "description": "Die Priorität dieses Tickets setzen.",
+        "options": {
+          "level": {
+            "name": "stufe",
+            "description": "Wie dringend es ist."
+          }
+        }
+      },
+      "stats": {
+        "name": "statistik",
+        "description": "Die Ticket-Statistiken anzeigen."
+      },
+      "view": {
+        "name": "anzeigen",
+        "description": "Die Ticket-Konfiguration anzeigen."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Das Ticketsystem einschalten."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Das Ticketsystem ausschalten."
+      },
+      "panel": {
+        "name": "panel",
+        "description": "Das Ticket-Panel in einem Kanal posten.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Wo es gepostet wird. Standard: dieser Kanal."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "teamrolle",
+        "description": "Lege die Rolle fest, die Tickets sehen und beantworten darf.",
+        "options": {
+          "role": {
+            "name": "rolle",
+            "description": "Die Team-Rolle. Wähle keine zum Löschen."
+          }
+        }
+      },
+      "transcript": {
+        "name": "protokoll",
+        "description": "Lege fest, wo Protokolle geschlossener Tickets landen.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der Protokoll-Kanal. Wähle keinen zum Löschen."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "abklingzeit",
+        "description": "Lege die Wartezeit zwischen Tickets fest.",
+        "options": {
+          "seconds": {
+            "name": "sekunden",
+            "description": "Sekunden. 0 deaktiviert die Wartezeit."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "max_offen",
+        "description": "Lege fest, wie viele Tickets ein Mitglied offen haben darf.",
+        "options": {
+          "count": {
+            "name": "anzahl",
+            "description": "Anzahl der Tickets."
+          }
+        }
+      }
+    }
+  }
+}

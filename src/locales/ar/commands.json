@@ -1,0 +1,684 @@
+{
+  "ping": {
+    "name": "بنق",
+    "description": "تحقق من زمن استجابة البوت والبوابة وقاعدة البيانات."
+  },
+  "uptime": {
+    "name": "مدة_التشغيل",
+    "description": "اعرض كم من الوقت يعمل xXx Family."
+  },
+  "help": {
+    "name": "مساعدة",
+    "description": "اعرض كل الأوامر أو تفاصيل أمر واحد.",
+    "options": {
+      "command": {
+        "name": "الأمر",
+        "description": "الأمر الذي تريد تفاصيله."
+      }
+    }
+  },
+  "language": {
+    "name": "اللغة",
+    "description": "أدر لغتك أو لغة هذا الخادم.",
+    "options": {
+      "set": {
+        "name": "تعيين",
+        "description": "عيّن لغتك الشخصية."
+      },
+      "list": {
+        "name": "قائمة",
+        "description": "اعرض كل اللغات المتاحة."
+      },
+      "reset": {
+        "name": "إعادة_تعيين",
+        "description": "أعد تعيين لغتك الشخصية."
+      },
+      "server": {
+        "name": "الخادم",
+        "description": "عيّن اللغة الافتراضية لهذا الخادم."
+      },
+      "user": {
+        "name": "المستخدم",
+        "description": "اعرض اللغة المستخدمة لك."
+      },
+      "language": {
+        "name": "اللغة",
+        "description": "اللغة المراد استخدامها."
+      }
+    }
+  },
+  "settings": {
+    "name": "الإعدادات",
+    "description": "اعرض أو أعد تعيين إعدادات xXx Family لهذا الخادم.",
+    "options": {
+      "view": {
+        "name": "عرض",
+        "description": "اعرض إعدادات هذا الخادم."
+      },
+      "reset": {
+        "name": "إعادة_تعيين",
+        "description": "أعد تعيين كل إعدادات الخادم."
+      },
+      "confirm": {
+        "name": "تأكيد",
+        "description": "اكتب CONFIRM لإعادة التعيين. لا يمكن التراجع."
+      }
+    }
+  },
+  "responses": {
+    "pong": "بونغ!",
+    "pingTitle": "حالة الاتصال",
+    "uptimeTitle": "مدة تشغيل النظام",
+    "helpTitle": "دليل الأوامر",
+    "helpDescription": "كل الأوامر متاحة بلغتك. اختر فئة لتضييق القائمة.",
+    "helpUsage": "الاستخدام",
+    "helpCooldown": "فترة الانتظار",
+    "helpPermissions": "الصلاحيات المطلوبة",
+    "helpCategory": "الفئة",
+    "helpSelectPlaceholder": "اختر فئة",
+    "helpNoCommands": "لا توجد أوامر مسجّلة بعد.",
+    "helpEveryone": "الجميع",
+    "languageTitle": "إعدادات اللغة",
+    "settingsTitle": "إعدادات الخادم",
+    "settingsGuildId": "معرّف الخادم",
+    "settingsPrefix": "الوحدات",
+    "settingsResetDone": "تمت إعادة كل إعدادات هذا الخادم إلى الوضع الافتراضي.",
+    "settingsResetConfirm": "إعادة تعيين كل إعدادات هذا الخادم؟ لا يمكن التراجع.",
+    "modulesLoaded": "الوحدات النشطة",
+    "noModules": "لا توجد وحدات نشطة بعد."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "اضبط رسائل الترحيب والوداع في هذا الخادم.",
+    "options": {
+      "view": {
+        "name": "عرض",
+        "description": "اعرض إعدادات الترحيب الحالية."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "فعّل رسائل الترحيب."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "عطّل رسائل الترحيب."
+      },
+      "channel": {
+        "name": "قناة",
+        "description": "اضبط القناة التي تُرسل إليها رسائل الترحيب.",
+        "options": {
+          "channel": {
+            "name": "قناة",
+            "description": "القناة المطلوبة. اختر none للمسح."
+          }
+        }
+      },
+      "message": {
+        "name": "رسالة",
+        "description": "اضبط قالب رسالة ترحيب مخصص.",
+        "options": {
+          "text": {
+            "name": "نص",
+            "description": "قالب الرسالة. استخدم {user.mention} و {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "اختبار",
+        "description": "أرسل لنفسك رسالة ترحيب تجريبية."
+      },
+      "roles": {
+        "name": "أدوار",
+        "description": "أدر الأدوار الممنوحة عند الانضمام.",
+        "options": {
+          "role": {
+            "name": "دور",
+            "description": "الدور المراد إضافته أو إزالته."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "وداع",
+        "description": "اضبط قالب رسالة وداع مخصص.",
+        "options": {
+          "text": {
+            "name": "نص",
+            "description": "قالب الرسالة. استخدم {user.mention} و {server.name}."
+          }
+        }
+      }
+    }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "تعزيز الخادم: إعلانات، دور المعزّز، اللوحة والسجل.",
+    "options": {
+      "stats": {
+        "name": "إحصائيات",
+        "description": "اعرض إحصائيات التعزيز لهذا الخادم."
+      },
+      "leaderboard": {
+        "name": "اللوحة",
+        "description": "اعرض أقدم المعزّزين."
+      },
+      "history": {
+        "name": "السجل",
+        "description": "اعرض سجل تعزيز أحد الأعضاء.",
+        "options": {
+          "user": {
+            "name": "عضو",
+            "description": "العضو المطلوب."
+          }
+        }
+      },
+      "view": {
+        "name": "عرض",
+        "description": "اعرض إعدادات المعزّزين."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "فعّل إعلانات المعزّزين."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "عطّل إعلانات المعزّزين."
+      },
+      "channel": {
+        "name": "قناة",
+        "description": "اضبط القناة التي تُرسل إليها رسائل المعزّزين.",
+        "options": {
+          "channel": {
+            "name": "قناة",
+            "description": "القناة المطلوبة. اختر none للمسح."
+          }
+        }
+      },
+      "role": {
+        "name": "دور",
+        "description": "اضبط الدور الممنوح أثناء التعزيز.",
+        "options": {
+          "role": {
+            "name": "دور",
+            "description": "الدور المطلوب. اختر none للمسح."
+          }
+        }
+      }
+    }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "إجراءات الإشراف: حظر، طرد، مهلة، تحذير، حذف، قفل والسجل.",
+    "options": {
+      "ban": {
+        "name": "حظر",
+        "description": "حظر عضو من الخادم.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد حظره."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب الحظر."
+          },
+          "delete_days": {
+            "name": "أيام_الحذف",
+            "description": "عدد أيام الرسائل المراد حذفها (0-7)."
+          }
+        }
+      },
+      "unban": {
+        "name": "رفع_الحظر",
+        "description": "رفع الحظر عبر معرّف المستخدم.",
+        "options": {
+          "user_id": {
+            "name": "معرف_المستخدم",
+            "description": "معرّف المستخدم المحظور."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب رفع الحظر."
+          }
+        }
+      },
+      "kick": {
+        "name": "طرد",
+        "description": "إخراج عضو من الخادم.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد طرده."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب الطرد."
+          }
+        }
+      },
+      "timeout": {
+        "name": "مهلة",
+        "description": "منع عضو مؤقتاً من التحدث.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد منحه مهلة."
+          },
+          "duration": {
+            "name": "المدة",
+            "description": "المدة مثل 10m أو 2h أو 1d (بحد أقصى 28d)."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب المهلة."
+          }
+        }
+      },
+      "untimeout": {
+        "name": "رفع_المهلة",
+        "description": "رفع المهلة مبكراً.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد تحريره."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب رفع المهلة."
+          }
+        }
+      },
+      "warn": {
+        "name": "تحذير",
+        "description": "تسجيل تحذير على عضو.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد تحذيره."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "ما الذي فعله."
+          }
+        }
+      },
+      "purge": {
+        "name": "حذف_جماعي",
+        "description": "حذف الرسائل الأخيرة دفعة واحدة.",
+        "options": {
+          "count": {
+            "name": "العدد",
+            "description": "عدد الرسائل المراد حذفها (1-100)."
+          },
+          "user": {
+            "name": "المستخدم",
+            "description": "حذف رسائل هذا العضو فقط."
+          },
+          "channel": {
+            "name": "القناة",
+            "description": "القناة المراد تنظيفها. الافتراضي: الحالية."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب حذف الرسائل."
+          }
+        }
+      },
+      "slowmode": {
+        "name": "إبطاء",
+        "description": "ضبط تأخير الرسائل لكل مستخدم.",
+        "options": {
+          "seconds": {
+            "name": "الثواني",
+            "description": "التأخير بالثواني. 0 لإلغائه."
+          },
+          "channel": {
+            "name": "القناة",
+            "description": "القناة المراد تعديلها. الافتراضي: الحالية."
+          }
+        }
+      },
+      "lock": {
+        "name": "قفل",
+        "description": "منع الجميع من إرسال الرسائل في قناة.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "القناة المراد قفلها. الافتراضي: الحالية."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب قفل القناة."
+          }
+        }
+      },
+      "unlock": {
+        "name": "فتح",
+        "description": "إعادة فتح قناة مقفلة.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "القناة المراد فتحها. الافتراضي: الحالية."
+          },
+          "reason": {
+            "name": "السبب",
+            "description": "سبب إعادة فتح القناة."
+          }
+        }
+      },
+      "history": {
+        "name": "السجل",
+        "description": "عرض سجل إشراف عضو.",
+        "options": {
+          "user": {
+            "name": "المستخدم",
+            "description": "العضو المراد استعلامه. الافتراضي: أنت."
+          }
+        }
+      }
+    }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "ضبط الفحص التلقائي للرسائل.",
+    "options": {
+      "view": {
+        "name": "عرض",
+        "description": "عرض قواعد الإشراف التلقائي الحالية."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "تشغيل الفحص التلقائي."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "إيقاف الفحص التلقائي."
+      },
+      "rule": {
+        "name": "قاعدة",
+        "description": "ضبط قاعدة واحدة للإشراف التلقائي.",
+        "options": {
+          "rule": {
+            "name": "القاعدة",
+            "description": "القاعدة المراد ضبطها."
+          },
+          "enabled": {
+            "name": "مفعلة",
+            "description": "تشغيل أو إيقاف هذه القاعدة."
+          },
+          "action": {
+            "name": "الإجراء",
+            "description": "ما يحدث عند تفعيل القاعدة."
+          },
+          "threshold": {
+            "name": "الحد",
+            "description": "عدد الإصابات قبل اتخاذ إجراء."
+          },
+          "word": {
+            "name": "كلمة",
+            "description": "لقاعدة الكلمات: أضف هذه الكلمة. استهلها بـ - لحذفها."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "استثناء",
+        "description": "استثناء دور من الفحص.",
+        "options": {
+          "role": {
+            "name": "الدور",
+            "description": "الدور المراد استثناءه."
+          },
+          "remove": {
+            "name": "إزالة",
+            "description": "إزالة الاستثناء بدلاً من إضافته."
+          }
+        }
+      },
+      "test": {
+        "name": "اختبار",
+        "description": "فحص ما ستطلقه رسالة تجريبية. لا يُحذف شيء.",
+        "options": {
+          "text": {
+            "name": "النص",
+            "description": "الرسالة المراد اختبارها."
+          }
+        }
+      }
+    }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "غرف صوت مؤقتة تُنشأ عند الانضمام.",
+    "options": {
+      "view": {
+        "name": "عرض",
+        "description": "عرض إعدادات الصوت المؤقت."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "تشغيل الإنشاء عند الانضمام."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "إيقاف الإنشاء عند الانضمام."
+      },
+      "trigger": {
+        "name": "قناة_الإنشاء",
+        "description": "حدد القناة التي تنشئ غرفة عند دخولها.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "قناة الإنشاء. اختر لا شيء للمسح."
+          }
+        }
+      },
+      "category": {
+        "name": "التصنيف",
+        "description": "حدد التصنيف الذي تُنشأ فيه الغرف.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "التصنيف. اختر لا شيء للمسح."
+          }
+        }
+      },
+      "roomname": {
+        "name": "اسم_الغرفة",
+        "description": "حدد قالب اسم الغرفة. العناصر: {user} {number}",
+        "options": {
+          "template": {
+            "name": "القالب",
+            "description": "القالب، مثل غرفة {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "الحد_الافتراضي",
+        "description": "حدد حد الأعضاء الافتراضي للغرف الجديدة.",
+        "options": {
+          "limit": {
+            "name": "الحد",
+            "description": "0 يعني بلا حد."
+          }
+        }
+      },
+      "privacy": {
+        "name": "الخصوصية",
+        "description": "اختر ما إذا كانت الغرف الجديدة تبدأ مخفية.",
+        "options": {
+          "private": {
+            "name": "خاصة",
+            "description": "True لإخفاء الغرف الجديدة."
+          }
+        }
+      },
+      "grace": {
+        "name": "المهلة",
+        "description": "كم تبقى الغرفة الفارغة قبل حذفها.",
+        "options": {
+          "seconds": {
+            "name": "الثواني",
+            "description": "ثواني الانتظار. 0 يحذف فوراً."
+          }
+        }
+      },
+      "rename": {
+        "name": "إعادة_تسمية",
+        "description": "أعد تسمية غرفتك المؤقتة.",
+        "options": {
+          "name": {
+            "name": "الاسم",
+            "description": "الاسم الجديد."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "حد_الغرفة",
+        "description": "غيّر حد أعضاء غرفتك المؤقتة.",
+        "options": {
+          "limit": {
+            "name": "الحد",
+            "description": "0 يعني بلا حد."
+          }
+        }
+      },
+      "lock": {
+        "name": "قفل",
+        "description": "امنع الآخرين من دخول غرفتك المؤقتة."
+      },
+      "unlock": {
+        "name": "فتح",
+        "description": "اسمح للآخرين بالدخول مجدداً."
+      },
+      "transfer": {
+        "name": "نقل",
+        "description": "امنح غرفتك المؤقتة لعضو آخر داخلها.",
+        "options": {
+          "user": {
+            "name": "العضو",
+            "description": "المالك الجديد."
+          }
+        }
+      }
+    }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "تذاكر الدعم: افتح واحدة أو أدر النظام.",
+    "options": {
+      "open": {
+        "name": "فتح",
+        "description": "فتح تذكرة جديدة.",
+        "options": {
+          "subject": {
+            "name": "الموضوع",
+            "description": "بماذا تحتاج المساعدة."
+          },
+          "category": {
+            "name": "التصنيف",
+            "description": "نوع التذكرة."
+          }
+        }
+      },
+      "close": {
+        "name": "إغلاق",
+        "description": "إغلاق هذه التذكرة.",
+        "options": {
+          "reason": {
+            "name": "السبب",
+            "description": "سبب الإغلاق."
+          }
+        }
+      },
+      "claim": {
+        "name": "استلام",
+        "description": "تولَّ هذه التذكرة كي لا يجيب عليها أحد غيرك."
+      },
+      "add": {
+        "name": "إضافة",
+        "description": "إضافة عضو إلى هذه التذكرة.",
+        "options": {
+          "user": {
+            "name": "العضو",
+            "description": "العضو المراد إضافته."
+          }
+        }
+      },
+      "priority": {
+        "name": "الأولوية",
+        "description": "ضبط أولوية هذه التذكرة.",
+        "options": {
+          "level": {
+            "name": "المستوى",
+            "description": "مدى الاستعجال."
+          }
+        }
+      },
+      "stats": {
+        "name": "الإحصاءات",
+        "description": "عرض إحصاءات التذاكر في هذا الخادم."
+      },
+      "view": {
+        "name": "عرض",
+        "description": "عرض إعدادات التذاكر."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "تشغيل نظام التذاكر."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "إيقاف نظام التذاكر."
+      },
+      "panel": {
+        "name": "اللوحة",
+        "description": "نشر لوحة التذاكر في قناة.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "أين تُنشر. الافتراضي: هذه القناة."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "دور_الفريق",
+        "description": "حدد الدور الذي يمكنه رؤية التذاكر والرد عليها.",
+        "options": {
+          "role": {
+            "name": "الدور",
+            "description": "دور الفريق. اختر لا شيء للمسح."
+          }
+        }
+      },
+      "transcript": {
+        "name": "النسخة",
+        "description": "حدد أين تُنشر نسخ التذاكر المغلقة.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "قناة النسخ. اختر لا شيء للمسح."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "الانتظار",
+        "description": "حدد مدة انتظار العضو بين التذاكر.",
+        "options": {
+          "seconds": {
+            "name": "الثواني",
+            "description": "ثوانٍ. 0 يلغي الانتظار."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "أقصى_مفتوح",
+        "description": "حدد عدد التذاكر المفتوحة المسموح بها للعضو.",
+        "options": {
+          "count": {
+            "name": "العدد",
+            "description": "عدد التذاكر."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,684 @@
+{
+  "ping": {
+    "name": "ぴんぐ",
+    "description": "ボット、ゲートウェイ、データベースの遅延を確認します。"
+  },
+  "uptime": {
+    "name": "かどうじかん",
+    "description": "xXx Family の稼働時間を表示します。"
+  },
+  "help": {
+    "name": "へるぷ",
+    "description": "すべてのコマンド、または特定のコマンドの詳細を表示します。",
+    "options": {
+      "command": {
+        "name": "こまんど",
+        "description": "詳細を見たいコマンド。"
+      }
+    }
+  },
+  "language": {
+    "name": "げんご",
+    "description": "自分の言語やサーバーの言語を管理します。",
+    "options": {
+      "set": {
+        "name": "せってい",
+        "description": "個人の言語を設定します。"
+      },
+      "list": {
+        "name": "いちらん",
+        "description": "利用可能な言語を一覧表示します。"
+      },
+      "reset": {
+        "name": "りせっと",
+        "description": "個人の言語をリセットします。"
+      },
+      "server": {
+        "name": "さーばー",
+        "description": "サーバーの既定言語を設定します。"
+      },
+      "user": {
+        "name": "ゆーざー",
+        "description": "あなたに適用されている言語を表示します。"
+      },
+      "language": {
+        "name": "げんご",
+        "description": "使用する言語。"
+      }
+    }
+  },
+  "settings": {
+    "name": "せっていかんり",
+    "description": "このサーバーの xXx Family 設定を表示・リセットします。",
+    "options": {
+      "view": {
+        "name": "ひょうじ",
+        "description": "このサーバーの設定を表示します。"
+      },
+      "reset": {
+        "name": "りせっと",
+        "description": "サーバーの全設定を初期化します。"
+      },
+      "confirm": {
+        "name": "かくにん",
+        "description": "CONFIRM と入力して初期化します。元に戻せません。"
+      }
+    }
+  },
+  "responses": {
+    "pong": "ポン！",
+    "pingTitle": "接続状態",
+    "uptimeTitle": "システムの稼働時間",
+    "helpTitle": "コマンド一覧",
+    "helpDescription": "すべてのコマンドはあなたの言語で利用できます。カテゴリを選ぶと絞り込めます。",
+    "helpUsage": "使い方",
+    "helpCooldown": "クールダウン",
+    "helpPermissions": "必要な権限",
+    "helpCategory": "カテゴリ",
+    "helpSelectPlaceholder": "カテゴリを選択",
+    "helpNoCommands": "登録されているコマンドはまだありません。",
+    "helpEveryone": "全員",
+    "languageTitle": "言語設定",
+    "settingsTitle": "サーバー設定",
+    "settingsGuildId": "サーバーID",
+    "settingsPrefix": "モジュール",
+    "settingsResetDone": "このサーバーの設定をすべて初期値に戻しました。",
+    "settingsResetConfirm": "このサーバーの設定をすべて初期化しますか？元に戻せません。",
+    "modulesLoaded": "有効なモジュール",
+    "noModules": "有効なモジュールはまだありません。"
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "このサーバーのウェルカム・グッバイメッセージを設定します。",
+    "options": {
+      "view": {
+        "name": "ひょうじ",
+        "description": "現在のウェルカム設定を表示します。"
+      },
+      "enable": {
+        "name": "ゆうこうか",
+        "description": "ウェルカムメッセージをオンにします。"
+      },
+      "disable": {
+        "name": "むこうか",
+        "description": "ウェルカムメッセージをオフにします。"
+      },
+      "channel": {
+        "name": "チャンネル",
+        "description": "ウェルカムメッセージの送信先を設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "使用するチャンネル。none で解除します。"
+          }
+        }
+      },
+      "message": {
+        "name": "メッセージ",
+        "description": "カスタムのウェルカム文を設定します。",
+        "options": {
+          "text": {
+            "name": "テキスト",
+            "description": "文のテンプレート。{user.mention} と {server.name} が使えます。"
+          }
+        }
+      },
+      "test": {
+        "name": "テスト",
+        "description": "あなたにテスト用メッセージを送信します。"
+      },
+      "roles": {
+        "name": "ロール",
+        "description": "参加時に付与するロールを管理します。",
+        "options": {
+          "role": {
+            "name": "ロール",
+            "description": "追加・削除するロール。"
+          }
+        }
+      },
+      "goodbye": {
+        "name": "グッバイ",
+        "description": "カスタムのグッバイ文を設定します。",
+        "options": {
+          "text": {
+            "name": "テキスト",
+            "description": "文のテンプレート。{user.mention} と {server.name} が使えます。"
+          }
+        }
+      }
+    }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "サーバーブースト: 通知、ブースターロール、ランキング、履歴。",
+    "options": {
+      "stats": {
+        "name": "とうけい",
+        "description": "このサーバーのブースト統計を表示します。"
+      },
+      "leaderboard": {
+        "name": "ランキング",
+        "description": "最も長くブーストしている人を表示します。"
+      },
+      "history": {
+        "name": "りれき",
+        "description": "メンバーのブースト履歴を表示します。",
+        "options": {
+          "user": {
+            "name": "メンバー",
+            "description": "調べるメンバー。"
+          }
+        }
+      },
+      "view": {
+        "name": "ひょうじ",
+        "description": "ブースター設定を表示します。"
+      },
+      "enable": {
+        "name": "ゆうこうか",
+        "description": "ブースター通知をオンにします。"
+      },
+      "disable": {
+        "name": "むこうか",
+        "description": "ブースター通知をオフにします。"
+      },
+      "channel": {
+        "name": "チャンネル",
+        "description": "ブースターメッセージの送信先を設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "使用するチャンネル。none で解除します。"
+          }
+        }
+      },
+      "role": {
+        "name": "ロール",
+        "description": "ブースト中に付与するロールを設定します。",
+        "options": {
+          "role": {
+            "name": "ロール",
+            "description": "使用するロール。none で解除します。"
+          }
+        }
+      }
+    }
+  },
+  "mod": {
+    "name": "mod",
+    "description": "モデレーション操作：BAN、キック、タイムアウト、警告、削除、ロック、履歴。",
+    "options": {
+      "ban": {
+        "name": "ban",
+        "description": "メンバーをサーバーから BAN します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "BAN するメンバー。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "BAN の理由。"
+          },
+          "delete_days": {
+            "name": "削除日数",
+            "description": "削除するメッセージの日数（0〜7）。"
+          }
+        }
+      },
+      "unban": {
+        "name": "ban解除",
+        "description": "ユーザー ID で BAN を解除します。",
+        "options": {
+          "user_id": {
+            "name": "ユーザー番号",
+            "description": "BAN されたユーザーの ID。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "BAN 解除の理由。"
+          }
+        }
+      },
+      "kick": {
+        "name": "キック",
+        "description": "メンバーをサーバーから退出させます。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "キックするメンバー。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "キックの理由。"
+          }
+        }
+      },
+      "timeout": {
+        "name": "タイムアウト",
+        "description": "メンバーの発言を一時的に制限します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "タイムアウトするメンバー。"
+          },
+          "duration": {
+            "name": "期間",
+            "description": "期間（例：10m、2h、1d、最大28d）。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "タイムアウトの理由。"
+          }
+        }
+      },
+      "untimeout": {
+        "name": "タイムアウト解除",
+        "description": "タイムアウトを早期に解除します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "解除するメンバー。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "タイムアウト解除の理由。"
+          }
+        }
+      },
+      "warn": {
+        "name": "警告",
+        "description": "メンバーに警告を記録します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "警告するメンバー。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "何をしたか。"
+          }
+        }
+      },
+      "purge": {
+        "name": "一括削除",
+        "description": "直近のメッセージを一括削除します。",
+        "options": {
+          "count": {
+            "name": "件数",
+            "description": "削除する件数（1〜100）。"
+          },
+          "user": {
+            "name": "ユーザー",
+            "description": "このメンバーのメッセージのみ削除。"
+          },
+          "channel": {
+            "name": "チャンネル",
+            "description": "削除するチャンネル。既定は現在地。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "メッセージを削除する理由。"
+          }
+        }
+      },
+      "slowmode": {
+        "name": "スローモード",
+        "description": "ユーザーごとの送信間隔を設定します。",
+        "options": {
+          "seconds": {
+            "name": "秒",
+            "description": "秒単位の間隔。0 で解除。"
+          },
+          "channel": {
+            "name": "チャンネル",
+            "description": "変更するチャンネル。既定は現在地。"
+          }
+        }
+      },
+      "lock": {
+        "name": "ロック",
+        "description": "チャンネルの全員発言を停止します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "ロックするチャンネル。既定は現在地。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "チャンネルをロックする理由。"
+          }
+        }
+      },
+      "unlock": {
+        "name": "ロック解除",
+        "description": "ロックされたチャンネルを再開します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "解除するチャンネル。既定は現在地。"
+          },
+          "reason": {
+            "name": "理由",
+            "description": "チャンネルを再開する理由。"
+          }
+        }
+      },
+      "history": {
+        "name": "履歴",
+        "description": "メンバーのモデレーション履歴を表示します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "表示するメンバー。既定はあなた。"
+          }
+        }
+      }
+    }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "自動メッセージ検査を設定します。",
+    "options": {
+      "view": {
+        "name": "表示",
+        "description": "現在のオートモッドルールを表示します。"
+      },
+      "enable": {
+        "name": "有効化",
+        "description": "自動検査をオンにします。"
+      },
+      "disable": {
+        "name": "無効化",
+        "description": "自動検査をオフにします。"
+      },
+      "rule": {
+        "name": "ルール",
+        "description": "オートモッドのルールを1つ設定します。",
+        "options": {
+          "rule": {
+            "name": "ルール",
+            "description": "設定するルール。"
+          },
+          "enabled": {
+            "name": "有効",
+            "description": "このルールをオンまたはオフにします。"
+          },
+          "action": {
+            "name": "アクション",
+            "description": "ルールが発動したときの処理。"
+          },
+          "threshold": {
+            "name": "しきい値",
+            "description": "反応するまでの命中回数。"
+          },
+          "word": {
+            "name": "単語",
+            "description": "単語ルール用：この単語を追加します。先頭に - を付けると削除します。"
+          }
+        }
+      },
+      "whitelist": {
+        "name": "除外",
+        "description": "ロールを検査から除外します。",
+        "options": {
+          "role": {
+            "name": "ロール",
+            "description": "除外するロール。"
+          },
+          "remove": {
+            "name": "解除",
+            "description": "追加ではなく除外を解除します。"
+          }
+        }
+      },
+      "test": {
+        "name": "テスト",
+        "description": "例のメッセージが何を発動するか確認します。削除はされません。",
+        "options": {
+          "text": {
+            "name": "テキスト",
+            "description": "テストするメッセージ。"
+          }
+        }
+      }
+    }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "参加すると作成される一時ボイスルーム。",
+    "options": {
+      "view": {
+        "name": "表示",
+        "description": "一時ボイスの設定を表示します。"
+      },
+      "enable": {
+        "name": "有効化",
+        "description": "参加時作成をオンにします。"
+      },
+      "disable": {
+        "name": "無効化",
+        "description": "参加時作成をオフにします。"
+      },
+      "trigger": {
+        "name": "トリガー",
+        "description": "入室で作成されるチャンネルを設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "トリガーチャンネル。なしで解除。"
+          }
+        }
+      },
+      "category": {
+        "name": "カテゴリ",
+        "description": "新規ルームを作成するカテゴリを設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "カテゴリ。なしで解除。"
+          }
+        }
+      },
+      "roomname": {
+        "name": "ルーム名",
+        "description": "ルーム名のテンプレートを設定します。{user} {number}",
+        "options": {
+          "template": {
+            "name": "テンプレート",
+            "description": "テンプレート（例：{user} のルーム）"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "既定の上限",
+        "description": "新規ルームの既定の人数上限を設定します。",
+        "options": {
+          "limit": {
+            "name": "上限",
+            "description": "0 で無制限。"
+          }
+        }
+      },
+      "privacy": {
+        "name": "公開設定",
+        "description": "新規ルームを非公開にするか選びます。",
+        "options": {
+          "private": {
+            "name": "非公開",
+            "description": "True で新規ルームを隠します。"
+          }
+        }
+      },
+      "grace": {
+        "name": "猶予",
+        "description": "空のルームが削除されるまでの時間。",
+        "options": {
+          "seconds": {
+            "name": "秒",
+            "description": "待機秒数。0 で即削除。"
+          }
+        }
+      },
+      "rename": {
+        "name": "名前変更",
+        "description": "自分の一時ルームの名前を変更します。",
+        "options": {
+          "name": {
+            "name": "名前",
+            "description": "新しい名前。"
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "ルーム上限",
+        "description": "自分の一時ルームの人数上限を変更します。",
+        "options": {
+          "limit": {
+            "name": "上限",
+            "description": "0 で無制限。"
+          }
+        }
+      },
+      "lock": {
+        "name": "ロック",
+        "description": "他の人が自分のルームに入るのを防ぎます。"
+      },
+      "unlock": {
+        "name": "ロック解除",
+        "description": "他の人が再び入れるようにします。"
+      },
+      "transfer": {
+        "name": "譲渡",
+        "description": "自分の一時ルームを別のメンバーに渡します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "新しい所有者。"
+          }
+        }
+      }
+    }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "サポートチケット：開く、またはシステムを管理します。",
+    "options": {
+      "open": {
+        "name": "開く",
+        "description": "新しいチケットを開きます。",
+        "options": {
+          "subject": {
+            "name": "件名",
+            "description": "必要な支援の内容。"
+          },
+          "category": {
+            "name": "カテゴリ",
+            "description": "チケットの種類。"
+          }
+        }
+      },
+      "close": {
+        "name": "閉じる",
+        "description": "このチケットを閉じます。",
+        "options": {
+          "reason": {
+            "name": "理由",
+            "description": "閉じる理由。"
+          }
+        }
+      },
+      "claim": {
+        "name": "担当",
+        "description": "他の人が対応しないようこのチケットを担当します。"
+      },
+      "add": {
+        "name": "追加",
+        "description": "このチケットにメンバーを追加します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "追加するメンバー。"
+          }
+        }
+      },
+      "priority": {
+        "name": "優先度",
+        "description": "このチケットの優先度を設定します。",
+        "options": {
+          "level": {
+            "name": "レベル",
+            "description": "緊急度。"
+          }
+        }
+      },
+      "stats": {
+        "name": "統計",
+        "description": "このサーバーのチケット統計を表示します。"
+      },
+      "view": {
+        "name": "表示",
+        "description": "チケット設定を表示します。"
+      },
+      "enable": {
+        "name": "有効化",
+        "description": "チケット機能をオンにします。"
+      },
+      "disable": {
+        "name": "無効化",
+        "description": "チケット機能をオフにします。"
+      },
+      "panel": {
+        "name": "パネル",
+        "description": "チャンネルにチケットパネルを投稿します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "投稿先。既定は現在地。"
+          }
+        }
+      },
+      "staffrole": {
+        "name": "スタッフロール",
+        "description": "チケットを閲覧・対応できるロールを設定します。",
+        "options": {
+          "role": {
+            "name": "ロール",
+            "description": "スタッフロール。なしで解除。"
+          }
+        }
+      },
+      "transcript": {
+        "name": "記録",
+        "description": "閉じたチケットの記録の投稿先を設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "記録チャンネル。なしで解除。"
+          }
+        }
+      },
+      "cooldown": {
+        "name": "クールダウン",
+        "description": "チケットを開く間隔を設定します。",
+        "options": {
+          "seconds": {
+            "name": "秒",
+            "description": "秒。0 で待機なし。"
+          }
+        }
+      },
+      "maxopen": {
+        "name": "最大件数",
+        "description": "1人が開いておけるチケット数を設定します。",
+        "options": {
+          "count": {
+            "name": "件数",
+            "description": "チケット数。"
+          }
+        }
+      }
+    }
+  }
+}

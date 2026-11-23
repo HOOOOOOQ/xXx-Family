@@ -1,0 +1,27 @@
+{
+  "buttons": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "close": "Close",
+    "refresh": "Refresh",
+    "next": "Next",
+    "previous": "Back",
+    "support": "Support server",
+    "invite": "Invite xXx Family",
+    "dashboard": "Open dashboard",
+    "dismiss": "Dismiss"
+  },
+  "selects": {
+    "languagePlaceholder": "Select a language",
+    "categoryPlaceholder": "Select a category"
+  },
+  "modals": {
+    "feedbackTitle": "Send feedback",
+    "feedbackLabel": "Your message",
+    "feedbackPlaceholder": "Write your feedback here…"
+  },
+  "menu": {
+    "back": "Back to menu",
+    "home": "Main menu"
+  }
+}

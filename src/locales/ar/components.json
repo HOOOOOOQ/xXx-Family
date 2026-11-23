@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "confirm": "تأكيد",
+    "cancel": "إلغاء",
+    "close": "إغلاق",
+    "refresh": "تحديث",
+    "next": "التالي",
+    "previous": "السابق",
+    "support": "خادم الدعم",
+    "invite": "أضف xXx Family",
+    "dashboard": "فتح لوحة التحكم",
+    "dismiss": "تجاهل"
+  },
+  "selects": { "languagePlaceholder": "اختر لغة", "categoryPlaceholder": "اختر فئة" },
+  "modals": {
+    "feedbackTitle": "أرسل ملاحظاتك",
+    "feedbackLabel": "رسالتك",
+    "feedbackPlaceholder": "اكتب ملاحظاتك هنا…"
+  },
+  "menu": { "back": "العودة إلى القائمة", "home": "القائمة الرئيسية" }
+}
