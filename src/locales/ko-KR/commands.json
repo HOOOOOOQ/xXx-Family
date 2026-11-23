@@ -444,5 +444,121 @@
         }
       }
     }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "참여 시 만들어지는 임시 음성 방.",
+    "options": {
+      "view": {
+        "name": "보기",
+        "description": "임시 음성 설정을 표시합니다."
+      },
+      "enable": {
+        "name": "켜기",
+        "description": "참여 시 생성을 켭니다."
+      },
+      "disable": {
+        "name": "끄기",
+        "description": "참여 시 생성을 끕니다."
+      },
+      "trigger": {
+        "name": "생성채널",
+        "description": "참여하면 방을 만드는 채널을 설정합니다.",
+        "options": {
+          "channel": {
+            "name": "채널",
+            "description": "생성 채널. 없음으로 해제."
+          }
+        }
+      },
+      "category": {
+        "name": "카테고리",
+        "description": "새 방이 만들어질 카테고리를 설정합니다.",
+        "options": {
+          "channel": {
+            "name": "채널",
+            "description": "카테고리. 없음으로 해제."
+          }
+        }
+      },
+      "roomname": {
+        "name": "방이름",
+        "description": "방 이름 템플릿을 설정합니다. {user} {number}",
+        "options": {
+          "template": {
+            "name": "템플릿",
+            "description": "템플릿 예: {user}의 방"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "기본인원",
+        "description": "새 방의 기본 인원 제한을 설정합니다.",
+        "options": {
+          "limit": {
+            "name": "인원",
+            "description": "0이면 무제한."
+          }
+        }
+      },
+      "privacy": {
+        "name": "공개설정",
+        "description": "새 방을 숨긴 상태로 시작할지 선택합니다.",
+        "options": {
+          "private": {
+            "name": "비공개",
+            "description": "True면 새 방을 숨깁니다."
+          }
+        }
+      },
+      "grace": {
+        "name": "유예",
+        "description": "빈 방이 삭제되기까지의 시간.",
+        "options": {
+          "seconds": {
+            "name": "초",
+            "description": "대기 초. 0이면 즉시 삭제."
+          }
+        }
+      },
+      "rename": {
+        "name": "이름변경",
+        "description": "내 임시 방의 이름을 바꿉니다.",
+        "options": {
+          "name": {
+            "name": "이름",
+            "description": "새 이름."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "방인원",
+        "description": "내 임시 방의 인원 제한을 바꿉니다.",
+        "options": {
+          "limit": {
+            "name": "인원",
+            "description": "0이면 무제한."
+          }
+        }
+      },
+      "lock": {
+        "name": "잠금",
+        "description": "다른 사람이 내 방에 들어오지 못하게 합니다."
+      },
+      "unlock": {
+        "name": "잠금해제",
+        "description": "다른 사람이 다시 들어올 수 있게 합니다."
+      },
+      "transfer": {
+        "name": "양도",
+        "description": "내 임시 방을 안의 다른 멤버에게 넘깁니다.",
+        "options": {
+          "user": {
+            "name": "사용자",
+            "description": "새 소유자."
+          }
+        }
+      }
+    }
   }
 }

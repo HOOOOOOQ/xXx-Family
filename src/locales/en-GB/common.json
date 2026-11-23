@@ -270,5 +270,37 @@
       "whitelist": "Whitelisted roles",
       "noWhitelist": "None"
     }
+  },
+  "tempVoice": {
+    "title": "Temporary voice",
+    "status": "Status",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "trigger": "Trigger channel",
+    "category": "Category",
+    "roomName": "Room name",
+    "userLimit": "Member limit",
+    "privacy": "Privacy",
+    "private": "Private",
+    "open": "Open",
+    "startLocked": "Starts locked",
+    "grace": "Empty grace",
+    "maxOwned": "Max rooms per member",
+    "notSet": "Not set",
+    "unlimited": "Unlimited",
+    "placeholders": "Placeholders",
+    "saved": "Saved",
+    "preview": "Preview",
+    "done": "Done",
+    "errors": {
+      "notTempRoom": "That is not a temporary voice room.",
+      "notOwner": "Only the room owner can do that.",
+      "emptyName": "The room name cannot be empty.",
+      "invalidLimit": "The limit must be between 0 and 99.",
+      "missingChannel": "That voice channel no longer exists.",
+      "notInRoom": "That member is not in your room.",
+      "discordRejected": "Discord rejected that change.",
+      "unknown": "That change could not be made."
+    }
   }
 }

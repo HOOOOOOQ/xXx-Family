@@ -16,6 +16,7 @@
 import { Events } from 'discord.js';
 
 import { COLORS } from '../../config/constants.js';
+import { getLogger } from '../../utils/logger.js';
 import { safeLog } from './_logHelper.js';
 
 /**
@@ -46,6 +47,28 @@ export default {
 
     const guild = newState.guild ?? oldState.guild;
     if (!guild) return;
+
+    // Temporary voice runs first and is guarded separately: it must not be
+    // suppressed by a logging failure, and its own failure must not stop voice
+    // logs from being written.
+    if (client.tempVoice) {
+      try {
+        await client.tempVoice.handleVoiceUpdate(
+          newState.member ?? oldState.member,
+          oldState.channelId,
+          newState.channelId,
+          guild,
+        );
+      } catch (err) {
+        getLogger()
+          .child('tempvoice')
+          .errorFrom(err, 'Temporary voice handling failed', {
+            guildId: guild.id,
+            userId: newState.member?.id ?? oldState.member?.id,
+          });
+        client.metrics?.increment?.('tempvoice.errors');
+      }
+    }
 
     await safeLog(client, 'voiceStateUpdate', async () => {
       // Ignore our own voice presence — the music module joins channels too,

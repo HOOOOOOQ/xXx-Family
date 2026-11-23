@@ -22,6 +22,8 @@ import BoosterConfig from './BoosterConfig.js';
 import BoosterRecord from './BoosterRecord.js';
 import ModerationCase from './ModerationCase.js';
 import Counter from './Counter.js';
+import TempVoiceConfig from './TempVoiceConfig.js';
+import TemporaryVoice from './TemporaryVoice.js';
 
 export const models = {
   GuildSettings,
@@ -34,13 +36,14 @@ export const models = {
   BoosterRecord,
   ModerationCase,
   Counter,
+  TempVoiceConfig,
+  TemporaryVoice,
 };
 
 /** Collections planned for later phases (declared so the roadmap is explicit). */
 export const PLANNED_MODELS = Object.freeze([
   'MemberProfile',
   'MemberCard',
-  'TemporaryVoice',
   'Ticket',
   'TicketMessage',
   'AnonymousSubmission',
@@ -72,8 +75,11 @@ export {
   BoosterRecord,
   ModerationCase,
   Counter,
+  TempVoiceConfig,
+  TemporaryVoice,
 };
 export { CASE_TYPES, TEMPORARY_TYPES } from './ModerationCase.js';
 export { COUNTER_SCOPES } from './Counter.js';
+export { DEFAULT_TEMPVOICE_CONFIG, toEffective as toEffectiveTempVoice } from './TempVoiceConfig.js';
 export { AUDIT_TYPES } from './AuditLog.js';
 export default models;

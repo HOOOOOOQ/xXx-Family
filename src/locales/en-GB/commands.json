@@ -444,5 +444,121 @@
         }
       }
     }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Join-to-create temporary voice rooms.",
+    "options": {
+      "view": {
+        "name": "view",
+        "description": "Show the temporary voice configuration."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn join-to-create on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn join-to-create off."
+      },
+      "trigger": {
+        "name": "trigger",
+        "description": "Set the channel that creates a room when joined.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The trigger channel. Choose none to clear."
+          }
+        }
+      },
+      "category": {
+        "name": "category",
+        "description": "Set the category new rooms are created in.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The category. Choose none to clear."
+          }
+        }
+      },
+      "roomname": {
+        "name": "roomname",
+        "description": "Set the room name template. Placeholders: {user} {number}",
+        "options": {
+          "template": {
+            "name": "template",
+            "description": "The template, e.g. {user}'s room"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "defaultlimit",
+        "description": "Set the default member limit for new rooms.",
+        "options": {
+          "limit": {
+            "name": "limit",
+            "description": "0 for unlimited."
+          }
+        }
+      },
+      "privacy": {
+        "name": "privacy",
+        "description": "Choose whether new rooms start hidden.",
+        "options": {
+          "private": {
+            "name": "private",
+            "description": "True to hide new rooms."
+          }
+        }
+      },
+      "grace": {
+        "name": "grace",
+        "description": "How long an empty room survives before deletion.",
+        "options": {
+          "seconds": {
+            "name": "seconds",
+            "description": "Seconds to wait. 0 deletes immediately."
+          }
+        }
+      },
+      "rename": {
+        "name": "rename",
+        "description": "Rename your temporary room.",
+        "options": {
+          "name": {
+            "name": "name",
+            "description": "The new name."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "roomlimit",
+        "description": "Change the member limit of your temporary room.",
+        "options": {
+          "limit": {
+            "name": "limit",
+            "description": "0 for unlimited."
+          }
+        }
+      },
+      "lock": {
+        "name": "lock",
+        "description": "Stop others from joining your temporary room."
+      },
+      "unlock": {
+        "name": "unlock",
+        "description": "Let others join your temporary room again."
+      },
+      "transfer": {
+        "name": "transfer",
+        "description": "Give your temporary room to another member in it.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The new owner."
+          }
+        }
+      }
+    }
   }
 }

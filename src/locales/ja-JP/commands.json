@@ -444,5 +444,121 @@
         }
       }
     }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "参加すると作成される一時ボイスルーム。",
+    "options": {
+      "view": {
+        "name": "表示",
+        "description": "一時ボイスの設定を表示します。"
+      },
+      "enable": {
+        "name": "有効化",
+        "description": "参加時作成をオンにします。"
+      },
+      "disable": {
+        "name": "無効化",
+        "description": "参加時作成をオフにします。"
+      },
+      "trigger": {
+        "name": "トリガー",
+        "description": "入室で作成されるチャンネルを設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "トリガーチャンネル。なしで解除。"
+          }
+        }
+      },
+      "category": {
+        "name": "カテゴリ",
+        "description": "新規ルームを作成するカテゴリを設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "カテゴリ。なしで解除。"
+          }
+        }
+      },
+      "roomname": {
+        "name": "ルーム名",
+        "description": "ルーム名のテンプレートを設定します。{user} {number}",
+        "options": {
+          "template": {
+            "name": "テンプレート",
+            "description": "テンプレート（例：{user} のルーム）"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "既定の上限",
+        "description": "新規ルームの既定の人数上限を設定します。",
+        "options": {
+          "limit": {
+            "name": "上限",
+            "description": "0 で無制限。"
+          }
+        }
+      },
+      "privacy": {
+        "name": "公開設定",
+        "description": "新規ルームを非公開にするか選びます。",
+        "options": {
+          "private": {
+            "name": "非公開",
+            "description": "True で新規ルームを隠します。"
+          }
+        }
+      },
+      "grace": {
+        "name": "猶予",
+        "description": "空のルームが削除されるまでの時間。",
+        "options": {
+          "seconds": {
+            "name": "秒",
+            "description": "待機秒数。0 で即削除。"
+          }
+        }
+      },
+      "rename": {
+        "name": "名前変更",
+        "description": "自分の一時ルームの名前を変更します。",
+        "options": {
+          "name": {
+            "name": "名前",
+            "description": "新しい名前。"
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "ルーム上限",
+        "description": "自分の一時ルームの人数上限を変更します。",
+        "options": {
+          "limit": {
+            "name": "上限",
+            "description": "0 で無制限。"
+          }
+        }
+      },
+      "lock": {
+        "name": "ロック",
+        "description": "他の人が自分のルームに入るのを防ぎます。"
+      },
+      "unlock": {
+        "name": "ロック解除",
+        "description": "他の人が再び入れるようにします。"
+      },
+      "transfer": {
+        "name": "譲渡",
+        "description": "自分の一時ルームを別のメンバーに渡します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "新しい所有者。"
+          }
+        }
+      }
+    }
   }
 }

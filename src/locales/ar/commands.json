@@ -444,5 +444,121 @@
         }
       }
     }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "غرف صوت مؤقتة تُنشأ عند الانضمام.",
+    "options": {
+      "view": {
+        "name": "عرض",
+        "description": "عرض إعدادات الصوت المؤقت."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "تشغيل الإنشاء عند الانضمام."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "إيقاف الإنشاء عند الانضمام."
+      },
+      "trigger": {
+        "name": "قناة_الإنشاء",
+        "description": "حدد القناة التي تنشئ غرفة عند دخولها.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "قناة الإنشاء. اختر لا شيء للمسح."
+          }
+        }
+      },
+      "category": {
+        "name": "التصنيف",
+        "description": "حدد التصنيف الذي تُنشأ فيه الغرف.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "التصنيف. اختر لا شيء للمسح."
+          }
+        }
+      },
+      "roomname": {
+        "name": "اسم_الغرفة",
+        "description": "حدد قالب اسم الغرفة. العناصر: {user} {number}",
+        "options": {
+          "template": {
+            "name": "القالب",
+            "description": "القالب، مثل غرفة {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "الحد_الافتراضي",
+        "description": "حدد حد الأعضاء الافتراضي للغرف الجديدة.",
+        "options": {
+          "limit": {
+            "name": "الحد",
+            "description": "0 يعني بلا حد."
+          }
+        }
+      },
+      "privacy": {
+        "name": "الخصوصية",
+        "description": "اختر ما إذا كانت الغرف الجديدة تبدأ مخفية.",
+        "options": {
+          "private": {
+            "name": "خاصة",
+            "description": "True لإخفاء الغرف الجديدة."
+          }
+        }
+      },
+      "grace": {
+        "name": "المهلة",
+        "description": "كم تبقى الغرفة الفارغة قبل حذفها.",
+        "options": {
+          "seconds": {
+            "name": "الثواني",
+            "description": "ثواني الانتظار. 0 يحذف فوراً."
+          }
+        }
+      },
+      "rename": {
+        "name": "إعادة_تسمية",
+        "description": "أعد تسمية غرفتك المؤقتة.",
+        "options": {
+          "name": {
+            "name": "الاسم",
+            "description": "الاسم الجديد."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "حد_الغرفة",
+        "description": "غيّر حد أعضاء غرفتك المؤقتة.",
+        "options": {
+          "limit": {
+            "name": "الحد",
+            "description": "0 يعني بلا حد."
+          }
+        }
+      },
+      "lock": {
+        "name": "قفل",
+        "description": "امنع الآخرين من دخول غرفتك المؤقتة."
+      },
+      "unlock": {
+        "name": "فتح",
+        "description": "اسمح للآخرين بالدخول مجدداً."
+      },
+      "transfer": {
+        "name": "نقل",
+        "description": "امنح غرفتك المؤقتة لعضو آخر داخلها.",
+        "options": {
+          "user": {
+            "name": "العضو",
+            "description": "المالك الجديد."
+          }
+        }
+      }
+    }
   }
 }

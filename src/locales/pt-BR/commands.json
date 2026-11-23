@@ -444,5 +444,121 @@
         }
       }
     }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Salas de voz temporárias ao entrar.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostrar a configuração de voz temporária."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativar a criação ao entrar."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativar a criação ao entrar."
+      },
+      "trigger": {
+        "name": "gatilho",
+        "description": "Defina o canal que cria uma sala ao entrar.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal gatilho. Escolha nenhum para limpar."
+          }
+        }
+      },
+      "category": {
+        "name": "categoria",
+        "description": "Defina a categoria onde as salas são criadas.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "A categoria. Escolha nenhuma para limpar."
+          }
+        }
+      },
+      "roomname": {
+        "name": "nome_sala",
+        "description": "Defina o modelo do nome. Marcadores: {user} {number}",
+        "options": {
+          "template": {
+            "name": "modelo",
+            "description": "O modelo, ex. sala de {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "limite_padrao",
+        "description": "Defina o limite padrão de membros.",
+        "options": {
+          "limit": {
+            "name": "limite",
+            "description": "0 para ilimitado."
+          }
+        }
+      },
+      "privacy": {
+        "name": "privacidade",
+        "description": "Escolha se as salas novas começam ocultas.",
+        "options": {
+          "private": {
+            "name": "privada",
+            "description": "True para ocultar as salas novas."
+          }
+        }
+      },
+      "grace": {
+        "name": "espera",
+        "description": "Quanto tempo uma sala vazia dura antes de ser apagada.",
+        "options": {
+          "seconds": {
+            "name": "segundos",
+            "description": "Segundos de espera. 0 apaga imediatamente."
+          }
+        }
+      },
+      "rename": {
+        "name": "renomear",
+        "description": "Renomeie sua sala temporária.",
+        "options": {
+          "name": {
+            "name": "nome",
+            "description": "O novo nome."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "limite_sala",
+        "description": "Altere o limite de membros da sua sala.",
+        "options": {
+          "limit": {
+            "name": "limite",
+            "description": "0 para ilimitado."
+          }
+        }
+      },
+      "lock": {
+        "name": "bloquear",
+        "description": "Impeça que outros entrem na sua sala."
+      },
+      "unlock": {
+        "name": "desbloquear",
+        "description": "Deixe outros entrarem novamente."
+      },
+      "transfer": {
+        "name": "transferir",
+        "description": "Passe sua sala temporária a outro membro nela.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O novo dono."
+          }
+        }
+      }
+    }
   }
 }

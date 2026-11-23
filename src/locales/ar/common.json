@@ -274,5 +274,37 @@
       "whitelist": "أدوار مستثناة",
       "noWhitelist": "لا شيء"
     }
+  },
+  "tempVoice": {
+    "title": "صوت مؤقت",
+    "status": "الحالة",
+    "enabled": "مفعّل",
+    "disabled": "معطّل",
+    "trigger": "قناة الإنشاء",
+    "category": "التصنيف",
+    "roomName": "اسم الغرفة",
+    "userLimit": "حد الأعضاء",
+    "privacy": "الخصوصية",
+    "private": "خاصة",
+    "open": "مفتوحة",
+    "startLocked": "تبدأ مقفلة",
+    "grace": "مهلة الفراغ",
+    "maxOwned": "أقصى غرف للعضو",
+    "notSet": "غير محدد",
+    "unlimited": "بلا حد",
+    "placeholders": "العناصر النائبة",
+    "saved": "تم الحفظ",
+    "preview": "معاينة",
+    "done": "تم",
+    "errors": {
+      "notTempRoom": "هذه ليست غرفة صوت مؤقتة.",
+      "notOwner": "يمكن لمالك الغرفة فقط فعل ذلك.",
+      "emptyName": "لا يمكن أن يكون اسم الغرفة فارغاً.",
+      "invalidLimit": "يجب أن يكون الحد بين 0 و99.",
+      "missingChannel": "لم تعد قناة الصوت هذه موجودة.",
+      "notInRoom": "هذا العضو ليس في غرفتك.",
+      "discordRejected": "رفض ديسكورد هذا التغيير.",
+      "unknown": "تعذّر إجراء هذا التغيير."
+    }
   }
 }

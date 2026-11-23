@@ -444,5 +444,121 @@
         }
       }
     }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Room voice sementara yang dibuat saat bergabung.",
+    "options": {
+      "view": {
+        "name": "lihat",
+        "description": "Tampilkan konfigurasi voice sementara."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan buat-saat-bergabung."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan buat-saat-bergabung."
+      },
+      "trigger": {
+        "name": "pemicu",
+        "description": "Atur channel yang membuat room saat dimasuki.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Channel pemicu. Pilih kosong untuk menghapus."
+          }
+        }
+      },
+      "category": {
+        "name": "kategori",
+        "description": "Atur kategori tempat room baru dibuat.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Kategori. Pilih kosong untuk menghapus."
+          }
+        }
+      },
+      "roomname": {
+        "name": "nama_room",
+        "description": "Atur templat nama room. Placeholder: {user} {number}",
+        "options": {
+          "template": {
+            "name": "templat",
+            "description": "Templatnya, mis. room {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "batas_bawaan",
+        "description": "Atur batas anggota bawaan untuk room baru.",
+        "options": {
+          "limit": {
+            "name": "batas",
+            "description": "0 untuk tak terbatas."
+          }
+        }
+      },
+      "privacy": {
+        "name": "privasi",
+        "description": "Pilih apakah room baru mulai tersembunyi.",
+        "options": {
+          "private": {
+            "name": "privat",
+            "description": "True untuk menyembunyikan room baru."
+          }
+        }
+      },
+      "grace": {
+        "name": "tenggang",
+        "description": "Berapa lama room kosong bertahan sebelum dihapus.",
+        "options": {
+          "seconds": {
+            "name": "detik",
+            "description": "Detik menunggu. 0 langsung menghapus."
+          }
+        }
+      },
+      "rename": {
+        "name": "ganti_nama",
+        "description": "Ganti nama room sementara kamu.",
+        "options": {
+          "name": {
+            "name": "nama",
+            "description": "Nama baru."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "batas_room",
+        "description": "Ubah batas anggota room sementara kamu.",
+        "options": {
+          "limit": {
+            "name": "batas",
+            "description": "0 untuk tak terbatas."
+          }
+        }
+      },
+      "lock": {
+        "name": "kunci",
+        "description": "Cegah orang lain masuk room sementara kamu."
+      },
+      "unlock": {
+        "name": "buka",
+        "description": "Izinkan orang lain masuk lagi."
+      },
+      "transfer": {
+        "name": "alihkan",
+        "description": "Berikan room sementara kamu ke anggota lain di dalamnya.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Pemilik baru."
+          }
+        }
+      }
+    }
   }
 }

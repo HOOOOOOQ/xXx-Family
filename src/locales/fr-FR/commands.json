@@ -444,5 +444,121 @@
         }
       }
     }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Salons vocaux temporaires à la connexion.",
+    "options": {
+      "view": {
+        "name": "voir",
+        "description": "Afficher la configuration de la voix temporaire."
+      },
+      "enable": {
+        "name": "activer",
+        "description": "Activer la création à la connexion."
+      },
+      "disable": {
+        "name": "desactiver",
+        "description": "Désactiver la création à la connexion."
+      },
+      "trigger": {
+        "name": "declencheur",
+        "description": "Définis le salon qui crée un salon vocal.",
+        "options": {
+          "channel": {
+            "name": "salon",
+            "description": "Le salon déclencheur. Choisis aucun pour effacer."
+          }
+        }
+      },
+      "category": {
+        "name": "categorie",
+        "description": "Définis la catégorie des nouveaux salons.",
+        "options": {
+          "channel": {
+            "name": "salon",
+            "description": "La catégorie. Choisis aucune pour effacer."
+          }
+        }
+      },
+      "roomname": {
+        "name": "nom_salon",
+        "description": "Définis le modèle de nom. Marqueurs : {user} {number}",
+        "options": {
+          "template": {
+            "name": "modele",
+            "description": "Le modèle, ex. salon de {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "limite_defaut",
+        "description": "Définis la limite de membres par défaut.",
+        "options": {
+          "limit": {
+            "name": "limite",
+            "description": "0 pour illimité."
+          }
+        }
+      },
+      "privacy": {
+        "name": "confidentialite",
+        "description": "Choisis si les nouveaux salons sont cachés.",
+        "options": {
+          "private": {
+            "name": "prive",
+            "description": "True pour cacher les nouveaux salons."
+          }
+        }
+      },
+      "grace": {
+        "name": "delai",
+        "description": "Combien de temps un salon vide survit.",
+        "options": {
+          "seconds": {
+            "name": "secondes",
+            "description": "Secondes d'attente. 0 supprime immédiatement."
+          }
+        }
+      },
+      "rename": {
+        "name": "renommer",
+        "description": "Renomme ton salon temporaire.",
+        "options": {
+          "name": {
+            "name": "nom",
+            "description": "Le nouveau nom."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "limite_salon",
+        "description": "Change la limite de membres de ton salon.",
+        "options": {
+          "limit": {
+            "name": "limite",
+            "description": "0 pour illimité."
+          }
+        }
+      },
+      "lock": {
+        "name": "verrouiller",
+        "description": "Empêche les autres de rejoindre ton salon."
+      },
+      "unlock": {
+        "name": "deverrouiller",
+        "description": "Laisse les autres rejoindre à nouveau."
+      },
+      "transfer": {
+        "name": "transferer",
+        "description": "Cède ton salon temporaire à un autre membre.",
+        "options": {
+          "user": {
+            "name": "utilisateur",
+            "description": "Le nouveau propriétaire."
+          }
+        }
+      }
+    }
   }
 }

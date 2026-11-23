@@ -270,5 +270,37 @@
       "whitelist": "Roles exentos",
       "noWhitelist": "Ninguno"
     }
+  },
+  "tempVoice": {
+    "title": "Voz temporal",
+    "status": "Estado",
+    "enabled": "Activado",
+    "disabled": "Desactivado",
+    "trigger": "Canal de activación",
+    "category": "Categoría",
+    "roomName": "Nombre de sala",
+    "userLimit": "Límite de miembros",
+    "privacy": "Privacidad",
+    "private": "Privada",
+    "open": "Abierta",
+    "startLocked": "Empieza bloqueada",
+    "grace": "Espera en vacío",
+    "maxOwned": "Máx. salas por miembro",
+    "notSet": "Sin definir",
+    "unlimited": "Ilimitado",
+    "placeholders": "Marcadores",
+    "saved": "Guardado",
+    "preview": "Vista previa",
+    "done": "Hecho",
+    "errors": {
+      "notTempRoom": "Esa no es una sala de voz temporal.",
+      "notOwner": "Solo el dueño de la sala puede hacer eso.",
+      "emptyName": "El nombre de la sala no puede estar vacío.",
+      "invalidLimit": "El límite debe estar entre 0 y 99.",
+      "missingChannel": "Ese canal de voz ya no existe.",
+      "notInRoom": "Ese miembro no está en tu sala.",
+      "discordRejected": "Discord rechazó ese cambio.",
+      "unknown": "No se pudo hacer ese cambio."
+    }
   }
 }

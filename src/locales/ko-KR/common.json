@@ -270,5 +270,37 @@
       "whitelist": "예외 역할",
       "noWhitelist": "없음"
     }
+  },
+  "tempVoice": {
+    "title": "임시 음성",
+    "status": "상태",
+    "enabled": "켜짐",
+    "disabled": "꺼짐",
+    "trigger": "생성 채널",
+    "category": "카테고리",
+    "roomName": "방 이름",
+    "userLimit": "인원 제한",
+    "privacy": "공개 설정",
+    "private": "비공개",
+    "open": "공개",
+    "startLocked": "시작 시 잠금",
+    "grace": "빈 방 유예",
+    "maxOwned": "1인당 최대 방",
+    "notSet": "설정되지 않음",
+    "unlimited": "무제한",
+    "placeholders": "자리표시자",
+    "saved": "저장됨",
+    "preview": "미리보기",
+    "done": "완료",
+    "errors": {
+      "notTempRoom": "임시 음성 방이 아닙니다.",
+      "notOwner": "방 소유자만 할 수 있습니다.",
+      "emptyName": "방 이름은 비울 수 없습니다.",
+      "invalidLimit": "제한은 0에서 99 사이여야 합니다.",
+      "missingChannel": "해당 음성 채널이 더 이상 없습니다.",
+      "notInRoom": "그 멤버는 당신의 방에 없습니다.",
+      "discordRejected": "Discord가 해당 변경을 거부했습니다.",
+      "unknown": "해당 변경을 할 수 없습니다."
+    }
   }
 }

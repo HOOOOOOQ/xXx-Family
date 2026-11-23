@@ -270,5 +270,37 @@
       "whitelist": "除外ロール",
       "noWhitelist": "なし"
     }
+  },
+  "tempVoice": {
+    "title": "一時ボイス",
+    "status": "状態",
+    "enabled": "有効",
+    "disabled": "無効",
+    "trigger": "作成トリガー",
+    "category": "カテゴリ",
+    "roomName": "ルーム名",
+    "userLimit": "人数上限",
+    "privacy": "公開設定",
+    "private": "非公開",
+    "open": "公開",
+    "startLocked": "開始時ロック",
+    "grace": "空室猶予",
+    "maxOwned": "1人あたりの上限",
+    "notSet": "未設定",
+    "unlimited": "無制限",
+    "placeholders": "プレースホルダー",
+    "saved": "保存しました",
+    "preview": "プレビュー",
+    "done": "完了",
+    "errors": {
+      "notTempRoom": "それは一時ボイスルームではありません。",
+      "notOwner": "ルームの所有者のみが実行できます。",
+      "emptyName": "ルーム名を空にすることはできません。",
+      "invalidLimit": "上限は 0〜99 の間で指定してください。",
+      "missingChannel": "そのボイスチャンネルは存在しません。",
+      "notInRoom": "そのメンバーはあなたのルームにいません。",
+      "discordRejected": "Discord がその変更を拒否しました。",
+      "unknown": "その変更はできませんでした。"
+    }
   }
 }

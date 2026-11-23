@@ -270,5 +270,37 @@
       "whitelist": "Peran yang dikecualikan",
       "noWhitelist": "Tidak ada"
     }
+  },
+  "tempVoice": {
+    "title": "Voice sementara",
+    "status": "Status",
+    "enabled": "Aktif",
+    "disabled": "Nonaktif",
+    "trigger": "Channel pemicu",
+    "category": "Kategori",
+    "roomName": "Nama room",
+    "userLimit": "Batas anggota",
+    "privacy": "Privasi",
+    "private": "Privat",
+    "open": "Terbuka",
+    "startLocked": "Mulai terkunci",
+    "grace": "Tenggang kosong",
+    "maxOwned": "Maks room per anggota",
+    "notSet": "Belum diatur",
+    "unlimited": "Tak terbatas",
+    "placeholders": "Placeholder",
+    "saved": "Tersimpan",
+    "preview": "Pratinjau",
+    "done": "Selesai",
+    "errors": {
+      "notTempRoom": "Itu bukan room voice sementara.",
+      "notOwner": "Hanya pemilik room yang bisa melakukan itu.",
+      "emptyName": "Nama room tidak boleh kosong.",
+      "invalidLimit": "Batas harus antara 0 dan 99.",
+      "missingChannel": "Channel voice itu sudah tidak ada.",
+      "notInRoom": "Anggota itu tidak ada di room kamu.",
+      "discordRejected": "Discord menolak perubahan itu.",
+      "unknown": "Perubahan itu tidak bisa dilakukan."
+    }
   }
 }

@@ -444,5 +444,121 @@
         }
       }
     }
+  },
+  "tempvoice": {
+    "name": "tempvoice",
+    "description": "Temporäre Voice-Räume beim Beitreten.",
+    "options": {
+      "view": {
+        "name": "anzeigen",
+        "description": "Die Temporär-Voice-Konfiguration anzeigen."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Erstellung beim Beitreten einschalten."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Erstellung beim Beitreten ausschalten."
+      },
+      "trigger": {
+        "name": "ausloeser",
+        "description": "Lege den Kanal fest, der einen Raum erstellt.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der Auslöser-Kanal. Wähle keinen zum Löschen."
+          }
+        }
+      },
+      "category": {
+        "name": "kategorie",
+        "description": "Lege die Kategorie für neue Räume fest.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Die Kategorie. Wähle keine zum Löschen."
+          }
+        }
+      },
+      "roomname": {
+        "name": "raumname",
+        "description": "Lege die Namensvorlage fest. Platzhalter: {user} {number}",
+        "options": {
+          "template": {
+            "name": "vorlage",
+            "description": "Die Vorlage, z. B. Raum von {user}"
+          }
+        }
+      },
+      "defaultlimit": {
+        "name": "standardlimit",
+        "description": "Lege das Standard-Mitgliederlimit fest.",
+        "options": {
+          "limit": {
+            "name": "limit",
+            "description": "0 für unbegrenzt."
+          }
+        }
+      },
+      "privacy": {
+        "name": "privatsphaere",
+        "description": "Wähle, ob neue Räume verborgen starten.",
+        "options": {
+          "private": {
+            "name": "privat",
+            "description": "True, um neue Räume zu verbergen."
+          }
+        }
+      },
+      "grace": {
+        "name": "frist",
+        "description": "Wie lange ein leerer Raum bestehen bleibt.",
+        "options": {
+          "seconds": {
+            "name": "sekunden",
+            "description": "Sekunden Wartezeit. 0 löscht sofort."
+          }
+        }
+      },
+      "rename": {
+        "name": "umbenennen",
+        "description": "Benenne deinen temporären Raum um.",
+        "options": {
+          "name": {
+            "name": "name",
+            "description": "Der neue Name."
+          }
+        }
+      },
+      "roomlimit": {
+        "name": "raumlimit",
+        "description": "Ändere das Mitgliederlimit deines Raums.",
+        "options": {
+          "limit": {
+            "name": "limit",
+            "description": "0 für unbegrenzt."
+          }
+        }
+      },
+      "lock": {
+        "name": "sperren",
+        "description": "Verhindere, dass andere deinem Raum beitreten."
+      },
+      "unlock": {
+        "name": "entsperren",
+        "description": "Lasse andere wieder beitreten."
+      },
+      "transfer": {
+        "name": "uebertragen",
+        "description": "Übergib deinen temporären Raum an ein Mitglied.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Der neue Besitzer."
+          }
+        }
+      }
+    }
   }
 }

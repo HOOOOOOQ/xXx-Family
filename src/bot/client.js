@@ -39,6 +39,7 @@ import { WelcomeService } from '../services/welcomeService.js';
 import { BoosterService } from '../services/boosterService.js';
 import { ModerationService } from '../services/moderationService.js';
 import { AutomodService } from '../services/automodService.js';
+import { TempVoiceService } from '../services/tempVoiceService.js';
 import { healthService } from '../services/healthService.js';
 import { metrics } from '../services/metrics.js';
 import { settingsCache } from '../services/cacheManager.js';
@@ -167,6 +168,15 @@ export class XxxFamilyClient extends Client {
         metrics: this.metrics,
       });
 
+    this.tempVoice =
+      deps.tempVoice ??
+      new TempVoiceService({
+        models,
+        isDbReady: () => isDatabaseConfigured(),
+        logger: this.logger,
+        metrics: this.metrics,
+      });
+
     this.interactionHandler = new InteractionHandler({ client: this });
     this.cacheStore = settingsCache;
 
@@ -285,6 +295,7 @@ export class XxxFamilyClient extends Client {
         booster: this.booster,
         moderation: this.moderation,
         automod: this.automod,
+        tempVoice: this.tempVoice,
         health: this.health,
         metrics: this.metrics,
       });

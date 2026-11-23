@@ -270,5 +270,37 @@
       "whitelist": "Ausgenommene Rollen",
       "noWhitelist": "Keine"
     }
+  },
+  "tempVoice": {
+    "title": "Temporärer Voice",
+    "status": "Status",
+    "enabled": "Aktiviert",
+    "disabled": "Deaktiviert",
+    "trigger": "Auslöser-Kanal",
+    "category": "Kategorie",
+    "roomName": "Raumname",
+    "userLimit": "Mitgliederlimit",
+    "privacy": "Privatsphäre",
+    "private": "Privat",
+    "open": "Offen",
+    "startLocked": "Startet gesperrt",
+    "grace": "Leerfrist",
+    "maxOwned": "Max. Räume pro Mitglied",
+    "notSet": "Nicht festgelegt",
+    "unlimited": "Unbegrenzt",
+    "placeholders": "Platzhalter",
+    "saved": "Gespeichert",
+    "preview": "Vorschau",
+    "done": "Erledigt",
+    "errors": {
+      "notTempRoom": "Das ist kein temporärer Voice-Raum.",
+      "notOwner": "Nur der Raumbesitzer kann das tun.",
+      "emptyName": "Der Raumname darf nicht leer sein.",
+      "invalidLimit": "Das Limit muss zwischen 0 und 99 liegen.",
+      "missingChannel": "Dieser Voice-Kanal existiert nicht mehr.",
+      "notInRoom": "Dieses Mitglied ist nicht in deinem Raum.",
+      "discordRejected": "Discord hat diese Änderung abgelehnt.",
+      "unknown": "Diese Änderung konnte nicht durchgeführt werden."
+    }
   }
 }
