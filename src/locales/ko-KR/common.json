@@ -124,5 +124,57 @@
     "followGuild": "서버 언어를 따릅니다",
     "everyoneRole": "@everyone 역할은 참여 시 부여할 수 없습니다.",
     "unsupportedChannel": "해당 채널 종류는 메시지를 받을 수 없습니다."
+  },
+  "logs": {
+    "title": {
+      "messageDelete": "메시지 삭제됨",
+      "messageUpdate": "메시지 수정됨",
+      "messagePurge": "메시지 일괄 삭제",
+      "memberBan": "멤버 차단",
+      "memberUnban": "차단 해제",
+      "memberTimeout": "타임아웃 부여",
+      "memberTimeoutRemove": "타임아웃 해제",
+      "roleChange": "역할 변경",
+      "nicknameChange": "닉네임 변경",
+      "channelCreate": "채널 생성",
+      "channelDelete": "채널 삭제",
+      "inviteCreate": "초대 생성",
+      "inviteDelete": "초대 삭제",
+      "voiceJoin": "음성 참여",
+      "voiceLeave": "음성 퇴장",
+      "boosterStart": "새로운 부스터",
+      "boosterEnd": "부스트 종료"
+    },
+    "desc": {
+      "messageDelete": "{{channel}} 채널에서 {{author}}님의 메시지가 삭제되었습니다.",
+      "messageUpdate": "{{author}}님이 {{channel}} 채널에서 메시지를 수정했습니다.",
+      "messagePurge": "{{channel}} 채널에서 메시지 {{count}}개를 일괄 삭제했습니다.",
+      "memberBan": "{{moderator}}님이 {{user}}님을 차단했습니다.",
+      "memberUnban": "{{moderator}}님이 {{user}}님의 차단을 해제했습니다.",
+      "memberTimeout": "{{moderator}}님이 {{user}}님에게 {{duration}} 타임아웃을 부여했습니다.",
+      "memberTimeoutRemove": "{{moderator}}님이 {{user}}님의 타임아웃을 해제했습니다.",
+      "roleChange": "{{user}} — 추가: {{added}} / 제거: {{removed}}",
+      "nicknameChange": "{{user}}님의 닉네임이 {{after}}(으)로 변경되었습니다 (이전: {{before}}).",
+      "channelCreate": "{{moderator}}님이 {{channel}} 채널을 생성했습니다.",
+      "channelDelete": "{{moderator}}님이 {{name}} 채널을 삭제했습니다.",
+      "inviteCreate": "{{inviter}}님이 초대 {{code}}을(를) 생성했습니다.",
+      "inviteDelete": "{{moderator}}님이 초대 {{code}}을(를) 삭제했습니다.",
+      "voiceJoin": "{{user}}님이 {{channel}}에 참여했습니다.",
+      "voiceLeave": "{{user}}님이 {{channel}}에서 나갔습니다.",
+      "boosterStart": "{{user}}님이 서버를 부스트했습니다! 총 부스터: {{count}}명",
+      "boosterEnd": "{{user}}님의 부스트가 종료되었습니다."
+    },
+    "field": {
+      "content": "내용",
+      "before": "변경 전",
+      "after": "변경 후",
+      "reason": "사유",
+      "duration": "기간",
+      "added": "추가됨",
+      "removed": "제거됨",
+      "unknown": "알 수 없음",
+      "deletedAuthor": "작성자 알 수 없음",
+      "truncated": "내용이 잘렸습니다"
+    }
   }
 }

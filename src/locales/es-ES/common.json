@@ -124,5 +124,57 @@
     "followGuild": "Sigue el idioma del servidor",
     "everyoneRole": "El rol @everyone no se puede asignar al entrar.",
     "unsupportedChannel": "Ese tipo de canal no puede recibir mensajes."
+  },
+  "logs": {
+    "title": {
+      "messageDelete": "Mensaje eliminado",
+      "messageUpdate": "Mensaje editado",
+      "messagePurge": "Mensajes purgados",
+      "memberBan": "Miembro baneado",
+      "memberUnban": "Ban revocado",
+      "memberTimeout": "Miembro silenciado",
+      "memberTimeoutRemove": "Silencio retirado",
+      "roleChange": "Roles cambiados",
+      "nicknameChange": "Apodo cambiado",
+      "channelCreate": "Canal creado",
+      "channelDelete": "Canal eliminado",
+      "inviteCreate": "Invitación creada",
+      "inviteDelete": "Invitación eliminada",
+      "voiceJoin": "Entró a voz",
+      "voiceLeave": "Salió de voz",
+      "boosterStart": "Nuevo booster",
+      "boosterEnd": "Booster expirado"
+    },
+    "desc": {
+      "messageDelete": "Se eliminó un mensaje de {{author}} en {{channel}}.",
+      "messageUpdate": "{{author}} editó un mensaje en {{channel}}.",
+      "messagePurge": "Se purgaron {{count}} mensajes en {{channel}}.",
+      "memberBan": "{{user}} fue baneado por {{moderator}}.",
+      "memberUnban": "{{user}} fue desbaneado por {{moderator}}.",
+      "memberTimeout": "{{user}} fue silenciado por {{moderator}} durante {{duration}}.",
+      "memberTimeoutRemove": "{{moderator}} retiró el silencio de {{user}}.",
+      "roleChange": "{{user}} — añadidos: {{added}}; eliminados: {{removed}}.",
+      "nicknameChange": "{{user}} ahora se llama {{after}} (antes {{before}}).",
+      "channelCreate": "{{moderator}} creó {{channel}}.",
+      "channelDelete": "{{moderator}} eliminó el canal {{name}}.",
+      "inviteCreate": "{{inviter}} creó la invitación {{code}}.",
+      "inviteDelete": "{{moderator}} eliminó la invitación {{code}}.",
+      "voiceJoin": "{{user}} entró a {{channel}}.",
+      "voiceLeave": "{{user}} salió de {{channel}}.",
+      "boosterStart": "¡{{user}} mejoró el servidor! Boosters totales: {{count}}.",
+      "boosterEnd": "{{user}} ya no mejora el servidor."
+    },
+    "field": {
+      "content": "Contenido",
+      "before": "Antes",
+      "after": "Después",
+      "reason": "Motivo",
+      "duration": "Duración",
+      "added": "Añadidos",
+      "removed": "Eliminados",
+      "unknown": "Desconocido",
+      "deletedAuthor": "Autor desconocido",
+      "truncated": "Contenido truncado"
+    }
   }
 }

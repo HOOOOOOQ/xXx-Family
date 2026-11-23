@@ -124,5 +124,57 @@
     "followGuild": "Mengikuti bahasa server",
     "everyoneRole": "Peran @everyone tidak bisa diberikan saat bergabung.",
     "unsupportedChannel": "Tipe kanal itu tidak bisa menerima pesan."
+  },
+  "logs": {
+    "title": {
+      "messageDelete": "Pesan dihapus",
+      "messageUpdate": "Pesan diedit",
+      "messagePurge": "Pesan dibersihkan",
+      "memberBan": "Anggota dibanned",
+      "memberUnban": "Banned dicabut",
+      "memberTimeout": "Anggota diberi timeout",
+      "memberTimeoutRemove": "Timeout dicabut",
+      "roleChange": "Peran berubah",
+      "nicknameChange": "Nama panggilan berubah",
+      "channelCreate": "Kanal dibuat",
+      "channelDelete": "Kanal dihapus",
+      "inviteCreate": "Undangan dibuat",
+      "inviteDelete": "Undangan dihapus",
+      "voiceJoin": "Masuk voice",
+      "voiceLeave": "Keluar voice",
+      "boosterStart": "Booster baru",
+      "boosterEnd": "Booster berakhir"
+    },
+    "desc": {
+      "messageDelete": "Pesan dari {{author}} dihapus di {{channel}}.",
+      "messageUpdate": "{{author}} mengedit pesan di {{channel}}.",
+      "messagePurge": "{{count}} pesan dibersihkan di {{channel}}.",
+      "memberBan": "{{user}} dibanned oleh {{moderator}}.",
+      "memberUnban": "Banned {{user}} dicabut oleh {{moderator}}.",
+      "memberTimeout": "{{user}} diberi timeout oleh {{moderator}} selama {{duration}}.",
+      "memberTimeoutRemove": "Timeout {{user}} dicabut oleh {{moderator}}.",
+      "roleChange": "{{user}} — ditambah: {{added}}; dihapus: {{removed}}.",
+      "nicknameChange": "{{user}} sekarang bernama {{after}} (sebelumnya {{before}}).",
+      "channelCreate": "{{channel}} dibuat oleh {{moderator}}.",
+      "channelDelete": "Kanal {{name}} dihapus oleh {{moderator}}.",
+      "inviteCreate": "{{inviter}} membuat undangan {{code}}.",
+      "inviteDelete": "Undangan {{code}} dihapus oleh {{moderator}}.",
+      "voiceJoin": "{{user}} masuk {{channel}}.",
+      "voiceLeave": "{{user}} keluar {{channel}}.",
+      "boosterStart": "{{user}} melakukan boost server! Total booster: {{count}}.",
+      "boosterEnd": "{{user}} tidak lagi melakukan boost server."
+    },
+    "field": {
+      "content": "Isi",
+      "before": "Sebelum",
+      "after": "Sesudah",
+      "reason": "Alasan",
+      "duration": "Durasi",
+      "added": "Ditambah",
+      "removed": "Dihapus",
+      "unknown": "Tidak diketahui",
+      "deletedAuthor": "Penulis tidak diketahui",
+      "truncated": "Isi dipotong"
+    }
   }
 }

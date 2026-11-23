@@ -128,5 +128,57 @@
     "followGuild": "تتبع لغة الخادم",
     "everyoneRole": "لا يمكن منح دور @everyone عند الانضمام.",
     "unsupportedChannel": "هذا النوع من القنوات لا يمكنه استقبال الرسائل."
+  },
+  "logs": {
+    "title": {
+      "messageDelete": "حُذفت رسالة",
+      "messageUpdate": "عُدّلت رسالة",
+      "messagePurge": "حُذفت رسائل",
+      "memberBan": "حُظر عضو",
+      "memberUnban": "رُفع الحظر",
+      "memberTimeout": "مُنح عضو مهلة",
+      "memberTimeoutRemove": "رُفعت المهلة",
+      "roleChange": "تغيّرت الأدوار",
+      "nicknameChange": "تغيّر الاسم المستعار",
+      "channelCreate": "أُنشئت قناة",
+      "channelDelete": "حُذفت قناة",
+      "inviteCreate": "أُنشئت دعوة",
+      "inviteDelete": "حُذفت دعوة",
+      "voiceJoin": "انضم إلى الصوت",
+      "voiceLeave": "غادر الصوت",
+      "boosterStart": "معزّز جديد",
+      "boosterEnd": "انتهى التعزيز"
+    },
+    "desc": {
+      "messageDelete": "حُذفت رسالة من {{author}} في {{channel}}.",
+      "messageUpdate": "عدّل {{author}} رسالة في {{channel}}.",
+      "messagePurge": "حُذفت {{count}} رسالة في {{channel}}.",
+      "memberBan": "حظر {{moderator}} العضو {{user}}.",
+      "memberUnban": "رفع {{moderator}} الحظر عن {{user}}.",
+      "memberTimeout": "منح {{moderator}} العضو {{user}} مهلة لمدة {{duration}}.",
+      "memberTimeoutRemove": "رفع {{moderator}} المهلة عن {{user}}.",
+      "roleChange": "{{user}} — أُضيف: {{added}}؛ أُزيل: {{removed}}.",
+      "nicknameChange": "أصبح اسم {{user}} الآن {{after}} (كان {{before}}).",
+      "channelCreate": "أنشأ {{moderator}} القناة {{channel}}.",
+      "channelDelete": "حذف {{moderator}} القناة {{name}}.",
+      "inviteCreate": "أنشأ {{inviter}} الدعوة {{code}}.",
+      "inviteDelete": "حذف {{moderator}} الدعوة {{code}}.",
+      "voiceJoin": "انضم {{user}} إلى {{channel}}.",
+      "voiceLeave": "غادر {{user}} القناة {{channel}}.",
+      "boosterStart": "عزّز {{user}} الخادم! إجمالي المعزّزين: {{count}}.",
+      "boosterEnd": "لم يعد {{user}} يعزّز الخادم."
+    },
+    "field": {
+      "content": "المحتوى",
+      "before": "قبل",
+      "after": "بعد",
+      "reason": "السبب",
+      "duration": "المدة",
+      "added": "أُضيف",
+      "removed": "أُزيل",
+      "unknown": "غير معروف",
+      "deletedAuthor": "كاتب غير معروف",
+      "truncated": "تم اقتطاع المحتوى"
+    }
   }
 }

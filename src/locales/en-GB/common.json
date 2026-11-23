@@ -124,5 +124,57 @@
     "followGuild": "Follows the server language",
     "everyoneRole": "The @everyone role cannot be granted on join.",
     "unsupportedChannel": "That channel type cannot receive messages."
+  },
+  "logs": {
+    "title": {
+      "messageDelete": "Message deleted",
+      "messageUpdate": "Message edited",
+      "messagePurge": "Messages purged",
+      "memberBan": "Member banned",
+      "memberUnban": "Member unbanned",
+      "memberTimeout": "Member timed out",
+      "memberTimeoutRemove": "Timeout removed",
+      "roleChange": "Roles changed",
+      "nicknameChange": "Nickname changed",
+      "channelCreate": "Channel created",
+      "channelDelete": "Channel deleted",
+      "inviteCreate": "Invite created",
+      "inviteDelete": "Invite deleted",
+      "voiceJoin": "Joined voice",
+      "voiceLeave": "Left voice",
+      "boosterStart": "New booster",
+      "boosterEnd": "Booster expired"
+    },
+    "desc": {
+      "messageDelete": "A message by {{author}} was deleted in {{channel}}.",
+      "messageUpdate": "{{author}} edited a message in {{channel}}.",
+      "messagePurge": "{{count}} messages were purged in {{channel}}.",
+      "memberBan": "{{user}} was banned by {{moderator}}.",
+      "memberUnban": "{{user}} was unbanned by {{moderator}}.",
+      "memberTimeout": "{{user}} was timed out by {{moderator}} for {{duration}}.",
+      "memberTimeoutRemove": "The timeout for {{user}} was removed by {{moderator}}.",
+      "roleChange": "{{user}} — added: {{added}}; removed: {{removed}}.",
+      "nicknameChange": "{{user}} is now known as {{after}} (was {{before}}).",
+      "channelCreate": "{{channel}} was created by {{moderator}}.",
+      "channelDelete": "The channel {{name}} was deleted by {{moderator}}.",
+      "inviteCreate": "{{inviter}} created the invite {{code}}.",
+      "inviteDelete": "The invite {{code}} was deleted by {{moderator}}.",
+      "voiceJoin": "{{user}} joined {{channel}}.",
+      "voiceLeave": "{{user}} left {{channel}}.",
+      "boosterStart": "{{user}} boosted the server! Total boosters: {{count}}.",
+      "boosterEnd": "{{user}} is no longer boosting the server."
+    },
+    "field": {
+      "content": "Content",
+      "before": "Before",
+      "after": "After",
+      "reason": "Reason",
+      "duration": "Duration",
+      "added": "Added",
+      "removed": "Removed",
+      "unknown": "Unknown",
+      "deletedAuthor": "Unknown author",
+      "truncated": "Content truncated"
+    }
   }
 }

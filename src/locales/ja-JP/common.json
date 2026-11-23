@@ -124,5 +124,57 @@
     "followGuild": "サーバーの言語に従います",
     "everyoneRole": "@everyone ロールは参加時に付与できません。",
     "unsupportedChannel": "そのチャンネルの種類はメッセージを受け取れません。"
+  },
+  "logs": {
+    "title": {
+      "messageDelete": "メッセージ削除",
+      "messageUpdate": "メッセージ編集",
+      "messagePurge": "メッセージ一括削除",
+      "memberBan": "メンバーを BAN",
+      "memberUnban": "BAN 解除",
+      "memberTimeout": "タイムアウト付与",
+      "memberTimeoutRemove": "タイムアウト解除",
+      "roleChange": "ロール変更",
+      "nicknameChange": "ニックネーム変更",
+      "channelCreate": "チャンネル作成",
+      "channelDelete": "チャンネル削除",
+      "inviteCreate": "招待作成",
+      "inviteDelete": "招待削除",
+      "voiceJoin": "ボイス参加",
+      "voiceLeave": "ボイス退出",
+      "boosterStart": "新しいブースター",
+      "boosterEnd": "ブースト終了"
+    },
+    "desc": {
+      "messageDelete": "{{channel}} で {{author}} のメッセージが削除されました。",
+      "messageUpdate": "{{author}} が {{channel}} でメッセージを編集しました。",
+      "messagePurge": "{{channel}} で {{count}} 件のメッセージを一括削除しました。",
+      "memberBan": "{{moderator}} が {{user}} を BAN しました。",
+      "memberUnban": "{{moderator}} が {{user}} の BAN を解除しました。",
+      "memberTimeout": "{{moderator}} が {{user}} に {{duration}} のタイムアウトを付与しました。",
+      "memberTimeoutRemove": "{{moderator}} が {{user}} のタイムアウトを解除しました。",
+      "roleChange": "{{user}} — 追加: {{added}} / 削除: {{removed}}",
+      "nicknameChange": "{{user}} は {{after}} になりました（以前は {{before}}）。",
+      "channelCreate": "{{moderator}} が {{channel}} を作成しました。",
+      "channelDelete": "{{moderator}} がチャンネル {{name}} を削除しました。",
+      "inviteCreate": "{{inviter}} が招待 {{code}} を作成しました。",
+      "inviteDelete": "{{moderator}} が招待 {{code}} を削除しました。",
+      "voiceJoin": "{{user}} が {{channel}} に参加しました。",
+      "voiceLeave": "{{user}} が {{channel}} から退出しました。",
+      "boosterStart": "{{user}} がサーバーをブーストしました！合計: {{count}} 人",
+      "boosterEnd": "{{user}} のブーストが終了しました。"
+    },
+    "field": {
+      "content": "内容",
+      "before": "変更前",
+      "after": "変更後",
+      "reason": "理由",
+      "duration": "期間",
+      "added": "追加",
+      "removed": "削除",
+      "unknown": "不明",
+      "deletedAuthor": "投稿者不明",
+      "truncated": "内容を切り詰めました"
+    }
   }
 }

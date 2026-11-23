@@ -109,6 +109,7 @@ export class XxxFamilyClient extends Client {
       deps.logging ??
       new LoggingService({
         settings: this.settings,
+        localeService: this.localeService,
         resolveChannel,
         isDbReady: () => isDatabaseConfigured(),
         logger: this.logger,

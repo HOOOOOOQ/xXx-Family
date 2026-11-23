@@ -12,6 +12,8 @@ export class MetricsRegistry {
     /** @type {Map<string, { count:number, totalMs:number, maxMs:number, errors:number }>} */
     this.commands = new Map();
     this.counters = new Map();
+    /** @type {Map<string, () => number>} */
+    this.gauges = new Map();
     this.interactions = 0;
     this.errors = 0;
   }
@@ -46,6 +48,33 @@ export class MetricsRegistry {
     return this.counters.get(name) ?? 0;
   }
 
+  /**
+   * Register a value that is read on demand instead of accumulated — cache
+   * sizes, queue depths, pending entries. Unlike `increment`, the gauge always
+   * reports the current value, so it never drifts after a restart.
+   * @param {string} name
+   * @param {() => number} read
+   */
+  gauge(name, read) {
+    if (typeof read !== 'function') throw new TypeError('gauge() needs a function');
+    this.gauges.set(name, read);
+    return this;
+  }
+
+  /** Read every registered gauge. A throwing gauge is reported as null, not fatal. */
+  readGauges() {
+    const out = {};
+    for (const [name, read] of this.gauges) {
+      try {
+        const value = read();
+        out[name] = typeof value === 'number' && Number.isFinite(value) ? value : null;
+      } catch {
+        out[name] = null;
+      }
+    }
+    return out;
+  }
+
   /** @returns {Record<string, any>} */
   snapshot() {
     const commands = {};
@@ -62,6 +91,7 @@ export class MetricsRegistry {
       interactions: this.interactions,
       errors: this.errors,
       counters: Object.fromEntries(this.counters),
+      gauges: this.readGauges(),
       commands,
     };
   }
@@ -69,6 +99,7 @@ export class MetricsRegistry {
   reset() {
     this.commands.clear();
     this.counters.clear();
+    this.gauges.clear();
     this.interactions = 0;
     this.errors = 0;
   }

@@ -124,5 +124,57 @@
     "followGuild": "Suit la langue du serveur",
     "everyoneRole": "Le rôle @everyone ne peut pas être attribué à l'arrivée.",
     "unsupportedChannel": "Ce type de salon ne peut pas recevoir de messages."
+  },
+  "logs": {
+    "title": {
+      "messageDelete": "Message supprimé",
+      "messageUpdate": "Message modifié",
+      "messagePurge": "Messages supprimés",
+      "memberBan": "Membre banni",
+      "memberUnban": "Banissement levé",
+      "memberTimeout": "Membre rendu muet",
+      "memberTimeoutRemove": "Muet retiré",
+      "roleChange": "Rôles modifiés",
+      "nicknameChange": "Pseudo modifié",
+      "channelCreate": "Salon créé",
+      "channelDelete": "Salon supprimé",
+      "inviteCreate": "Invitation créée",
+      "inviteDelete": "Invitation supprimée",
+      "voiceJoin": "A rejoint la voix",
+      "voiceLeave": "A quitté la voix",
+      "boosterStart": "Nouveau booster",
+      "boosterEnd": "Boost terminé"
+    },
+    "desc": {
+      "messageDelete": "Un message de {{author}} a été supprimé dans {{channel}}.",
+      "messageUpdate": "{{author}} a modifié un message dans {{channel}}.",
+      "messagePurge": "{{count}} messages ont été supprimés dans {{channel}}.",
+      "memberBan": "{{user}} a été banni par {{moderator}}.",
+      "memberUnban": "{{user}} a été débanni par {{moderator}}.",
+      "memberTimeout": "{{user}} a été rendu muet par {{moderator}} pendant {{duration}}.",
+      "memberTimeoutRemove": "{{moderator}} a retiré le mode muet de {{user}}.",
+      "roleChange": "{{user}} — ajoutés : {{added}} ; retirés : {{removed}}.",
+      "nicknameChange": "{{user}} s'appelle maintenant {{after}} (avant {{before}}).",
+      "channelCreate": "{{moderator}} a créé {{channel}}.",
+      "channelDelete": "{{moderator}} a supprimé le salon {{name}}.",
+      "inviteCreate": "{{inviter}} a créé l'invitation {{code}}.",
+      "inviteDelete": "{{moderator}} a supprimé l'invitation {{code}}.",
+      "voiceJoin": "{{user}} a rejoint {{channel}}.",
+      "voiceLeave": "{{user}} a quitté {{channel}}.",
+      "boosterStart": "{{user}} a boosté le serveur ! Total des boosters : {{count}}.",
+      "boosterEnd": "{{user}} ne booste plus le serveur."
+    },
+    "field": {
+      "content": "Contenu",
+      "before": "Avant",
+      "after": "Après",
+      "reason": "Motif",
+      "duration": "Durée",
+      "added": "Ajoutés",
+      "removed": "Retirés",
+      "unknown": "Inconnu",
+      "deletedAuthor": "Auteur inconnu",
+      "truncated": "Contenu tronqué"
+    }
   }
 }

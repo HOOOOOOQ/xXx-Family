@@ -124,5 +124,57 @@
     "followGuild": "Folgt der Serversprache",
     "everyoneRole": "Die Rolle @everyone kann beim Beitritt nicht vergeben werden.",
     "unsupportedChannel": "Dieser Kanaltyp kann keine Nachrichten empfangen."
+  },
+  "logs": {
+    "title": {
+      "messageDelete": "Nachricht gelöscht",
+      "messageUpdate": "Nachricht bearbeitet",
+      "messagePurge": "Nachrichten bereinigt",
+      "memberBan": "Mitglied gebannt",
+      "memberUnban": "Bann aufgehoben",
+      "memberTimeout": "Mitglied stummgeschaltet",
+      "memberTimeoutRemove": "Stummschaltung aufgehoben",
+      "roleChange": "Rollen geändert",
+      "nicknameChange": "Spitzname geändert",
+      "channelCreate": "Kanal erstellt",
+      "channelDelete": "Kanal gelöscht",
+      "inviteCreate": "Einladung erstellt",
+      "inviteDelete": "Einladung gelöscht",
+      "voiceJoin": "Voice beigetreten",
+      "voiceLeave": "Voice verlassen",
+      "boosterStart": "Neuer Booster",
+      "boosterEnd": "Boost beendet"
+    },
+    "desc": {
+      "messageDelete": "Eine Nachricht von {{author}} wurde in {{channel}} gelöscht.",
+      "messageUpdate": "{{author}} hat eine Nachricht in {{channel}} bearbeitet.",
+      "messagePurge": "{{count}} Nachrichten wurden in {{channel}} bereinigt.",
+      "memberBan": "{{user}} wurde von {{moderator}} gebannt.",
+      "memberUnban": "{{user}} wurde von {{moderator}} entbannt.",
+      "memberTimeout": "{{user}} wurde von {{moderator}} für {{duration}} stummgeschaltet.",
+      "memberTimeoutRemove": "{{moderator}} hat die Stummschaltung von {{user}} aufgehoben.",
+      "roleChange": "{{user}} — hinzugefügt: {{added}}; entfernt: {{removed}}.",
+      "nicknameChange": "{{user}} heißt jetzt {{after}} (vorher {{before}}).",
+      "channelCreate": "{{moderator}} hat {{channel}} erstellt.",
+      "channelDelete": "{{moderator}} hat den Kanal {{name}} gelöscht.",
+      "inviteCreate": "{{inviter}} hat die Einladung {{code}} erstellt.",
+      "inviteDelete": "{{moderator}} hat die Einladung {{code}} gelöscht.",
+      "voiceJoin": "{{user}} ist {{channel}} beigetreten.",
+      "voiceLeave": "{{user}} hat {{channel}} verlassen.",
+      "boosterStart": "{{user}} hat den Server geboostet! Booster gesamt: {{count}}.",
+      "boosterEnd": "{{user}} boostet den Server nicht mehr."
+    },
+    "field": {
+      "content": "Inhalt",
+      "before": "Vorher",
+      "after": "Nachher",
+      "reason": "Grund",
+      "duration": "Dauer",
+      "added": "Hinzugefügt",
+      "removed": "Entfernt",
+      "unknown": "Unbekannt",
+      "deletedAuthor": "Unbekannter Autor",
+      "truncated": "Inhalt gekürzt"
+    }
   }
 }
