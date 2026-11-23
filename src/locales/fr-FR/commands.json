@@ -86,5 +86,67 @@
     "settingsResetConfirm": "Réinitialiser tous les paramètres de ce serveur ? Cette action est irréversible.",
     "modulesLoaded": "Modules actifs",
     "noModules": "Aucun module n'est actif pour l'instant."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Configure les messages de bienvenue et d'adieu de ce serveur.",
+    "options": {
+      "view": {
+        "name": "voir",
+        "description": "Affiche la configuration de bienvenue actuelle."
+      },
+      "enable": {
+        "name": "activer",
+        "description": "Active les messages de bienvenue."
+      },
+      "disable": {
+        "name": "desactiver",
+        "description": "Désactive les messages de bienvenue."
+      },
+      "channel": {
+        "name": "salon",
+        "description": "Définit le salon des messages de bienvenue.",
+        "options": {
+          "channel": {
+            "name": "salon",
+            "description": "Le salon à utiliser. Choisis none pour effacer."
+          }
+        }
+      },
+      "message": {
+        "name": "message",
+        "description": "Définit un modèle de bienvenue personnalisé.",
+        "options": {
+          "text": {
+            "name": "texte",
+            "description": "Le modèle de message. Utilise {user.mention} et {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "tester",
+        "description": "T'envoie un message de bienvenue de test."
+      },
+      "roles": {
+        "name": "roles",
+        "description": "Gère les rôles attribués à l'arrivée.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "Le rôle à ajouter ou retirer."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "adieu",
+        "description": "Définit un modèle d'adieu personnalisé.",
+        "options": {
+          "text": {
+            "name": "texte",
+            "description": "Le modèle de message. Utilise {user.mention} et {server.name}."
+          }
+        }
+      }
+    }
   }
 }

@@ -14,7 +14,7 @@
 import { MessageFlags } from 'discord.js';
 
 import { getLogger } from '../utils/logger.js';
-import { isAppError, normalizeError } from '../utils/errors.js';
+import { isAppError, normalizeError, resolveUserMessage } from '../utils/errors.js';
 import { localizedErrorEmbed } from '../utils/embeds.js';
 import { getT } from '../services/i18nService.js';
 import { DEFAULT_LOCALE } from '../config/locales.js';
@@ -43,15 +43,18 @@ export async function handleInteractionError(interaction, err, context = {}) {
   });
 
   const values = isAppError(err) && err.details ? err.details : {};
-  const description =
-    isAppError(err) && err.expose && err.message ? err.message : t(normalized.i18nKey, values);
+  // Resolve the user-facing string ONCE, then reuse it for the embed, so what
+  // is logged as `description` is exactly what the member sees. It also makes a
+  // raw `{{placeholder}}` impossible to send when `details` is incomplete.
+  const description = resolveUserMessage(err, { t, i18nKey: normalized.i18nKey, values });
+  const embed = localizedErrorEmbed({ t, i18nKey: normalized.i18nKey, values, description });
 
-  const payload = { embeds: [localizedErrorEmbed({ t, i18nKey: normalized.i18nKey, values })], flags: MessageFlags.Ephemeral };
+  const payload = { embeds: [embed], flags: MessageFlags.Ephemeral };
 
   try {
     if (!interaction || interaction.replied || interaction.deferred) {
       // Best effort: replace a deferred "thinking…" state with the error.
-      const followUpPayload = { embeds: [localizedErrorEmbed({ t, i18nKey: normalized.i18nKey, values })], flags: MessageFlags.Ephemeral };
+      const followUpPayload = { embeds: [embed], flags: MessageFlags.Ephemeral };
       if (interaction?.deferred && !interaction.replied) await interaction.editReply(followUpPayload);
       else if (interaction?.replied) await interaction.followUp(followUpPayload);
       return { delivered: Boolean(interaction), fallback: true, description };

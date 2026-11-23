@@ -86,5 +86,67 @@
     "settingsResetConfirm": "Redefinir todas as configurações deste servidor? Não dá para desfazer.",
     "modulesLoaded": "Módulos ativos",
     "noModules": "Nenhum módulo ativo ainda."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Configure as mensagens de boas-vindas e despedida deste servidor.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostra a configuração de boas-vindas atual."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativa as mensagens de boas-vindas."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativa as mensagens de boas-vindas."
+      },
+      "channel": {
+        "name": "canal",
+        "description": "Define o canal das mensagens de boas-vindas.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal a usar. Escolha none para limpar."
+          }
+        }
+      },
+      "message": {
+        "name": "mensagem",
+        "description": "Define um modelo de boas-vindas personalizado.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "O modelo de mensagem. Use {user.mention} e {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "testar",
+        "description": "Envia a você uma mensagem de boas-vindas de teste."
+      },
+      "roles": {
+        "name": "cargos",
+        "description": "Gerencia os cargos dados ao entrar.",
+        "options": {
+          "role": {
+            "name": "cargo",
+            "description": "O cargo a adicionar ou remover."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "despedida",
+        "description": "Define um modelo de despedida personalizado.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "O modelo de mensagem. Use {user.mention} e {server.name}."
+          }
+        }
+      }
+    }
   }
 }

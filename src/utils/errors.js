@@ -38,6 +38,7 @@ export class AppError extends Error {
   }
 
   /** Plain object form for API responses (never includes a stack). */
+
   toJSON() {
     return {
       error: {
@@ -131,6 +132,54 @@ export class LocaleError extends AppError {
 /** @param {unknown} value */
 export function isAppError(value) {
   return Boolean(value) && typeof value === 'object' && value.isAppError === true;
+}
+
+/**
+ * i18next leaves `{{name}}` in the output when no value was supplied for it.
+ * Showing that to a user is worse than showing a generic message, so callers
+ * check for it before sending.
+ * @param {unknown} text
+ * @returns {boolean}
+ */
+export function hasUnresolvedPlaceholders(text) {
+  return typeof text === 'string' && /\{\{[^{}]*\}\}/.test(text);
+}
+
+/**
+ * Decide the ONE string a user should see for an error.
+ *
+ * Precedence:
+ *   1. the localized `i18nKey` template, when it interpolated completely
+ *   2. the error's own message, when it is exposed and complete
+ *   3. `errors:generic` — placeholder-free by construction
+ *
+ * Rule 1 keeps the documented contract (English technical `message`, localized
+ * user-facing string). Rule 3 is the important one: a caller that passes
+ * `details` missing a placeholder the template needs must never leak a raw
+ * `{{reason}}` into a reply.
+ *
+ * @param {unknown} err
+ * @param {object} [ctx]
+ * @param {(key:string, values?:Record<string, unknown>) => string} [ctx.t]
+ * @param {string} [ctx.i18nKey]
+ * @param {Record<string, unknown>} [ctx.values]
+ * @returns {string}
+ */
+export function resolveUserMessage(err, ctx = {}) {
+  const { t, i18nKey, values = {} } = ctx;
+  const isApp = isAppError(err);
+  const message = isApp && err.message ? err.message : null;
+
+  if (typeof t === 'function' && i18nKey) {
+    const rendered = t(i18nKey, values);
+    if (rendered && !hasUnresolvedPlaceholders(rendered)) return rendered;
+  }
+  if (isApp && err.expose && message && !hasUnresolvedPlaceholders(message)) return message;
+  if (typeof t === 'function') {
+    const generic = t('errors:generic');
+    if (generic && !hasUnresolvedPlaceholders(generic)) return generic;
+  }
+  return 'Something went wrong while handling that.';
 }
 
 /**

@@ -86,5 +86,67 @@
     "settingsResetConfirm": "Reset semua pengaturan server ini? Tindakan ini tidak bisa dibatalkan.",
     "modulesLoaded": "Modul aktif",
     "noModules": "Belum ada modul yang aktif."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Atur pesan sambutan dan perpisahan untuk server ini.",
+    "options": {
+      "view": {
+        "name": "tampilan",
+        "description": "Tampilkan konfigurasi sambutan saat ini."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan pesan sambutan."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan pesan sambutan."
+      },
+      "channel": {
+        "name": "kanal",
+        "description": "Atur kanal tujuan pesan sambutan.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Kanal yang dipakai. Pilih none untuk menghapus."
+          }
+        }
+      },
+      "message": {
+        "name": "pesan",
+        "description": "Atur templat pesan sambutan khusus.",
+        "options": {
+          "text": {
+            "name": "teks",
+            "description": "Templat pesan. Gunakan {user.mention} dan {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "tes",
+        "description": "Kirim pesan sambutan percobaan ke dirimu."
+      },
+      "roles": {
+        "name": "peran",
+        "description": "Kelola peran yang diberikan saat bergabung.",
+        "options": {
+          "role": {
+            "name": "peran",
+            "description": "Peran yang ditambahkan atau dihapus."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "perpisahan",
+        "description": "Atur templat pesan perpisahan khusus.",
+        "options": {
+          "text": {
+            "name": "teks",
+            "description": "Templat pesan. Gunakan {user.mention} dan {server.name}."
+          }
+        }
+      }
+    }
   }
 }

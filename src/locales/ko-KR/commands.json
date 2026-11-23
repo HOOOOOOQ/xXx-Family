@@ -86,5 +86,67 @@
     "settingsResetConfirm": "이 서버의 모든 설정을 초기화할까요? 되돌릴 수 없습니다.",
     "modulesLoaded": "활성 모듈",
     "noModules": "활성 모듈이 아직 없습니다."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "이 서버의 환영 및 작별 메시지를 설정합니다.",
+    "options": {
+      "view": {
+        "name": "보기",
+        "description": "현재 환영 설정을 표시합니다."
+      },
+      "enable": {
+        "name": "켜기",
+        "description": "환영 메시지를 켭니다."
+      },
+      "disable": {
+        "name": "끄기",
+        "description": "환영 메시지를 끕니다."
+      },
+      "channel": {
+        "name": "채널",
+        "description": "환영 메시지를 보낼 채널을 설정합니다.",
+        "options": {
+          "channel": {
+            "name": "채널",
+            "description": "사용할 채널입니다. none을 선택하면 해제됩니다."
+          }
+        }
+      },
+      "message": {
+        "name": "메시지",
+        "description": "사용자 정의 환영 문구를 설정합니다.",
+        "options": {
+          "text": {
+            "name": "텍스트",
+            "description": "문구 템플릿입니다. {user.mention}, {server.name} 사용 가능."
+          }
+        }
+      },
+      "test": {
+        "name": "테스트",
+        "description": "나에게 테스트 메시지를 보냅니다."
+      },
+      "roles": {
+        "name": "역할",
+        "description": "참여 시 부여할 역할을 관리합니다.",
+        "options": {
+          "role": {
+            "name": "역할",
+            "description": "추가 또는 제거할 역할입니다."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "작별",
+        "description": "사용자 정의 작별 문구를 설정합니다.",
+        "options": {
+          "text": {
+            "name": "텍스트",
+            "description": "문구 템플릿입니다. {user.mention}, {server.name} 사용 가능."
+          }
+        }
+      }
+    }
   }
 }

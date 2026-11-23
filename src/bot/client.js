@@ -22,12 +22,20 @@ import { DEFAULT_PRESENCE } from '../config/constants.js';
 import { getLogger } from '../utils/logger.js';
 import { ConfigError } from '../utils/errors.js';
 
-import { connectDatabase, disconnectDatabase, getDatabaseHealth, pingDatabase } from '../database/connection.js';
-import '../database/models/index.js';
+import {
+  connectDatabase,
+  disconnectDatabase,
+  getDatabaseHealth,
+  isDatabaseConfigured,
+  pingDatabase,
+} from '../database/connection.js';
+import { models } from '../database/models/index.js';
 
 import { initI18n, shutdownI18n } from '../services/i18nService.js';
 import { settingsService } from '../services/settingsService.js';
 import { LocaleService, localeService } from '../services/localeService.js';
+import { LoggingService } from '../services/loggingService.js';
+import { WelcomeService } from '../services/welcomeService.js';
 import { healthService } from '../services/healthService.js';
 import { metrics } from '../services/metrics.js';
 import { settingsCache } from '../services/cacheManager.js';
@@ -87,6 +95,39 @@ export class XxxFamilyClient extends Client {
     // is a single source of truth (and a single seam to inject in tests).
     this.settings = deps.settings ?? settingsService;
     this.localeService = new LocaleService({ settings: this.settings, config, logger: this.logger });
+
+    // Logging + welcome are constructed here (not used as the module-level
+    // singletons) so they share THIS client's settings service, models and
+    // channel resolver. Channel resolution goes through the client cache first
+    // and only fetches on a miss.
+    const resolveChannel = async (channelId) => {
+      if (!channelId) return null;
+      return this.channels.cache.get(channelId) ?? (await this.channels.fetch(channelId).catch(() => null));
+    };
+
+    this.logging =
+      deps.logging ??
+      new LoggingService({
+        settings: this.settings,
+        resolveChannel,
+        isDbReady: () => isDatabaseConfigured(),
+        logger: this.logger,
+        metrics: this.metrics,
+      });
+
+    this.welcome =
+      deps.welcome ??
+      new WelcomeService({
+        models,
+        settings: this.settings,
+        logging: this.logging,
+        localeService: this.localeService,
+        resolveChannel,
+        isDbReady: () => isDatabaseConfigured(),
+        logger: this.logger,
+        metrics: this.metrics,
+      });
+
     this.interactionHandler = new InteractionHandler({ client: this });
     this.cacheStore = settingsCache;
 
@@ -200,6 +241,8 @@ export class XxxFamilyClient extends Client {
         config: this.config,
         settings: this.settings,
         localeService: this.localeService,
+        logging: this.logging,
+        welcome: this.welcome,
         health: this.health,
         metrics: this.metrics,
       });

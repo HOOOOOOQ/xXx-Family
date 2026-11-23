@@ -86,5 +86,67 @@
     "settingsResetConfirm": "إعادة تعيين كل إعدادات هذا الخادم؟ لا يمكن التراجع.",
     "modulesLoaded": "الوحدات النشطة",
     "noModules": "لا توجد وحدات نشطة بعد."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "اضبط رسائل الترحيب والوداع في هذا الخادم.",
+    "options": {
+      "view": {
+        "name": "عرض",
+        "description": "اعرض إعدادات الترحيب الحالية."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "فعّل رسائل الترحيب."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "عطّل رسائل الترحيب."
+      },
+      "channel": {
+        "name": "قناة",
+        "description": "اضبط القناة التي تُرسل إليها رسائل الترحيب.",
+        "options": {
+          "channel": {
+            "name": "قناة",
+            "description": "القناة المطلوبة. اختر none للمسح."
+          }
+        }
+      },
+      "message": {
+        "name": "رسالة",
+        "description": "اضبط قالب رسالة ترحيب مخصص.",
+        "options": {
+          "text": {
+            "name": "نص",
+            "description": "قالب الرسالة. استخدم {user.mention} و {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "اختبار",
+        "description": "أرسل لنفسك رسالة ترحيب تجريبية."
+      },
+      "roles": {
+        "name": "أدوار",
+        "description": "أدر الأدوار الممنوحة عند الانضمام.",
+        "options": {
+          "role": {
+            "name": "دور",
+            "description": "الدور المراد إضافته أو إزالته."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "وداع",
+        "description": "اضبط قالب رسالة وداع مخصص.",
+        "options": {
+          "text": {
+            "name": "نص",
+            "description": "قالب الرسالة. استخدم {user.mention} و {server.name}."
+          }
+        }
+      }
+    }
   }
 }

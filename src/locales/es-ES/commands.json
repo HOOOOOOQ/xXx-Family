@@ -86,5 +86,67 @@
     "settingsResetConfirm": "¿Restablecer todos los ajustes de este servidor? No se puede deshacer.",
     "modulesLoaded": "Módulos activos",
     "noModules": "Todavía no hay módulos activos."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Configura los mensajes de bienvenida y despedida de este servidor.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Muestra la configuración de bienvenida actual."
+      },
+      "enable": {
+        "name": "activar",
+        "description": "Activa los mensajes de bienvenida."
+      },
+      "disable": {
+        "name": "desactivar",
+        "description": "Desactiva los mensajes de bienvenida."
+      },
+      "channel": {
+        "name": "canal",
+        "description": "Define el canal de los mensajes de bienvenida.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "El canal a usar. Elige none para borrarlo."
+          }
+        }
+      },
+      "message": {
+        "name": "mensaje",
+        "description": "Define una plantilla de bienvenida personalizada.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "La plantilla. Usa {user.mention} y {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "probar",
+        "description": "Te envía un mensaje de bienvenida de prueba."
+      },
+      "roles": {
+        "name": "roles",
+        "description": "Gestiona los roles asignados al entrar.",
+        "options": {
+          "role": {
+            "name": "rol",
+            "description": "El rol que se añade o se elimina."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "despedida",
+        "description": "Define una plantilla de despedida personalizada.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "La plantilla. Usa {user.mention} y {server.name}."
+          }
+        }
+      }
+    }
   }
 }

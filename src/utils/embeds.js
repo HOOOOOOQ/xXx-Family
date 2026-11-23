@@ -91,11 +91,13 @@ export const warningEmbed = (options) => brandEmbed({ ...options, variant: 'warn
  * @param {string} params.i18nKey
  * @param {Record<string, unknown>} [params.values]
  */
-export function localizedErrorEmbed({ t, i18nKey, values = {}, dir = 'ltr' }) {
+export function localizedErrorEmbed({ t, i18nKey, values = {}, dir = 'ltr', description = null }) {
   return errorEmbed({
     t,
     title: '⚠️',
-    description: t(i18nKey, values),
+    // A pre-resolved description wins so the embed can never disagree with the
+    // message the caller already decided on.
+    description: description ?? t(i18nKey, values),
     dir,
   });
 }

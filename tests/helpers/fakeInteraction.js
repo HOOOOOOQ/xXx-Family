@@ -46,6 +46,40 @@ export class FakeOptions {
   getBoolean(name) {
     return this.values[name] ?? null;
   }
+
+  getChannel(name, required = false) {
+    const value = this.values[name];
+    if (value === undefined && required) throw new Error(`Missing required option "${name}"`);
+    return value ?? null;
+  }
+
+  getRole(name, required = false) {
+    const value = this.values[name];
+    if (value === undefined && required) throw new Error(`Missing required option "${name}"`);
+    return value ?? null;
+  }
+
+  getUser(name, required = false) {
+    const value = this.values[name];
+    if (value === undefined && required) throw new Error(`Missing required option "${name}"`);
+    return value ?? null;
+  }
+
+  getMember(name, required = false) {
+    const value = this.values[name];
+    if (value === undefined && required) throw new Error(`Missing required option "${name}"`);
+    return value ?? null;
+  }
+
+  getInteger(name, required = false) {
+    const value = this.values[name];
+    if (value === undefined && required) throw new Error(`Missing required option "${name}"`);
+    return value ?? null;
+  }
+
+  getNumber(name, required = false) {
+    return this.getInteger(name, required);
+  }
 }
 
 /**
@@ -73,6 +107,10 @@ export function createFakeInteraction(params = {}) {
     selectValues = [],
     client = null,
     kind = 'chatInput',
+    /** Position of the bot's highest role — used for hierarchy checks. */
+    botRolePosition = 10,
+    guildName = 'Test Guild',
+    memberCount = 1284,
   } = params;
 
   const calls = { reply: [], editReply: [], followUp: [], update: [], deferReply: 0 };
@@ -87,15 +125,42 @@ export function createFakeInteraction(params = {}) {
     createdTimestamp: Date.now() - 12,
     locale,
     guildLocale: guildId ? guildLocale : null,
-    user: { id: userId, username: 'tester', tag: 'tester#0001', bot: false },
+    user: {
+      id: userId,
+      username: 'tester',
+      displayName: 'tester',
+      tag: 'tester#0001',
+      bot: false,
+      createdTimestamp: Date.now() - 400 * 86400_000,
+      displayAvatarURL: () => 'https://cdn.discordapp.com/avatars/222/a.png',
+    },
     member: guildId
-      ? { id: userId, permissions: new FakePermissions(permissions), roles: { cache: new Map() } }
+      ? {
+          id: userId,
+          permissions: new FakePermissions(permissions),
+          roles: { cache: new Map() },
+          joinedTimestamp: Date.now() - 3600_000,
+          send: async () => ({ id: 'dm-1' }),
+          // A real GuildMember always carries its guild; code that reads
+          // `member.guild.id` would otherwise crash only in production.
+          get guild() {
+            return interaction.guild;
+          },
+        }
       : null,
     guild: guildId
       ? {
           id: guildId,
-          name: 'Test Guild',
-          members: { me: { permissions: new FakePermissions('*') } },
+          name: guildName,
+          memberCount,
+          iconURL: () => null,
+          members: {
+            me: {
+              permissions: new FakePermissions('*'),
+              roles: { highest: { position: botRolePosition } },
+            },
+          },
+          roles: { cache: new Map() },
         }
       : null,
     channel: { id: '333333333333333333', nsfw: false },

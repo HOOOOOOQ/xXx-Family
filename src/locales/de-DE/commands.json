@@ -86,5 +86,67 @@
     "settingsResetConfirm": "Alle Einstellungen dieses Servers zurücksetzen? Das ist nicht umkehrbar.",
     "modulesLoaded": "Aktive Module",
     "noModules": "Es sind noch keine Module aktiv."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Konfiguriere die Willkommens- und Abschiedsnachrichten dieses Servers.",
+    "options": {
+      "view": {
+        "name": "anzeigen",
+        "description": "Zeigt die aktuelle Willkommens-Konfiguration."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Schaltet Willkommensnachrichten ein."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Schaltet Willkommensnachrichten aus."
+      },
+      "channel": {
+        "name": "kanal",
+        "description": "Legt den Kanal für Willkommensnachrichten fest.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu verwendende Kanal. Wähle none zum Löschen."
+          }
+        }
+      },
+      "message": {
+        "name": "nachricht",
+        "description": "Legt eine eigene Willkommensvorlage fest.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "Die Nachrichtenvorlage. Nutze {user.mention} und {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "testen",
+        "description": "Sendet dir eine Test-Willkommensnachricht."
+      },
+      "roles": {
+        "name": "rollen",
+        "description": "Verwaltet die Rollen beim Beitritt.",
+        "options": {
+          "role": {
+            "name": "rolle",
+            "description": "Die hinzuzufügende oder zu entfernende Rolle."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "abschied",
+        "description": "Legt eine eigene Abschiedsvorlage fest.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "Die Nachrichtenvorlage. Nutze {user.mention} und {server.name}."
+          }
+        }
+      }
+    }
   }
 }

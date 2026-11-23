@@ -154,6 +154,18 @@ export async function pingDatabase() {
 }
 
 /**
+ * Whether a MongoDB URI was supplied at all.
+ *
+ * Distinct from "connected": a configured-but-reconnecting database should
+ * still let services attempt reads (they degrade on failure), while an
+ * unconfigured one should skip the round trip entirely and use defaults.
+ * @returns {boolean}
+ */
+export function isDatabaseConfigured() {
+  return state.enabled;
+}
+
+/**
  * Current connection health, safe to expose on `/health`.
  * @returns {{ enabled:boolean, status:'connected'|'connecting'|'disconnected'|'unconfigured'|'error', readyState:number, host:string, lastPingMs:number|null, lastError:string|null, lastConnectedAt:string|null, attempts:number }}
  */

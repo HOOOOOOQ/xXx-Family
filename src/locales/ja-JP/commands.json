@@ -86,5 +86,67 @@
     "settingsResetConfirm": "このサーバーの設定をすべて初期化しますか？元に戻せません。",
     "modulesLoaded": "有効なモジュール",
     "noModules": "有効なモジュールはまだありません。"
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "このサーバーのウェルカム・グッバイメッセージを設定します。",
+    "options": {
+      "view": {
+        "name": "ひょうじ",
+        "description": "現在のウェルカム設定を表示します。"
+      },
+      "enable": {
+        "name": "ゆうこうか",
+        "description": "ウェルカムメッセージをオンにします。"
+      },
+      "disable": {
+        "name": "むこうか",
+        "description": "ウェルカムメッセージをオフにします。"
+      },
+      "channel": {
+        "name": "チャンネル",
+        "description": "ウェルカムメッセージの送信先を設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "使用するチャンネル。none で解除します。"
+          }
+        }
+      },
+      "message": {
+        "name": "メッセージ",
+        "description": "カスタムのウェルカム文を設定します。",
+        "options": {
+          "text": {
+            "name": "テキスト",
+            "description": "文のテンプレート。{user.mention} と {server.name} が使えます。"
+          }
+        }
+      },
+      "test": {
+        "name": "テスト",
+        "description": "あなたにテスト用メッセージを送信します。"
+      },
+      "roles": {
+        "name": "ロール",
+        "description": "参加時に付与するロールを管理します。",
+        "options": {
+          "role": {
+            "name": "ロール",
+            "description": "追加・削除するロール。"
+          }
+        }
+      },
+      "goodbye": {
+        "name": "グッバイ",
+        "description": "カスタムのグッバイ文を設定します。",
+        "options": {
+          "text": {
+            "name": "テキスト",
+            "description": "文のテンプレート。{user.mention} と {server.name} が使えます。"
+          }
+        }
+      }
+    }
   }
 }

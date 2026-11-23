@@ -86,5 +86,67 @@
     "settingsResetConfirm": "Reset every setting of this server? This cannot be undone.",
     "modulesLoaded": "Active modules",
     "noModules": "No modules are active yet."
+  },
+  "welcome": {
+    "name": "welcome",
+    "description": "Configure welcome and goodbye messages for this server.",
+    "options": {
+      "view": {
+        "name": "view",
+        "description": "Show the current welcome configuration."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn welcome messages on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn welcome messages off."
+      },
+      "channel": {
+        "name": "channel",
+        "description": "Set the channel welcome messages are sent to.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The channel to use. Choose none to clear."
+          }
+        }
+      },
+      "message": {
+        "name": "message",
+        "description": "Set a custom welcome message template.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "The message template. Use {user.mention} and {server.name}."
+          }
+        }
+      },
+      "test": {
+        "name": "test",
+        "description": "Send yourself a test welcome message."
+      },
+      "roles": {
+        "name": "roles",
+        "description": "Manage the roles granted on join.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "The role to add or remove."
+          }
+        }
+      },
+      "goodbye": {
+        "name": "goodbye",
+        "description": "Set a custom goodbye message template.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "The message template. Use {user.mention} and {server.name}."
+          }
+        }
+      }
+    }
   }
 }

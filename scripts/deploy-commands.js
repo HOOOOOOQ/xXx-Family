@@ -37,10 +37,9 @@ async function main() {
   );
   const logger = getLogger();
 
-  if (!config.discord.token || !config.discord.clientId) {
-    logger.fatal('DISCORD_TOKEN and DISCORD_CLIENT_ID are required to deploy commands');
-    process.exit(1);
-  }
+  // NOTE: the credential check lives *after* the dry-run branch on purpose.
+  // Dry run exists so CI and a Termux pre-flight can validate the exact payload
+  // offline, so it must not need a token.
 
   await initI18n({
     locales: [...config.i18n.enabledLocales],
@@ -55,12 +54,6 @@ async function main() {
   }
 
   const payloads = [...commands.values()].map((command) => localizeCommandPayload(command));
-  const rest = new REST({ version: '10' }).setToken(config.discord.token);
-
-  const guildId = process.env.DEPLOY_GUILD_ID || config.discord.deployGuildId;
-  const route = guildId
-    ? Routes.applicationGuildCommands(config.discord.clientId, guildId)
-    : Routes.applicationCommands(config.discord.clientId);
 
   // --dry-run validates and prints the exact payload without calling Discord,
   // so the localization wiring can be checked offline (CI, Termux pre-flight).
@@ -94,6 +87,18 @@ async function main() {
     logger.info('Dry run passed — payload is valid', { count: payloads.length });
     process.exit(0);
   }
+
+  // From here on we really are talking to Discord, so credentials are required.
+  if (!config.discord.token || !config.discord.clientId) {
+    logger.fatal('DISCORD_TOKEN and DISCORD_CLIENT_ID are required to deploy commands');
+    process.exit(1);
+  }
+
+  const rest = new REST({ version: '10' }).setToken(config.discord.token);
+  const guildId = process.env.DEPLOY_GUILD_ID || config.discord.deployGuildId;
+  const route = guildId
+    ? Routes.applicationGuildCommands(config.discord.clientId, guildId)
+    : Routes.applicationCommands(config.discord.clientId);
 
   logger.info(`Deploying ${payloads.length} command(s)`, {
     scope: guildId ? `guild ${guildId}` : 'global',

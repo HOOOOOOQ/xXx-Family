@@ -63,6 +63,10 @@ export const LIMITS = Object.freeze({
   embedTotal: 6000,
   componentLabel: 80,
   selectOptions: 25,
+  /** Auto roles granted on join. One Discord API call each, so it is bounded. */
+  maxAutoRoles: 10,
+  /** Welcome channels per guild (one per language is the common case). */
+  maxWelcomeChannels: 5,
 });
 
 /** Cooldown defaults (ms) applied when a command does not declare its own. */

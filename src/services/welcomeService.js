@@ -20,6 +20,7 @@ import { renderTemplate, findUnknownPlaceholders } from '../utils/templates.js';
 import { brandEmbed } from '../utils/embeds.js';
 import { COLORS, LIMITS } from '../config/constants.js';
 import { formatDuration, discordTimestamp } from '../utils/format.js';
+import { DatabaseError } from '../utils/errors.js';
 import { DEFAULT_WELCOME_CONFIG } from '../database/models/WelcomeConfig.js';
 import { DEFAULT_GOODBYE_CONFIG } from '../database/models/GoodbyeConfig.js';
 
@@ -210,6 +211,40 @@ export class WelcomeService {
   }
 
   /**
+   * Render and send a preview for the member who asked, without side effects.
+   *
+   * Deliberately does not count towards `meta.totalSent` and does not write a
+   * `member.join` audit entry — otherwise an admin testing ten templates would
+   * leave ten fake joins in the moderation history.
+   *
+   * @param {import('discord.js').GuildMember} member
+   * @returns {Promise<{ sent:number, error:string|null, skipped?:string }>}
+   */
+  async sendTest(member) {
+    const config = await this.getWelcomeConfig(member.guild.id);
+    if (!config.channelIds.length) return { sent: 0, error: null, skipped: 'noChannel' };
+
+    const localeContext = await this.#locale(member.guild, config.language);
+    const t = localeContext.t;
+    const values = this.buildTemplateValues(member, { t });
+    const text = renderTemplate(config.message ?? t('common:welcome.message'), values, {
+      maxLength: LIMITS.messageContent,
+    });
+
+    const sent = await this.#sendToChannels(config.channelIds, text, config.embed, {
+      t,
+      dir: localeContext.dir,
+      values,
+      member,
+      fallbackTitle: 'common:welcome.title',
+      color: COLORS.success,
+    });
+
+    this.metrics?.increment('welcome.test');
+    return { sent, error: null };
+  }
+
+  /**
    * Say goodbye to a member who left.
    * @param {import('discord.js').GuildMember|import('discord.js').User} memberOrUser
    * @param {object} [options]
@@ -267,6 +302,49 @@ export class WelcomeService {
     this.metrics?.increment('goodbye.sent');
     await this.#bumpCounter('GoodbyeConfig', guild.id);
     return { sent };
+  }
+
+  /**
+   * Apply a partial update to a guild's welcome configuration.
+   *
+   * Uses `$set` with dot-notation paths so nested keys (embed.description,
+   * rejoin.windowMinutes) can be changed without rewriting the whole document.
+   * @param {string} guildId
+   * @param {Record<string, unknown>} patch dot-path -> value
+   * @param {string} [updatedBy] user id performing the change
+   * @returns {Promise<typeof DEFAULT_WELCOME_CONFIG>} the effective config afterwards
+   */
+  async saveWelcomeConfig(guildId, patch, updatedBy = null) {
+    return this.#save('WelcomeConfig', guildId, patch, updatedBy, DEFAULT_WELCOME_CONFIG, 'welcome');
+  }
+
+  /** @returns {Promise<typeof DEFAULT_GOODBYE_CONFIG>} */
+  async saveGoodbyeConfig(guildId, patch, updatedBy = null) {
+    return this.#save('GoodbyeConfig', guildId, patch, updatedBy, DEFAULT_GOODBYE_CONFIG, 'goodbye');
+  }
+
+  /** Shared upsert; refuses to run without a database rather than pretending. */
+  async #save(modelName, guildId, patch, updatedBy, fallback, cacheScope) {
+    const model = this.models?.[modelName];
+    if (!model) throw new DatabaseError(`${modelName} is not available`, { i18nKey: 'errors:database' });
+    if (!this.isDbReady()) {
+      throw new DatabaseError('Welcome configuration requires a database connection', {
+        i18nKey: 'errors:database',
+      });
+    }
+
+    const set = { ...patch };
+    if (updatedBy) set['meta.updatedBy'] = updatedBy;
+
+    await model.findOneAndUpdate(
+      { guildId },
+      { $set: set, $setOnInsert: { guildId } },
+      { upsert: true, new: true },
+    );
+
+    this.settings?.invalidateGuild?.(guildId);
+    this.logger.info(`${cacheScope} configuration updated`, { guildId, keys: Object.keys(patch), updatedBy });
+    return this[`get${modelName}`](guildId);
   }
 
   /** Resolve the locale: explicit welcome-language override, then the guild. */
