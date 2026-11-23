@@ -9,7 +9,7 @@
  * gateway disconnect.
  */
 
-import { Events } from 'discord.js';
+import { Events, PermissionFlagsBits } from 'discord.js';
 
 import { getLogger } from '../../utils/logger.js';
 
@@ -23,6 +23,33 @@ export default {
     // Cheapest checks first. Bots, webhooks and DMs are never screened.
     if (!message.inGuild()) return;
     if (message.author?.bot || message.webhookId || message.system) return;
+
+    // Ticket transcripts. This runs before the automod gate below on purpose:
+    // a server may disable automod and still expect its tickets to be recorded.
+    // `isTicketChannel` is a synchronous in-memory lookup, so messages outside
+    // a ticket — nearly all of them — cost nothing here.
+    if (client.tickets?.isTicketChannel?.(message.channelId)) {
+      try {
+        const ticketConfig = await client.tickets.getConfig(message.guildId);
+        await client.tickets.recordMessage({
+          guildId: message.guildId,
+          channelId: message.channelId,
+          message,
+          isStaff: Boolean(
+            ticketConfig.staffRoleId
+              ? message.member?.roles?.cache?.has?.(ticketConfig.staffRoleId)
+              : message.member?.permissions?.has?.(PermissionFlagsBits.ManageMessages),
+          ),
+        });
+      } catch (err) {
+        // A transcript gap is bad; losing the gateway over it is worse.
+        logger.warn('Could not record a ticket message', {
+          channelId: message.channelId,
+          reason: err.message,
+        });
+      }
+    }
+
     if (!client.automod) return;
 
     // A module the server switched off should cost nothing at all.

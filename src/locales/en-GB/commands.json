@@ -560,5 +560,125 @@
         }
       }
     }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Support tickets: open one, or manage the system.",
+    "options": {
+      "open": {
+        "name": "open",
+        "description": "Open a new ticket.",
+        "options": {
+          "subject": {
+            "name": "subject",
+            "description": "What you need help with."
+          },
+          "category": {
+            "name": "category",
+            "description": "The kind of ticket."
+          }
+        }
+      },
+      "close": {
+        "name": "close",
+        "description": "Close this ticket.",
+        "options": {
+          "reason": {
+            "name": "reason",
+            "description": "Why it is being closed."
+          }
+        }
+      },
+      "claim": {
+        "name": "claim",
+        "description": "Claim this ticket so nobody else answers it."
+      },
+      "add": {
+        "name": "add",
+        "description": "Add a member to this ticket.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to add."
+          }
+        }
+      },
+      "priority": {
+        "name": "priority",
+        "description": "Set the priority of this ticket.",
+        "options": {
+          "level": {
+            "name": "level",
+            "description": "How urgent it is."
+          }
+        }
+      },
+      "stats": {
+        "name": "stats",
+        "description": "Show ticket statistics for this server."
+      },
+      "view": {
+        "name": "view",
+        "description": "Show the ticket configuration."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn the ticket system on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn the ticket system off."
+      },
+      "panel": {
+        "name": "panel",
+        "description": "Post the ticket panel in a channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Where to post it. Defaults to this channel."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "staffrole",
+        "description": "Set the role that can see and answer tickets.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "The staff role. Choose none to clear."
+          }
+        }
+      },
+      "transcript": {
+        "name": "transcript",
+        "description": "Set where closed ticket transcripts are posted.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The transcript channel. Choose none to clear."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "cooldown",
+        "description": "Set how long a member waits between opening tickets.",
+        "options": {
+          "seconds": {
+            "name": "seconds",
+            "description": "Seconds. 0 disables the wait."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "maxopen",
+        "description": "Set how many tickets one member may hold open.",
+        "options": {
+          "count": {
+            "name": "count",
+            "description": "Number of tickets."
+          }
+        }
+      }
+    }
   }
 }

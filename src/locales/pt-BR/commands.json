@@ -560,5 +560,125 @@
         }
       }
     }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Tickets de suporte: abra um ou gerencie o sistema.",
+    "options": {
+      "open": {
+        "name": "abrir",
+        "description": "Abrir um novo ticket.",
+        "options": {
+          "subject": {
+            "name": "assunto",
+            "description": "Com o que você precisa de ajuda."
+          },
+          "category": {
+            "name": "categoria",
+            "description": "O tipo de ticket."
+          }
+        }
+      },
+      "close": {
+        "name": "fechar",
+        "description": "Fechar este ticket.",
+        "options": {
+          "reason": {
+            "name": "motivo",
+            "description": "Por que está sendo fechado."
+          }
+        }
+      },
+      "claim": {
+        "name": "assumir",
+        "description": "Assuma este ticket para que ninguém mais o atenda."
+      },
+      "add": {
+        "name": "adicionar",
+        "description": "Adicionar um membro a este ticket.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "O membro a adicionar."
+          }
+        }
+      },
+      "priority": {
+        "name": "prioridade",
+        "description": "Definir a prioridade deste ticket.",
+        "options": {
+          "level": {
+            "name": "nivel",
+            "description": "Quão urgente é."
+          }
+        }
+      },
+      "stats": {
+        "name": "estatisticas",
+        "description": "Mostrar as estatísticas de tickets."
+      },
+      "view": {
+        "name": "ver",
+        "description": "Mostrar a configuração de tickets."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativar o sistema de tickets."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativar o sistema de tickets."
+      },
+      "panel": {
+        "name": "painel",
+        "description": "Publicar o painel de tickets em um canal.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "Onde publicar. Padrão: este canal."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "cargo_equipe",
+        "description": "Defina o cargo que pode ver e responder tickets.",
+        "options": {
+          "role": {
+            "name": "cargo",
+            "description": "O cargo da equipe. Escolha nenhum para limpar."
+          }
+        }
+      },
+      "transcript": {
+        "name": "transcricao",
+        "description": "Defina onde as transcrições são publicadas.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal de transcrições. Escolha nenhum para limpar."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "espera",
+        "description": "Defina quanto um membro espera entre tickets.",
+        "options": {
+          "seconds": {
+            "name": "segundos",
+            "description": "Segundos. 0 desativa a espera."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "max_abertos",
+        "description": "Defina quantos tickets um membro pode ter abertos.",
+        "options": {
+          "count": {
+            "name": "quantidade",
+            "description": "Número de tickets."
+          }
+        }
+      }
+    }
   }
 }

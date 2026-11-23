@@ -560,5 +560,125 @@
         }
       }
     }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Tickets de soporte: abre uno o gestiona el sistema.",
+    "options": {
+      "open": {
+        "name": "abrir",
+        "description": "Abrir un ticket nuevo.",
+        "options": {
+          "subject": {
+            "name": "asunto",
+            "description": "En qué necesitas ayuda."
+          },
+          "category": {
+            "name": "categoria",
+            "description": "El tipo de ticket."
+          }
+        }
+      },
+      "close": {
+        "name": "cerrar",
+        "description": "Cerrar este ticket.",
+        "options": {
+          "reason": {
+            "name": "motivo",
+            "description": "Por qué se cierra."
+          }
+        }
+      },
+      "claim": {
+        "name": "tomar",
+        "description": "Toma este ticket para que nadie más lo atienda."
+      },
+      "add": {
+        "name": "anadir",
+        "description": "Añadir un miembro a este ticket.",
+        "options": {
+          "user": {
+            "name": "usuario",
+            "description": "El miembro a añadir."
+          }
+        }
+      },
+      "priority": {
+        "name": "prioridad",
+        "description": "Fijar la prioridad de este ticket.",
+        "options": {
+          "level": {
+            "name": "nivel",
+            "description": "Cuán urgente es."
+          }
+        }
+      },
+      "stats": {
+        "name": "estadisticas",
+        "description": "Mostrar las estadísticas de tickets."
+      },
+      "view": {
+        "name": "ver",
+        "description": "Mostrar la configuración de tickets."
+      },
+      "enable": {
+        "name": "activar",
+        "description": "Activar el sistema de tickets."
+      },
+      "disable": {
+        "name": "desactivar",
+        "description": "Desactivar el sistema de tickets."
+      },
+      "panel": {
+        "name": "panel",
+        "description": "Publicar el panel de tickets en un canal.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "Dónde publicarlo. Por defecto, este canal."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "rol_personal",
+        "description": "Define el rol que puede ver y responder tickets.",
+        "options": {
+          "role": {
+            "name": "rol",
+            "description": "El rol de personal. Elige ninguno para borrar."
+          }
+        }
+      },
+      "transcript": {
+        "name": "transcripcion",
+        "description": "Define dónde se publican las transcripciones.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "El canal de transcripciones. Elige ninguno para borrar."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "espera",
+        "description": "Define cuánto espera un miembro entre tickets.",
+        "options": {
+          "seconds": {
+            "name": "segundos",
+            "description": "Segundos. 0 desactiva la espera."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "max_abiertos",
+        "description": "Define cuántos tickets puede tener abiertos un miembro.",
+        "options": {
+          "count": {
+            "name": "cantidad",
+            "description": "Número de tickets."
+          }
+        }
+      }
+    }
   }
 }

@@ -560,5 +560,125 @@
         }
       }
     }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Tiket dukungan: buka tiket, atau kelola sistemnya.",
+    "options": {
+      "open": {
+        "name": "buka",
+        "description": "Buka tiket baru.",
+        "options": {
+          "subject": {
+            "name": "subjek",
+            "description": "Apa yang kamu butuhkan."
+          },
+          "category": {
+            "name": "kategori",
+            "description": "Jenis tiket."
+          }
+        }
+      },
+      "close": {
+        "name": "tutup",
+        "description": "Tutup tiket ini.",
+        "options": {
+          "reason": {
+            "name": "alasan",
+            "description": "Alasan penutupan."
+          }
+        }
+      },
+      "claim": {
+        "name": "ambil",
+        "description": "Ambil tiket ini agar tidak dijawab orang lain."
+      },
+      "add": {
+        "name": "tambah",
+        "description": "Tambahkan anggota ke tiket ini.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang ditambahkan."
+          }
+        }
+      },
+      "priority": {
+        "name": "prioritas",
+        "description": "Atur prioritas tiket ini.",
+        "options": {
+          "level": {
+            "name": "tingkat",
+            "description": "Seberapa mendesak."
+          }
+        }
+      },
+      "stats": {
+        "name": "statistik",
+        "description": "Tampilkan statistik tiket server ini."
+      },
+      "view": {
+        "name": "lihat",
+        "description": "Tampilkan konfigurasi tiket."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan sistem tiket."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan sistem tiket."
+      },
+      "panel": {
+        "name": "panel",
+        "description": "Posting panel tiket di sebuah channel.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Tempat memposting. Default: channel ini."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "peran_staf",
+        "description": "Atur peran yang bisa melihat dan menjawab tiket.",
+        "options": {
+          "role": {
+            "name": "peran",
+            "description": "Peran staf. Pilih kosong untuk menghapus."
+          }
+        }
+      },
+      "transcript": {
+        "name": "transkrip",
+        "description": "Atur tempat transkrip tiket yang ditutup diposting.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "Channel transkrip. Pilih kosong untuk menghapus."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "jeda",
+        "description": "Atur jeda antar pembukaan tiket oleh anggota.",
+        "options": {
+          "seconds": {
+            "name": "detik",
+            "description": "Detik. 0 mematikan jeda."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "maks_terbuka",
+        "description": "Atur jumlah tiket terbuka yang boleh dipegang satu anggota.",
+        "options": {
+          "count": {
+            "name": "jumlah",
+            "description": "Jumlah tiket."
+          }
+        }
+      }
+    }
   }
 }

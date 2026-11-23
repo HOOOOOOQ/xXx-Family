@@ -560,5 +560,125 @@
         }
       }
     }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "サポートチケット：開く、またはシステムを管理します。",
+    "options": {
+      "open": {
+        "name": "開く",
+        "description": "新しいチケットを開きます。",
+        "options": {
+          "subject": {
+            "name": "件名",
+            "description": "必要な支援の内容。"
+          },
+          "category": {
+            "name": "カテゴリ",
+            "description": "チケットの種類。"
+          }
+        }
+      },
+      "close": {
+        "name": "閉じる",
+        "description": "このチケットを閉じます。",
+        "options": {
+          "reason": {
+            "name": "理由",
+            "description": "閉じる理由。"
+          }
+        }
+      },
+      "claim": {
+        "name": "担当",
+        "description": "他の人が対応しないようこのチケットを担当します。"
+      },
+      "add": {
+        "name": "追加",
+        "description": "このチケットにメンバーを追加します。",
+        "options": {
+          "user": {
+            "name": "ユーザー",
+            "description": "追加するメンバー。"
+          }
+        }
+      },
+      "priority": {
+        "name": "優先度",
+        "description": "このチケットの優先度を設定します。",
+        "options": {
+          "level": {
+            "name": "レベル",
+            "description": "緊急度。"
+          }
+        }
+      },
+      "stats": {
+        "name": "統計",
+        "description": "このサーバーのチケット統計を表示します。"
+      },
+      "view": {
+        "name": "表示",
+        "description": "チケット設定を表示します。"
+      },
+      "enable": {
+        "name": "有効化",
+        "description": "チケット機能をオンにします。"
+      },
+      "disable": {
+        "name": "無効化",
+        "description": "チケット機能をオフにします。"
+      },
+      "panel": {
+        "name": "パネル",
+        "description": "チャンネルにチケットパネルを投稿します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "投稿先。既定は現在地。"
+          }
+        }
+      },
+      "staffrole": {
+        "name": "スタッフロール",
+        "description": "チケットを閲覧・対応できるロールを設定します。",
+        "options": {
+          "role": {
+            "name": "ロール",
+            "description": "スタッフロール。なしで解除。"
+          }
+        }
+      },
+      "transcript": {
+        "name": "記録",
+        "description": "閉じたチケットの記録の投稿先を設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "記録チャンネル。なしで解除。"
+          }
+        }
+      },
+      "cooldown": {
+        "name": "クールダウン",
+        "description": "チケットを開く間隔を設定します。",
+        "options": {
+          "seconds": {
+            "name": "秒",
+            "description": "秒。0 で待機なし。"
+          }
+        }
+      },
+      "maxopen": {
+        "name": "最大件数",
+        "description": "1人が開いておけるチケット数を設定します。",
+        "options": {
+          "count": {
+            "name": "件数",
+            "description": "チケット数。"
+          }
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 # 05 — Testing and QA
 
-**200 tests, all passing.** Built on Node's own test runner (`node:test`) — no test framework to
+**588 tests, all passing.** Built on Node's own test runner (`node:test`) — no test framework to
 install, which matters on Termux.
 
 ```bash
@@ -18,6 +18,10 @@ suites.
 
 ## What is covered
 
+**588 tests: 473 unit + 115 integration across 29 files.** The per-file counts below add up to that
+total, so a file that regresses is visible rather than hidden in a green suite.
+
+
 ### Unit (`tests/unit/`)
 
 | File | Covers |
@@ -33,6 +37,16 @@ suites.
 | `moduleLoader.test.js` | dependency ordering, **cycle detection**, unknown dependency, phase ordering, failing-module isolation, reverse-order shutdown, real `core` module boot |
 | `settingsService.test.js` | defaults, cache hits, invalidation, resets, **degraded mode with zero DB queries**, user settings, module toggles, override precedence |
 | `format.test.js` | duration formatting + unit caps, locale number formats, byte sizes, Discord timestamps, RTL marks, chunking, markdown escaping, embed truncation |
+| `templates.test.js` | `{placeholder}` template rendering, missing-key behaviour, strict vs. lenient modes, length caps |
+| `welcomeService.test.js` | welcome/goodbye rendering, auto roles, rejoin detection, degraded mode |
+| `boosterService.test.js` | boost detection from `premiumSince` diffs, announcements, milestone math, `monthsBetween`, duration formatting |
+| `loggingService.test.js` | channel resolution, payload shaping, delivery failures, filtering, metric accounting |
+| `loggingEvents.test.js` | each logging event handler's mapping of a Discord payload to a log entry |
+| `permissionService.test.js` | `has`, `highestPosition`, `canModerate` verdicts (self/owner/hierarchy), `assertCan` i18n routing, `canManageRole` |
+| `moderationService.test.js` | validation **before** any Discord call, ban/kick/timeout/warn/purge/slowmode, case numbering, degraded mode still acting |
+| `automodService.test.js` | every rule's matching, ranked actions, sliding-window spam counting, whitelist, **stateless preview mode**, word-boundary + regex escaping |
+| `tempVoiceService.test.js` | create-on-join, name templates, **rollback when the move fails**, grace-period cleanup, `reconcile`, lock/unlock override semantics, ownership transfer |
+| `ticketService.test.js` | open/claim/close/rate, **atomic claim guards**, transcript building, secret redaction in transcripts, participant overwrites, priority, stats, reconcile |
 
 ### Integration (`tests/integration/`)
 
@@ -41,6 +55,9 @@ suites.
 | `api.test.js` | real HTTP against the Express app: `/health`, `/health/live`, `/health/ready` (503 on critical failure), check timeouts, `/api/v1/*`, `/metrics`, security headers, CORS allow-list, preflight, structured 404, body-size rejection, rate limiting |
 | `interaction.test.js` | the **real** interaction handler with a fake interaction: `/ping` `/uptime` `/help` `/language` in English, Indonesian and Arabic; the category select menu; localized permission and cooldown errors; stack-trace leakage; module gating |
 | `locales.test.js` | key parity, orphan keys, placeholder contracts, plural fallback keys, RTL/Discord-code invariants, "not just a copy of English", and builder↔`en-US` description sync |
+| `welcome.test.js` | the **real** client boot (`initialize({ connectDatabase, loadEvents })`) with welcome enabled: join/leave events, role assignment, config writes |
+| `mod.test.js` | every `/mod` subcommand against the real interaction handler: permission refusals, hierarchy guards, localized errors, cooldown resets |
+| `automod.test.js` | `/automod` configuration round-trips through `settingsService`, rule edits, whitelist, and the `/automod test` preview |
 
 ### Scripts as gates
 

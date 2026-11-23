@@ -560,5 +560,125 @@
         }
       }
     }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Tickets d'assistance : ouvre-en un ou gère le système.",
+    "options": {
+      "open": {
+        "name": "ouvrir",
+        "description": "Ouvrir un nouveau ticket.",
+        "options": {
+          "subject": {
+            "name": "sujet",
+            "description": "Ce dont tu as besoin."
+          },
+          "category": {
+            "name": "categorie",
+            "description": "Le type de ticket."
+          }
+        }
+      },
+      "close": {
+        "name": "fermer",
+        "description": "Fermer ce ticket.",
+        "options": {
+          "reason": {
+            "name": "motif",
+            "description": "Pourquoi il est fermé."
+          }
+        }
+      },
+      "claim": {
+        "name": "prendre",
+        "description": "Prends ce ticket pour que personne d'autre ne réponde."
+      },
+      "add": {
+        "name": "ajouter",
+        "description": "Ajouter un membre à ce ticket.",
+        "options": {
+          "user": {
+            "name": "utilisateur",
+            "description": "Le membre à ajouter."
+          }
+        }
+      },
+      "priority": {
+        "name": "priorite",
+        "description": "Définir la priorité de ce ticket.",
+        "options": {
+          "level": {
+            "name": "niveau",
+            "description": "À quel point c'est urgent."
+          }
+        }
+      },
+      "stats": {
+        "name": "stats",
+        "description": "Afficher les statistiques des tickets."
+      },
+      "view": {
+        "name": "voir",
+        "description": "Afficher la configuration des tickets."
+      },
+      "enable": {
+        "name": "activer",
+        "description": "Activer le système de tickets."
+      },
+      "disable": {
+        "name": "desactiver",
+        "description": "Désactiver le système de tickets."
+      },
+      "panel": {
+        "name": "panneau",
+        "description": "Publier le panneau de tickets dans un salon.",
+        "options": {
+          "channel": {
+            "name": "salon",
+            "description": "Où le publier. Par défaut, ce salon."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "role_staff",
+        "description": "Définis le rôle qui peut voir et répondre aux tickets.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "Le rôle du staff. Choisis aucun pour effacer."
+          }
+        }
+      },
+      "transcript": {
+        "name": "transcription",
+        "description": "Définis où les transcriptions sont publiées.",
+        "options": {
+          "channel": {
+            "name": "salon",
+            "description": "Le salon des transcriptions. Choisis aucun pour effacer."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "delai",
+        "description": "Définis l'attente entre deux tickets.",
+        "options": {
+          "seconds": {
+            "name": "secondes",
+            "description": "Secondes. 0 désactive l'attente."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "max_ouverts",
+        "description": "Définis combien de tickets un membre peut avoir.",
+        "options": {
+          "count": {
+            "name": "nombre",
+            "description": "Nombre de tickets."
+          }
+        }
+      }
+    }
   }
 }

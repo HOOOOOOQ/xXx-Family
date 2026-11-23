@@ -40,6 +40,7 @@ import { BoosterService } from '../services/boosterService.js';
 import { ModerationService } from '../services/moderationService.js';
 import { AutomodService } from '../services/automodService.js';
 import { TempVoiceService } from '../services/tempVoiceService.js';
+import { TicketService } from '../services/ticketService.js';
 import { healthService } from '../services/healthService.js';
 import { metrics } from '../services/metrics.js';
 import { settingsCache } from '../services/cacheManager.js';
@@ -177,6 +178,17 @@ export class XxxFamilyClient extends Client {
         metrics: this.metrics,
       });
 
+    this.tickets =
+      deps.tickets ??
+      new TicketService({
+        models,
+        localeService: this.localeService,
+        resolveChannel,
+        isDbReady: () => isDatabaseConfigured(),
+        logger: this.logger,
+        metrics: this.metrics,
+      });
+
     this.interactionHandler = new InteractionHandler({ client: this });
     this.cacheStore = settingsCache;
 
@@ -296,6 +308,7 @@ export class XxxFamilyClient extends Client {
         moderation: this.moderation,
         automod: this.automod,
         tempVoice: this.tempVoice,
+        tickets: this.tickets,
         health: this.health,
         metrics: this.metrics,
       });

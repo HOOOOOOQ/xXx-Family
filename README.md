@@ -8,15 +8,15 @@ xXx Family is a modular Discord platform built for **international** communities
 management, entertainment, AI assistance, automation and a web dashboard — all rendered in the member's
 own language.
 
-> **Phase status — read this first.** This repository currently contains **Phase 1** (platform core):
-> bot client, MongoDB layer, command/event/module loaders, the full internationalization system,
-> logging, health monitoring, the Express API and the test suite. Phases 2–9 are **not implemented
-> yet** and are listed in [docs/ROADMAP.md](docs/ROADMAP.md). Nothing here is a placeholder pretending
-> to be finished — what exists, runs.
+> **Phase status — read this first.** This repository contains **Phases 1–3 complete** and **Phase 4
+> partly complete**: the platform core, welcome/goodbye, booster, logging, moderation, automod,
+> temporary voice and tickets. Anonymous submissions, streaks and Phases 5–9 are **not implemented
+> yet** and are listed with honest status in [docs/ROADMAP.md](docs/ROADMAP.md). Nothing here is a
+> placeholder pretending to be finished — what exists, runs, and is covered by tests.
 
 ---
 
-## What Phase 1 delivers
+## What is built
 
 | Area | Status | Where |
 |---|---|---|
@@ -26,15 +26,34 @@ own language.
 | MongoDB connection manager + models | ✅ working | `src/database/` |
 | Guild/user settings with cache + degraded mode | ✅ working | `src/services/settingsService.js` |
 | Dynamic command loader + localized registration | ✅ working | `src/handlers/commandLoader.js` |
-| Event handler (14 gateway events) | ✅ working | `src/bot/events/` |
+| Event handler (26 gateway events) | ✅ working | `src/bot/events/` |
 | Plugin/module manager (dependencies, isolation) | ✅ working | `src/handlers/moduleLoader.js` |
 | Interaction router + guards + error contract | ✅ working | `src/handlers/interactionHandler.js`, `src/middleware/` |
 | Rate limiting + per-command cooldowns | ✅ working | `src/middleware/rateLimiter.js` |
 | Structured logging + secret redaction | ✅ working | `src/utils/logger.js`, `src/utils/redact.js` |
 | Health / liveness / readiness / metrics API | ✅ working | `src/api/`, `src/services/healthService.js` |
 | Graceful shutdown (SIGINT/SIGTERM/SIGHUP) | ✅ working | `src/bot/index.js` |
-| Test suite — **200 tests, all passing** | ✅ working | `tests/` |
-| Commands shipped | `/ping` `/uptime` `/help` `/language` `/settings` | `src/bot/commands/` |
+| Test suite — **588 tests, all passing** | ✅ working | `tests/` |
+| Commands shipped (11) | `/ping` `/uptime` `/help` `/language` `/settings` `/welcome` `/booster` `/mod` `/automod` `/tempvoice` `/ticket` | `src/bot/commands/` |
+
+### Phases 2–4 — community subsystems
+
+| Area | Status | Where |
+|---|---|---|
+| Welcome / goodbye + auto roles | ✅ working | `src/services/welcomeService.js`, `/welcome` |
+| Booster tracking + leaderboard | ✅ working | `src/services/boosterService.js`, `/booster` |
+| Structured logging across 19 event types | ✅ working | `src/services/loggingService.js`, `logging` module |
+| Moderation (11 actions) + case records | ✅ working | `src/services/moderationService.js`, `/mod` |
+| Permission + role-hierarchy enforcement | ✅ working | `src/services/permissionService.js` |
+| Automod (spam, flood, phishing, invites, words) | ✅ working | `src/services/automodService.js`, `/automod` |
+| Temporary voice (join-to-create) | ✅ working | `src/services/tempVoiceService.js`, `/tempvoice` |
+| Tickets: open → claim → close, transcripts | ✅ working | `src/services/ticketService.js`, `/ticket` |
+| Modules running | 7 (`core`, `booster`, `logging`, `welcome`, `moderation`, `tempvoice`, `tickets`) | `src/bot/modules/` |
+| Registered models | 14 collections | `src/database/models/` |
+
+**Not built yet:** anonymous submissions and streaks (rest of Phase 4), XP/levels/economy/profiles,
+the digital member card, the AI assistant, games, tools, giveaways, music and the web dashboard.
+[docs/ROADMAP.md](docs/ROADMAP.md) states the status of each.
 
 ## Supported languages
 
@@ -95,7 +114,7 @@ served from defaults and nothing is persisted (this is reported honestly on `/he
 | `npm start` | Run the bot + API |
 | `npm run start:api` | Run only the Express API (no gateway) |
 | `npm run dev` | Run with `--watch` |
-| `npm test` | Full test suite (200 tests) |
+| `npm test` | Full test suite (588 tests) |
 | `npm run test:unit` / `test:integration` | Split runs |
 | `npm run doctor` | Pre-flight environment diagnostics |
 | `npm run db:check` | MongoDB connection + index verification |
@@ -125,7 +144,7 @@ src/
 │   ├── index.js            # process entry: signals, boot, shutdown deadline
 │   ├── client.js           # XxxFamilyClient — registries + boot sequence
 │   ├── commands/           # admin/ utility/ (slash commands)
-│   ├── events/             # 14 gateway event handlers
+│   ├── events/             # 26 gateway event handlers
 │   └── modules/            # plugin modules (core/ …)
 ├── handlers/               # command/event/module/interaction loaders
 ├── services/               # i18n, locale, settings, cache, health, metrics
@@ -136,7 +155,7 @@ src/
 ├── config/                 # validated env, brand constants, locale registry
 └── utils/                  # logger, redaction, errors, embeds, formatting
 scripts/                    # doctor, db-check, deploy, verify-locales, health-check
-tests/                      # unit + integration (200 tests)
+tests/                      # unit + integration (588 tests)
 docs/                       # installation, configuration, architecture, roadmap
 ```
 

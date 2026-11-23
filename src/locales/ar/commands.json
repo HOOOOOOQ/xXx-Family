@@ -560,5 +560,125 @@
         }
       }
     }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "تذاكر الدعم: افتح واحدة أو أدر النظام.",
+    "options": {
+      "open": {
+        "name": "فتح",
+        "description": "فتح تذكرة جديدة.",
+        "options": {
+          "subject": {
+            "name": "الموضوع",
+            "description": "بماذا تحتاج المساعدة."
+          },
+          "category": {
+            "name": "التصنيف",
+            "description": "نوع التذكرة."
+          }
+        }
+      },
+      "close": {
+        "name": "إغلاق",
+        "description": "إغلاق هذه التذكرة.",
+        "options": {
+          "reason": {
+            "name": "السبب",
+            "description": "سبب الإغلاق."
+          }
+        }
+      },
+      "claim": {
+        "name": "استلام",
+        "description": "تولَّ هذه التذكرة كي لا يجيب عليها أحد غيرك."
+      },
+      "add": {
+        "name": "إضافة",
+        "description": "إضافة عضو إلى هذه التذكرة.",
+        "options": {
+          "user": {
+            "name": "العضو",
+            "description": "العضو المراد إضافته."
+          }
+        }
+      },
+      "priority": {
+        "name": "الأولوية",
+        "description": "ضبط أولوية هذه التذكرة.",
+        "options": {
+          "level": {
+            "name": "المستوى",
+            "description": "مدى الاستعجال."
+          }
+        }
+      },
+      "stats": {
+        "name": "الإحصاءات",
+        "description": "عرض إحصاءات التذاكر في هذا الخادم."
+      },
+      "view": {
+        "name": "عرض",
+        "description": "عرض إعدادات التذاكر."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "تشغيل نظام التذاكر."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "إيقاف نظام التذاكر."
+      },
+      "panel": {
+        "name": "اللوحة",
+        "description": "نشر لوحة التذاكر في قناة.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "أين تُنشر. الافتراضي: هذه القناة."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "دور_الفريق",
+        "description": "حدد الدور الذي يمكنه رؤية التذاكر والرد عليها.",
+        "options": {
+          "role": {
+            "name": "الدور",
+            "description": "دور الفريق. اختر لا شيء للمسح."
+          }
+        }
+      },
+      "transcript": {
+        "name": "النسخة",
+        "description": "حدد أين تُنشر نسخ التذاكر المغلقة.",
+        "options": {
+          "channel": {
+            "name": "القناة",
+            "description": "قناة النسخ. اختر لا شيء للمسح."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "الانتظار",
+        "description": "حدد مدة انتظار العضو بين التذاكر.",
+        "options": {
+          "seconds": {
+            "name": "الثواني",
+            "description": "ثوانٍ. 0 يلغي الانتظار."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "أقصى_مفتوح",
+        "description": "حدد عدد التذاكر المفتوحة المسموح بها للعضو.",
+        "options": {
+          "count": {
+            "name": "العدد",
+            "description": "عدد التذاكر."
+          }
+        }
+      }
+    }
   }
 }

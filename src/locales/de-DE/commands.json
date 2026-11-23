@@ -560,5 +560,125 @@
         }
       }
     }
+  },
+  "ticket": {
+    "name": "ticket",
+    "description": "Support-Tickets: eines eröffnen oder das System verwalten.",
+    "options": {
+      "open": {
+        "name": "eroeffnen",
+        "description": "Ein neues Ticket eröffnen.",
+        "options": {
+          "subject": {
+            "name": "betreff",
+            "description": "Wobei du Hilfe brauchst."
+          },
+          "category": {
+            "name": "kategorie",
+            "description": "Die Art des Tickets."
+          }
+        }
+      },
+      "close": {
+        "name": "schliessen",
+        "description": "Dieses Ticket schließen.",
+        "options": {
+          "reason": {
+            "name": "grund",
+            "description": "Warum es geschlossen wird."
+          }
+        }
+      },
+      "claim": {
+        "name": "uebernehmen",
+        "description": "Übernimm dieses Ticket, damit niemand sonst antwortet."
+      },
+      "add": {
+        "name": "hinzufuegen",
+        "description": "Ein Mitglied zu diesem Ticket hinzufügen.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das hinzuzufügende Mitglied."
+          }
+        }
+      },
+      "priority": {
+        "name": "prioritaet",
+        "description": "Die Priorität dieses Tickets setzen.",
+        "options": {
+          "level": {
+            "name": "stufe",
+            "description": "Wie dringend es ist."
+          }
+        }
+      },
+      "stats": {
+        "name": "statistik",
+        "description": "Die Ticket-Statistiken anzeigen."
+      },
+      "view": {
+        "name": "anzeigen",
+        "description": "Die Ticket-Konfiguration anzeigen."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Das Ticketsystem einschalten."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Das Ticketsystem ausschalten."
+      },
+      "panel": {
+        "name": "panel",
+        "description": "Das Ticket-Panel in einem Kanal posten.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Wo es gepostet wird. Standard: dieser Kanal."
+          }
+        }
+      },
+      "staffrole": {
+        "name": "teamrolle",
+        "description": "Lege die Rolle fest, die Tickets sehen und beantworten darf.",
+        "options": {
+          "role": {
+            "name": "rolle",
+            "description": "Die Team-Rolle. Wähle keine zum Löschen."
+          }
+        }
+      },
+      "transcript": {
+        "name": "protokoll",
+        "description": "Lege fest, wo Protokolle geschlossener Tickets landen.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der Protokoll-Kanal. Wähle keinen zum Löschen."
+          }
+        }
+      },
+      "cooldown": {
+        "name": "abklingzeit",
+        "description": "Lege die Wartezeit zwischen Tickets fest.",
+        "options": {
+          "seconds": {
+            "name": "sekunden",
+            "description": "Sekunden. 0 deaktiviert die Wartezeit."
+          }
+        }
+      },
+      "maxopen": {
+        "name": "max_offen",
+        "description": "Lege fest, wie viele Tickets ein Mitglied offen haben darf.",
+        "options": {
+          "count": {
+            "name": "anzahl",
+            "description": "Anzahl der Tickets."
+          }
+        }
+      }
+    }
   }
 }
