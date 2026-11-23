@@ -376,5 +376,73 @@
         }
       }
     }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Atur penyaringan pesan otomatis.",
+    "options": {
+      "view": {
+        "name": "lihat",
+        "description": "Tampilkan aturan automod saat ini."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan penyaringan otomatis."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan penyaringan otomatis."
+      },
+      "rule": {
+        "name": "aturan",
+        "description": "Atur satu aturan automod.",
+        "options": {
+          "rule": {
+            "name": "aturan",
+            "description": "Aturan yang akan diatur."
+          },
+          "enabled": {
+            "name": "aktif",
+            "description": "Nyalakan atau matikan aturan ini."
+          },
+          "action": {
+            "name": "tindakan",
+            "description": "Apa yang dilakukan saat aturan terpicu."
+          },
+          "threshold": {
+            "name": "ambang",
+            "description": "Berapa kali pemicu sebelum bertindak."
+          },
+          "word": {
+            "name": "kata",
+            "description": "Untuk aturan kata: tambah kata ini. Awali dengan - untuk menghapus."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "pengecualian",
+        "description": "Kecualikan sebuah peran dari penyaringan.",
+        "options": {
+          "role": {
+            "name": "peran",
+            "description": "Peran yang dikecualikan."
+          },
+          "remove": {
+            "name": "hapus",
+            "description": "Hapus pengecualian, bukan menambah."
+          }
+        }
+      },
+      "test": {
+        "name": "uji",
+        "description": "Periksa apa yang dipicu pesan contoh. Tidak ada yang dihapus.",
+        "options": {
+          "text": {
+            "name": "teks",
+            "description": "Pesan yang diuji."
+          }
+        }
+      }
+    }
   }
 }

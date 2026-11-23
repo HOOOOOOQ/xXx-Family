@@ -376,5 +376,73 @@
         }
       }
     }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "자동 메시지 검사를 설정합니다.",
+    "options": {
+      "view": {
+        "name": "보기",
+        "description": "현재 자동 관리 규칙을 표시합니다."
+      },
+      "enable": {
+        "name": "켜기",
+        "description": "자동 검사를 켭니다."
+      },
+      "disable": {
+        "name": "끄기",
+        "description": "자동 검사를 끕니다."
+      },
+      "rule": {
+        "name": "규칙",
+        "description": "자동 관리 규칙 하나를 설정합니다.",
+        "options": {
+          "rule": {
+            "name": "규칙",
+            "description": "설정할 규칙."
+          },
+          "enabled": {
+            "name": "활성",
+            "description": "이 규칙을 켜거나 끕니다."
+          },
+          "action": {
+            "name": "조치",
+            "description": "규칙이 발동할 때 할 일."
+          },
+          "threshold": {
+            "name": "기준값",
+            "description": "조치까지의 감지 횟수."
+          },
+          "word": {
+            "name": "단어",
+            "description": "단어 규칙용: 이 단어를 추가합니다. 앞에 -를 붙이면 삭제합니다."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "예외",
+        "description": "역할을 검사에서 제외합니다.",
+        "options": {
+          "role": {
+            "name": "역할",
+            "description": "제외할 역할."
+          },
+          "remove": {
+            "name": "제거",
+            "description": "추가 대신 제외를 해제합니다."
+          }
+        }
+      },
+      "test": {
+        "name": "테스트",
+        "description": "예시 메시지가 무엇을 발동하는지 확인합니다. 아무것도 삭제되지 않습니다.",
+        "options": {
+          "text": {
+            "name": "텍스트",
+            "description": "테스트할 메시지."
+          }
+        }
+      }
+    }
   }
 }

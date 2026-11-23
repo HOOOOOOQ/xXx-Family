@@ -376,5 +376,73 @@
         }
       }
     }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Configurer le filtrage automatique des messages.",
+    "options": {
+      "view": {
+        "name": "voir",
+        "description": "Afficher les règles d'automod actuelles."
+      },
+      "enable": {
+        "name": "activer",
+        "description": "Activer le filtrage automatique."
+      },
+      "disable": {
+        "name": "desactiver",
+        "description": "Désactiver le filtrage automatique."
+      },
+      "rule": {
+        "name": "regle",
+        "description": "Configurer une règle d'automod.",
+        "options": {
+          "rule": {
+            "name": "regle",
+            "description": "Quelle règle configurer."
+          },
+          "enabled": {
+            "name": "activee",
+            "description": "Activer ou désactiver cette règle."
+          },
+          "action": {
+            "name": "action",
+            "description": "Que faire quand la règle se déclenche."
+          },
+          "threshold": {
+            "name": "seuil",
+            "description": "Combien de déclenchements avant d'agir."
+          },
+          "word": {
+            "name": "mot",
+            "description": "Pour la règle des mots : ajoutez ce mot. Préfixez par - pour le retirer."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "exemption",
+        "description": "Exempter un rôle du filtrage.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "Le rôle à exempter."
+          },
+          "remove": {
+            "name": "retirer",
+            "description": "Retirer l'exemption au lieu de l'ajouter."
+          }
+        }
+      },
+      "test": {
+        "name": "tester",
+        "description": "Vérifier ce qu'un exemple de message déclencherait. Rien n'est supprimé.",
+        "options": {
+          "text": {
+            "name": "texte",
+            "description": "Le message à tester."
+          }
+        }
+      }
+    }
   }
 }

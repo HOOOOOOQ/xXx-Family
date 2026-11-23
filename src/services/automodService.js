@@ -110,9 +110,15 @@ export class AutomodService {
    *
    * @param {object} message a discord.js Message
    * @param {object} config from effectiveConfig()
+   * @param {object} [options]
+   * @param {boolean} [options.track] update the sliding spam/repeat windows.
+   *   Pass false for previews: otherwise an admin who runs `/automod test` a
+   *   few times pushes their own message count over the spam threshold and can
+   *   get flagged by the very rule they are tuning.
    * @returns {{ matched:string[], action:string|null, details:object }}
    */
-  scan(message, config) {
+  scan(message, config, options = {}) {
+    const { track = true } = options;
     const matched = [];
     const details = {};
 
@@ -176,29 +182,37 @@ export class AutomodService {
       const key = `${guildId}:${userId}`;
       const previous = this.#last.get(key);
       const trimmed = content.trim().toLowerCase();
-      if (trimmed.length > 0 && trimmed === previous) {
-        const count = (this.#repeatCounts.get(key) ?? 1) + 1;
-        this.#repeatCounts.set(key, count);
-        if (count >= (rules.repeats.threshold ?? 3)) {
-          matched.push('repeats');
-          details.repeats = count;
-        }
-      } else {
-        this.#repeatCounts.set(key, 1);
+      const repeated = trimmed.length > 0 && trimmed === previous;
+      const count = repeated ? (this.#repeatCounts.get(key) ?? 1) + 1 : 1;
+      if (repeated && count >= (rules.repeats.threshold ?? 3)) {
+        matched.push('repeats');
+        details.repeats = count;
       }
-      this.#last.set(key, trimmed || null);
+      if (track) {
+        this.#repeatCounts.set(key, count);
+        this.#last.set(key, trimmed || null);
+      }
     }
 
     if (rules.spam?.enabled) {
       const key = `${guildId}:${userId}`;
       const now = Date.now();
-      const window = (this.#recent.get(key) ?? []).filter((ts) => now - ts < (rules.spam.windowMs ?? 10_000));
-      window.push(now);
-      this.#recent.set(key, window);
-      if (window.length >= (rules.spam.threshold ?? 4)) {
+      const windowMs = rules.spam.windowMs ?? 10_000;
+      const window = (this.#recent.get(key) ?? []).filter((ts) => now - ts < windowMs);
+      // The hypothetical message always counts toward the comparison — the
+      // preview has to answer "would this be flagged if sent now?", and
+      // excluding it would understate the result. What `track` controls is
+      // whether the message is recorded, so repeated previews cannot
+      // accumulate and trip the rule on their own.
+      const effectiveCount = window.length + 1;
+      if (track) {
+        window.push(now);
+        this.#recent.set(key, window);
+      }
+      if (effectiveCount >= (rules.spam.threshold ?? 4)) {
         matched.push('spam');
-        details.messages = window.length;
-        details.windowMs = rules.spam.windowMs ?? 10_000;
+        details.messages = effectiveCount;
+        details.windowMs = windowMs;
       }
     }
 

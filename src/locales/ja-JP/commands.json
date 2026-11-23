@@ -376,5 +376,73 @@
         }
       }
     }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "自動メッセージ検査を設定します。",
+    "options": {
+      "view": {
+        "name": "表示",
+        "description": "現在のオートモッドルールを表示します。"
+      },
+      "enable": {
+        "name": "有効化",
+        "description": "自動検査をオンにします。"
+      },
+      "disable": {
+        "name": "無効化",
+        "description": "自動検査をオフにします。"
+      },
+      "rule": {
+        "name": "ルール",
+        "description": "オートモッドのルールを1つ設定します。",
+        "options": {
+          "rule": {
+            "name": "ルール",
+            "description": "設定するルール。"
+          },
+          "enabled": {
+            "name": "有効",
+            "description": "このルールをオンまたはオフにします。"
+          },
+          "action": {
+            "name": "アクション",
+            "description": "ルールが発動したときの処理。"
+          },
+          "threshold": {
+            "name": "しきい値",
+            "description": "反応するまでの命中回数。"
+          },
+          "word": {
+            "name": "単語",
+            "description": "単語ルール用：この単語を追加します。先頭に - を付けると削除します。"
+          }
+        }
+      },
+      "whitelist": {
+        "name": "除外",
+        "description": "ロールを検査から除外します。",
+        "options": {
+          "role": {
+            "name": "ロール",
+            "description": "除外するロール。"
+          },
+          "remove": {
+            "name": "解除",
+            "description": "追加ではなく除外を解除します。"
+          }
+        }
+      },
+      "test": {
+        "name": "テスト",
+        "description": "例のメッセージが何を発動するか確認します。削除はされません。",
+        "options": {
+          "text": {
+            "name": "テキスト",
+            "description": "テストするメッセージ。"
+          }
+        }
+      }
+    }
   }
 }

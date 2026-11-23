@@ -376,5 +376,73 @@
         }
       }
     }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Automatische Nachrichtenprüfung konfigurieren.",
+    "options": {
+      "view": {
+        "name": "anzeigen",
+        "description": "Die aktuellen Automod-Regeln anzeigen."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Die automatische Prüfung einschalten."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Die automatische Prüfung ausschalten."
+      },
+      "rule": {
+        "name": "regel",
+        "description": "Eine Automod-Regel konfigurieren.",
+        "options": {
+          "rule": {
+            "name": "regel",
+            "description": "Welche Regel konfiguriert werden soll."
+          },
+          "enabled": {
+            "name": "aktiviert",
+            "description": "Diese Regel ein- oder ausschalten."
+          },
+          "action": {
+            "name": "aktion",
+            "description": "Was passieren soll, wenn die Regel greift."
+          },
+          "threshold": {
+            "name": "schwellenwert",
+            "description": "Wie viele Treffer vor einer Reaktion."
+          },
+          "word": {
+            "name": "wort",
+            "description": "Für die Wortregel: dieses Wort hinzufügen. Mit - voranstellen zum Entfernen."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "ausnahme",
+        "description": "Eine Rolle von der Prüfung ausnehmen.",
+        "options": {
+          "role": {
+            "name": "rolle",
+            "description": "Die auszunehmende Rolle."
+          },
+          "remove": {
+            "name": "entfernen",
+            "description": "Die Ausnahme entfernen statt hinzuzufügen."
+          }
+        }
+      },
+      "test": {
+        "name": "testen",
+        "description": "Prüfen, was eine Beispielnachricht auslösen würde. Nichts wird gelöscht.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "Die zu testende Nachricht."
+          }
+        }
+      }
+    }
   }
 }

@@ -376,5 +376,73 @@
         }
       }
     }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Configurar a triagem automática de mensagens.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostrar as regras atuais do automod."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativar a triagem automática."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativar a triagem automática."
+      },
+      "rule": {
+        "name": "regra",
+        "description": "Configurar uma regra do automod.",
+        "options": {
+          "rule": {
+            "name": "regra",
+            "description": "Qual regra configurar."
+          },
+          "enabled": {
+            "name": "ativada",
+            "description": "Ativar ou desativar esta regra."
+          },
+          "action": {
+            "name": "acao",
+            "description": "O que fazer quando a regra disparar."
+          },
+          "threshold": {
+            "name": "limite",
+            "description": "Quantos acertos antes de agir."
+          },
+          "word": {
+            "name": "palavra",
+            "description": "Para a regra de palavras: adicione esta palavra. Prefixe com - para remover."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "isencao",
+        "description": "Isentar um cargo da triagem.",
+        "options": {
+          "role": {
+            "name": "cargo",
+            "description": "O cargo a isentar."
+          },
+          "remove": {
+            "name": "remover",
+            "description": "Remover a isenção em vez de adicionar."
+          }
+        }
+      },
+      "test": {
+        "name": "testar",
+        "description": "Ver o que uma mensagem de exemplo acionaria. Nada é apagado.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "A mensagem a testar."
+          }
+        }
+      }
+    }
   }
 }

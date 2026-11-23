@@ -376,5 +376,73 @@
         }
       }
     }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Configure automatic message screening.",
+    "options": {
+      "view": {
+        "name": "view",
+        "description": "Show the current automod rules."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn automatic screening on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn automatic screening off."
+      },
+      "rule": {
+        "name": "rule",
+        "description": "Configure one automod rule.",
+        "options": {
+          "rule": {
+            "name": "rule",
+            "description": "Which rule to configure."
+          },
+          "enabled": {
+            "name": "enabled",
+            "description": "Turn this rule on or off."
+          },
+          "action": {
+            "name": "action",
+            "description": "What to do when the rule fires."
+          },
+          "threshold": {
+            "name": "threshold",
+            "description": "How many hits before it fires (spam, mentions, caps, repeats)."
+          },
+          "word": {
+            "name": "word",
+            "description": "For the words rule: add this word. Prefix with - to remove it."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "whitelist",
+        "description": "Exempt a role from screening.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "The role to exempt."
+          },
+          "remove": {
+            "name": "remove",
+            "description": "Remove the exemption instead of adding it."
+          }
+        }
+      },
+      "test": {
+        "name": "test",
+        "description": "Check what a sample message would trigger. Nothing is deleted.",
+        "options": {
+          "text": {
+            "name": "text",
+            "description": "The message to test."
+          }
+        }
+      }
+    }
   }
 }

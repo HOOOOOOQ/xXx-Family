@@ -220,6 +220,41 @@ describe('AutomodService.scan', () => {
       assert.deepEqual(other.matched, []);
     });
 
+    test('a stateless scan reports the count without recording it', () => {
+      // /automod test uses track:false so an admin previewing a rule cannot be
+      // flagged by it after a few previews.
+      const config = only('spam', { threshold: 3, windowMs: 10_000 });
+      const message = msg('hello');
+
+      assert.deepEqual(service.scan(message, config, { track: false }).matched, []);
+      assert.deepEqual(service.scan(message, config, { track: false }).matched, []);
+      assert.deepEqual(service.scan(message, config, { track: false }).matched, []);
+      assert.deepEqual(service.scan(message, config, { track: false }).matched, [], 'previews must never accumulate');
+      assert.equal(service.trackedMembers(), 0, 'a stateless scan must not create tracking state');
+    });
+
+    test('a stateless scan still reports what a real message would do', () => {
+      const config = only('spam', { threshold: 3, windowMs: 10_000 });
+      const message = msg('hello');
+      // Two real messages, then a preview: the preview sees the count that the
+      // next real message would reach.
+      service.scan(message, config);
+      service.scan(message, config);
+      const preview = service.scan(message, config, { track: false });
+      assert.deepEqual(preview.matched, ['spam']);
+      assert.equal(preview.details.messages, 3);
+      // The preview itself recorded nothing.
+      assert.equal(service.trackedMembers(), 1);
+    });
+
+    test('a stateless scan does not disturb the repeat counter', () => {
+      const config = only('repeats', { threshold: 3 });
+      const message = msg('same thing');
+      service.scan(message, config, { track: false });
+      service.scan(message, config, { track: false });
+      assert.deepEqual(service.scan(message, config, { track: false }).matched, []);
+    });
+
     test('forget() clears a member’s history', () => {
       const config = only('spam', { threshold: 2, windowMs: 10_000 });
       service.scan(msg('a'), config);

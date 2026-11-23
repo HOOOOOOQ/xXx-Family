@@ -376,5 +376,73 @@
         }
       }
     }
+  },
+  "automod": {
+    "name": "automod",
+    "description": "Configurar el filtrado automático de mensajes.",
+    "options": {
+      "view": {
+        "name": "ver",
+        "description": "Mostrar las reglas de automod actuales."
+      },
+      "enable": {
+        "name": "activar",
+        "description": "Activar el filtrado automático."
+      },
+      "disable": {
+        "name": "desactivar",
+        "description": "Desactivar el filtrado automático."
+      },
+      "rule": {
+        "name": "regla",
+        "description": "Configurar una regla de automod.",
+        "options": {
+          "rule": {
+            "name": "regla",
+            "description": "Qué regla configurar."
+          },
+          "enabled": {
+            "name": "activada",
+            "description": "Activar o desactivar esta regla."
+          },
+          "action": {
+            "name": "accion",
+            "description": "Qué hacer cuando la regla se activa."
+          },
+          "threshold": {
+            "name": "umbral",
+            "description": "Cuántos aciertos antes de actuar."
+          },
+          "word": {
+            "name": "palabra",
+            "description": "Para la regla de palabras: añade esta palabra. Prefija con - para quitarla."
+          }
+        }
+      },
+      "whitelist": {
+        "name": "exencion",
+        "description": "Eximir a un rol del filtrado.",
+        "options": {
+          "role": {
+            "name": "rol",
+            "description": "El rol a eximir."
+          },
+          "remove": {
+            "name": "quitar",
+            "description": "Quitar la exención en lugar de añadirla."
+          }
+        }
+      },
+      "test": {
+        "name": "probar",
+        "description": "Comprobar qué activaría un mensaje de ejemplo. No se borra nada.",
+        "options": {
+          "text": {
+            "name": "texto",
+            "description": "El mensaje a probar."
+          }
+        }
+      }
+    }
   }
 }
