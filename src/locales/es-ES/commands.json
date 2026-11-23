@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Mejoras del servidor: anuncios, rol de booster, clasificación e historial.",
+    "options": {
+      "stats": {
+        "name": "estadisticas",
+        "description": "Muestra las estadísticas de mejora del servidor."
+      },
+      "leaderboard": {
+        "name": "clasificacion",
+        "description": "Muestra los boosters más antiguos."
+      },
+      "history": {
+        "name": "historial",
+        "description": "Muestra el historial de mejora de un miembro.",
+        "options": {
+          "user": {
+            "name": "miembro",
+            "description": "El miembro a consultar."
+          }
+        }
+      },
+      "view": {
+        "name": "ver",
+        "description": "Muestra la configuración de boosters."
+      },
+      "enable": {
+        "name": "activar",
+        "description": "Activa los anuncios de boosters."
+      },
+      "disable": {
+        "name": "desactivar",
+        "description": "Desactiva los anuncios de boosters."
+      },
+      "channel": {
+        "name": "canal",
+        "description": "Define el canal de los mensajes de boosters.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "El canal a usar. Elige none para borrarlo."
+          }
+        }
+      },
+      "role": {
+        "name": "rol",
+        "description": "Define el rol asignado mientras se mejora.",
+        "options": {
+          "role": {
+            "name": "rol",
+            "description": "El rol a usar. Elige none para borrarlo."
+          }
+        }
+      }
+    }
   }
 }

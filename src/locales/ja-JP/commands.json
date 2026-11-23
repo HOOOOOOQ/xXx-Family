@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "サーバーブースト: 通知、ブースターロール、ランキング、履歴。",
+    "options": {
+      "stats": {
+        "name": "とうけい",
+        "description": "このサーバーのブースト統計を表示します。"
+      },
+      "leaderboard": {
+        "name": "ランキング",
+        "description": "最も長くブーストしている人を表示します。"
+      },
+      "history": {
+        "name": "りれき",
+        "description": "メンバーのブースト履歴を表示します。",
+        "options": {
+          "user": {
+            "name": "メンバー",
+            "description": "調べるメンバー。"
+          }
+        }
+      },
+      "view": {
+        "name": "ひょうじ",
+        "description": "ブースター設定を表示します。"
+      },
+      "enable": {
+        "name": "ゆうこうか",
+        "description": "ブースター通知をオンにします。"
+      },
+      "disable": {
+        "name": "むこうか",
+        "description": "ブースター通知をオフにします。"
+      },
+      "channel": {
+        "name": "チャンネル",
+        "description": "ブースターメッセージの送信先を設定します。",
+        "options": {
+          "channel": {
+            "name": "チャンネル",
+            "description": "使用するチャンネル。none で解除します。"
+          }
+        }
+      },
+      "role": {
+        "name": "ロール",
+        "description": "ブースト中に付与するロールを設定します。",
+        "options": {
+          "role": {
+            "name": "ロール",
+            "description": "使用するロール。none で解除します。"
+          }
+        }
+      }
+    }
   }
 }

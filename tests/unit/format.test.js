@@ -28,6 +28,34 @@ describe('formatDuration', () => {
     assert.equal(formatDuration((2 * 86400 + 3 * 3600 + 4 * 60) * 1000, tEn()), '2d 3h 4m');
   });
 
+  test('long spans use months and years, not hundreds of days', () => {
+    // A 3-month boost used to read as "90d"; a 2-year account as "730d".
+    assert.equal(formatDuration(90 * 86400_000, tEn()), '3mo');
+    assert.equal(formatDuration(730 * 86400_000, tEn()), '2y');
+    assert.equal(formatDuration((2 * 365 + 3 * 30) * 86400_000, tEn()), '2y 3mo');
+  });
+
+  test('short spans are unaffected by the larger units', () => {
+    assert.equal(formatDuration(86400_000, tEn()), '1d');
+    assert.equal(formatDuration(29 * 86400_000, tEn()), '29d');
+  });
+
+  test('months and years are localized', () => {
+    assert.equal(formatDuration(90 * 86400_000, tId()), '3bln');
+    // 395 days = exactly 1 year + 1 month (id-ID abbreviates "hari" as "h",
+    // which is why a leftover day count would read as a suffix h here).
+    assert.equal(formatDuration(395 * 86400_000, tId()), '1th 1bln');
+  });
+
+  test('every locale can render the larger units', () => {
+    for (const locale of LOCALE_CODES) {
+      const out = formatDuration((2 * 365 + 3 * 30) * 86400_000, getT(locale));
+      assert.ok(out.length > 0, `${locale} produced nothing`);
+      assert.ok(!out.includes('{{'), `${locale} leaked a placeholder: ${out}`);
+      assert.ok(!out.includes('common:time'), `${locale} leaked a key: ${out}`);
+    }
+  });
+
   test('renders at most three units so embeds stay compact', () => {
     const out = formatDuration((5 * 86400 + 6 * 3600 + 7 * 60 + 8) * 1000, tEn());
     assert.equal(out, '5d 6h 7m');

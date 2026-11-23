@@ -25,12 +25,22 @@ export function formatDuration(ms, t, options = {}) {
   const totalSeconds = Math.floor(ms / 1000);
   if (totalSeconds < 1) return t('common:time.justNow');
 
-  const days = Math.floor(totalSeconds / 86400);
+  // Long spans are expressed in years/months: a 3-month boost reading as "90d",
+  // or a 2-year-old account as "730d", is technically correct and still the
+  // wrong thing to show a person.
+  const totalDays = Math.floor(totalSeconds / 86400);
+  const years = Math.floor(totalDays / 365);
+  const months = Math.floor((totalDays % 365) / 30);
+  // What is left after the years and months are taken out — NOT totalDays % 30,
+  // which leaves a phantom remainder (730 days used to read as "2y 10d").
+  const days = totalDays - years * 365 - months * 30;
   const hours = Math.floor((totalSeconds % 86400) / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
 
   const parts = [
+    years ? t('common:time.years', { count: years }) : null,
+    months ? t('common:time.months', { count: months }) : null,
     days ? t('common:time.days', { count: days }) : null,
     hours ? t('common:time.hours', { count: hours }) : null,
     minutes ? t('common:time.minutes', { count: minutes }) : null,

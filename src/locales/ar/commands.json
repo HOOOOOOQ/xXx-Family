@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "تعزيز الخادم: إعلانات، دور المعزّز، اللوحة والسجل.",
+    "options": {
+      "stats": {
+        "name": "إحصائيات",
+        "description": "اعرض إحصائيات التعزيز لهذا الخادم."
+      },
+      "leaderboard": {
+        "name": "اللوحة",
+        "description": "اعرض أقدم المعزّزين."
+      },
+      "history": {
+        "name": "السجل",
+        "description": "اعرض سجل تعزيز أحد الأعضاء.",
+        "options": {
+          "user": {
+            "name": "عضو",
+            "description": "العضو المطلوب."
+          }
+        }
+      },
+      "view": {
+        "name": "عرض",
+        "description": "اعرض إعدادات المعزّزين."
+      },
+      "enable": {
+        "name": "تفعيل",
+        "description": "فعّل إعلانات المعزّزين."
+      },
+      "disable": {
+        "name": "تعطيل",
+        "description": "عطّل إعلانات المعزّزين."
+      },
+      "channel": {
+        "name": "قناة",
+        "description": "اضبط القناة التي تُرسل إليها رسائل المعزّزين.",
+        "options": {
+          "channel": {
+            "name": "قناة",
+            "description": "القناة المطلوبة. اختر none للمسح."
+          }
+        }
+      },
+      "role": {
+        "name": "دور",
+        "description": "اضبط الدور الممنوح أثناء التعزيز.",
+        "options": {
+          "role": {
+            "name": "دور",
+            "description": "الدور المطلوب. اختر none للمسح."
+          }
+        }
+      }
+    }
   }
 }

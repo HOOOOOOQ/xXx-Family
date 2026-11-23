@@ -65,6 +65,8 @@
     "previous": "Atrás"
   },
   "time": {
+    "years": "{{count}}a",
+    "months": "{{count}}m",
     "days": "{{count}} d",
     "hours": "{{count}} h",
     "minutes": "{{count}} min",
@@ -176,5 +178,45 @@
       "deletedAuthor": "Autor desconocido",
       "truncated": "Contenido truncado"
     }
+  },
+  "booster": {
+    "titleStart": "¡Nuevo booster!",
+    "titleEnd": "Boost finalizado",
+    "start": "¡{user.mention} acaba de mejorar **{server.name}**! 🎉 El servidor tiene ahora **{server.boostCount}** mejoras (Nivel {server.boostTier}).",
+    "end": "**{user.name}** ya no mejora el servidor. Lo mejoró durante {duration}. ¡Gracias! 💜",
+    "milestone": "¡{user.mention} alcanzó **{months} meses** de mejora! 🏆",
+    "dm": "¡Gracias por mejorar **{server.name}**! 💜"
+  },
+  "boosterPanel": {
+    "title": "Sistema de boosters",
+    "status": "Estado",
+    "enabled": "Activado",
+    "disabled": "Desactivado",
+    "channel": "Canal",
+    "noChannel": "Sin canal definido",
+    "role": "Rol de booster",
+    "noRole": "Ninguno",
+    "rewards": "Recompensas por hitos",
+    "noRewards": "Ninguna",
+    "boosters": "Boosters actuales",
+    "lifetime": "Boosters históricos",
+    "totalMonths": "Meses totales de mejora",
+    "tier": "Nivel de mejora",
+    "boostCount": "Mejoras",
+    "leaderboard": "Clasificación de boosters",
+    "noBoosters": "Nadie ha mejorado todavía.",
+    "since": "Mejorando desde",
+    "months": "{{count}} m",
+    "history": "Historial de mejoras",
+    "noHistory": "Ese miembro no tiene historial de mejoras.",
+    "saved": "Configuración guardada",
+    "enabledNow": "Los anuncios de boosters están **activados**.",
+    "disabledNow": "Los anuncios de boosters están **desactivados**.",
+    "channelSet": "Los mensajes de boosters se enviarán a {{channel}}.",
+    "noChannelConfigured": "Define primero un canal con `/booster channel`.",
+    "roleSet": "Los boosters recibirán {{role}}.",
+    "roleCleared": "El rol de booster se eliminó.",
+    "roleAboveBot": "No puedo asignar {{role}} — está por encima de mi rol más alto.",
+    "monthsLabel": "Meses"
   }
 }

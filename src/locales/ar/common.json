@@ -69,6 +69,8 @@
     "previous": "السابق"
   },
   "time": {
+    "years": "{{count}}س",
+    "months": "{{count}}ش",
     "days": "{{count}} يوم",
     "hours": "{{count}} ساعة",
     "minutes": "{{count}} دقيقة",
@@ -180,5 +182,45 @@
       "deletedAuthor": "كاتب غير معروف",
       "truncated": "تم اقتطاع المحتوى"
     }
+  },
+  "booster": {
+    "titleStart": "معزّز جديد!",
+    "titleEnd": "انتهى التعزيز",
+    "start": "قام {user.mention} للتو بتعزيز **{server.name}**! 🎉 أصبح لدى الخادم **{server.boostCount}** تعزيزاً (المستوى {server.boostTier}).",
+    "end": "لم يعد **{user.name}** يعزّز الخادم. عزّزه لمدة {duration}. شكراً لك! 💜",
+    "milestone": "بلغ {user.mention} **{months} شهراً** من التعزيز! 🏆",
+    "dm": "شكراً لتعزيزك **{server.name}**! 💜"
+  },
+  "boosterPanel": {
+    "title": "نظام المعزّزين",
+    "status": "الحالة",
+    "enabled": "مفعّل",
+    "disabled": "معطّل",
+    "channel": "القناة",
+    "noChannel": "لم تُضبط قناة",
+    "role": "دور المعزّز",
+    "noRole": "لا شيء",
+    "rewards": "مكافآت الإنجاز",
+    "noRewards": "لا شيء",
+    "boosters": "المعزّزون الحاليون",
+    "lifetime": "إجمالي المعزّزين",
+    "totalMonths": "إجمالي أشهر التعزيز",
+    "tier": "مستوى التعزيز",
+    "boostCount": "عدد التعزيزات",
+    "leaderboard": "لوحة المعزّزين",
+    "noBoosters": "لا أحد يعزّز بعد.",
+    "since": "يعزّز منذ",
+    "months": "{{count}} شهر",
+    "history": "سجل التعزيز",
+    "noHistory": "لا يوجد سجل تعزيز لهذا العضو.",
+    "saved": "تم حفظ الإعدادات",
+    "enabledNow": "إعلانات المعزّزين **مفعّلة** الآن.",
+    "disabledNow": "إعلانات المعزّزين **معطّلة** الآن.",
+    "channelSet": "ستُرسل رسائل المعزّزين إلى {{channel}}.",
+    "noChannelConfigured": "اضبط قناة أولاً عبر `/booster channel`.",
+    "roleSet": "سيحصل المعزّزون على {{role}}.",
+    "roleCleared": "تمت إزالة دور المعزّز.",
+    "roleAboveBot": "لا أستطيع منح {{role}} — إنه أعلى من أعلى أدواري.",
+    "monthsLabel": "الأشهر"
   }
 }

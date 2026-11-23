@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Boosts do servidor: anúncios, cargo de booster, ranking e histórico.",
+    "options": {
+      "stats": {
+        "name": "estatisticas",
+        "description": "Mostra as estatísticas de boost do servidor."
+      },
+      "leaderboard": {
+        "name": "ranking",
+        "description": "Mostra os boosters mais antigos."
+      },
+      "history": {
+        "name": "historico",
+        "description": "Mostra o histórico de boost de um membro.",
+        "options": {
+          "user": {
+            "name": "membro",
+            "description": "O membro a consultar."
+          }
+        }
+      },
+      "view": {
+        "name": "ver",
+        "description": "Mostra a configuração de boosters."
+      },
+      "enable": {
+        "name": "ativar",
+        "description": "Ativa os anúncios de boosters."
+      },
+      "disable": {
+        "name": "desativar",
+        "description": "Desativa os anúncios de boosters."
+      },
+      "channel": {
+        "name": "canal",
+        "description": "Define o canal das mensagens de boosters.",
+        "options": {
+          "channel": {
+            "name": "canal",
+            "description": "O canal a usar. Escolha none para limpar."
+          }
+        }
+      },
+      "role": {
+        "name": "cargo",
+        "description": "Define o cargo dado durante o boost.",
+        "options": {
+          "role": {
+            "name": "cargo",
+            "description": "O cargo a usar. Escolha none para limpar."
+          }
+        }
+      }
+    }
   }
 }

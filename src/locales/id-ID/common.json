@@ -65,6 +65,8 @@
     "previous": "Kembali"
   },
   "time": {
+    "years": "{{count}}th",
+    "months": "{{count}}bln",
     "days": "{{count}}h",
     "hours": "{{count}}j",
     "minutes": "{{count}}m",
@@ -176,5 +178,45 @@
       "deletedAuthor": "Penulis tidak diketahui",
       "truncated": "Isi dipotong"
     }
+  },
+  "booster": {
+    "titleStart": "Booster baru!",
+    "titleEnd": "Boost berakhir",
+    "start": "{user.mention} baru saja mem-boost **{server.name}**! 🎉 Server ini sekarang punya **{server.boostCount}** boost (Tier {server.boostTier}).",
+    "end": "**{user.name}** tidak lagi mem-boost server. Ia mem-boost selama {duration}. Terima kasih! 💜",
+    "milestone": "{user.mention} mencapai **{months} bulan** mem-boost! 🏆",
+    "dm": "Terima kasih sudah mem-boost **{server.name}**! 💜"
+  },
+  "boosterPanel": {
+    "title": "Sistem booster",
+    "status": "Status",
+    "enabled": "Aktif",
+    "disabled": "Nonaktif",
+    "channel": "Kanal",
+    "noChannel": "Kanal belum diatur",
+    "role": "Peran booster",
+    "noRole": "Tidak ada",
+    "rewards": "Hadiah pencapaian",
+    "noRewards": "Tidak ada",
+    "boosters": "Booster aktif",
+    "lifetime": "Total booster sepanjang waktu",
+    "totalMonths": "Total bulan mem-boost",
+    "tier": "Tier boost",
+    "boostCount": "Jumlah boost",
+    "leaderboard": "Papan peringkat booster",
+    "noBoosters": "Belum ada yang mem-boost.",
+    "since": "Mem-boost sejak",
+    "months": "{{count}} bln",
+    "history": "Riwayat boost",
+    "noHistory": "Tidak ada riwayat boost untuk anggota itu.",
+    "saved": "Konfigurasi tersimpan",
+    "enabledNow": "Pengumuman booster sekarang **aktif**.",
+    "disabledNow": "Pengumuman booster sekarang **nonaktif**.",
+    "channelSet": "Pesan booster akan dikirim ke {{channel}}.",
+    "noChannelConfigured": "Atur kanal lebih dulu dengan `/booster channel`.",
+    "roleSet": "Booster akan menerima {{role}}.",
+    "roleCleared": "Peran booster dihapus.",
+    "roleAboveBot": "Aku tidak bisa memberikan {{role}} — peran itu di atas peran tertinggiku.",
+    "monthsLabel": "Bulan"
   }
 }

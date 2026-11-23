@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "서버 부스트: 알림, 부스터 역할, 순위, 기록.",
+    "options": {
+      "stats": {
+        "name": "통계",
+        "description": "이 서버의 부스트 통계를 표시합니다."
+      },
+      "leaderboard": {
+        "name": "순위",
+        "description": "가장 오래 부스트한 사람을 표시합니다."
+      },
+      "history": {
+        "name": "기록",
+        "description": "멤버의 부스트 기록을 표시합니다.",
+        "options": {
+          "user": {
+            "name": "멤버",
+            "description": "조회할 멤버입니다."
+          }
+        }
+      },
+      "view": {
+        "name": "보기",
+        "description": "부스터 설정을 표시합니다."
+      },
+      "enable": {
+        "name": "켜기",
+        "description": "부스터 알림을 켭니다."
+      },
+      "disable": {
+        "name": "끄기",
+        "description": "부스터 알림을 끕니다."
+      },
+      "channel": {
+        "name": "채널",
+        "description": "부스터 메시지를 보낼 채널을 설정합니다.",
+        "options": {
+          "channel": {
+            "name": "채널",
+            "description": "사용할 채널입니다. none을 선택하면 해제됩니다."
+          }
+        }
+      },
+      "role": {
+        "name": "역할",
+        "description": "부스트 중 부여할 역할을 설정합니다.",
+        "options": {
+          "role": {
+            "name": "역할",
+            "description": "사용할 역할입니다. none을 선택하면 해제됩니다."
+          }
+        }
+      }
+    }
   }
 }

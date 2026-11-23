@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Server-Boosting: Ankündigungen, Booster-Rolle, Rangliste und Verlauf.",
+    "options": {
+      "stats": {
+        "name": "statistik",
+        "description": "Zeigt die Boost-Statistik dieses Servers."
+      },
+      "leaderboard": {
+        "name": "rangliste",
+        "description": "Zeigt die dienstältesten Booster."
+      },
+      "history": {
+        "name": "verlauf",
+        "description": "Zeigt den Boost-Verlauf eines Mitglieds.",
+        "options": {
+          "user": {
+            "name": "mitglied",
+            "description": "Das gesuchte Mitglied."
+          }
+        }
+      },
+      "view": {
+        "name": "anzeigen",
+        "description": "Zeigt die Booster-Konfiguration."
+      },
+      "enable": {
+        "name": "aktivieren",
+        "description": "Schaltet Booster-Ankündigungen ein."
+      },
+      "disable": {
+        "name": "deaktivieren",
+        "description": "Schaltet Booster-Ankündigungen aus."
+      },
+      "channel": {
+        "name": "kanal",
+        "description": "Legt den Kanal für Booster-Nachrichten fest.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Der zu verwendende Kanal. Wähle none zum Löschen."
+          }
+        }
+      },
+      "role": {
+        "name": "rolle",
+        "description": "Legt die Rolle während des Boostens fest.",
+        "options": {
+          "role": {
+            "name": "rolle",
+            "description": "Die zu verwendende Rolle. Wähle none zum Löschen."
+          }
+        }
+      }
+    }
   }
 }

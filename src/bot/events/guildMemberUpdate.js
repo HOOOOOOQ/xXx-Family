@@ -37,6 +37,13 @@ export default {
       if (!guild) return;
       if (oldMember.partial || newMember.partial) return;
 
+      // Boost state. discord.js has no dedicated boost event, so this is the
+      // only signal we get — and it is cleared the instant a boost ends, which
+      // is why BoosterService has to persist it.
+      if (Boolean(oldMember.premiumSince) !== Boolean(newMember.premiumSince)) {
+        await client.booster?.handleBoostChange(newMember, oldMember.premiumSince, newMember.premiumSince);
+      }
+
       const beforeRoles = new Set(oldMember.roles.cache.keys());
       const afterRoles = new Set(newMember.roles.cache.keys());
       const { added, removed } = diffRoles(beforeRoles, afterRoles);

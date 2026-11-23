@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Boost du serveur : annonces, rôle de booster, classement et historique.",
+    "options": {
+      "stats": {
+        "name": "stats",
+        "description": "Affiche les statistiques de boost du serveur."
+      },
+      "leaderboard": {
+        "name": "classement",
+        "description": "Affiche les boosters les plus anciens."
+      },
+      "history": {
+        "name": "historique",
+        "description": "Affiche l'historique de boost d'un membre.",
+        "options": {
+          "user": {
+            "name": "membre",
+            "description": "Le membre à consulter."
+          }
+        }
+      },
+      "view": {
+        "name": "voir",
+        "description": "Affiche la configuration des boosters."
+      },
+      "enable": {
+        "name": "activer",
+        "description": "Active les annonces de boost."
+      },
+      "disable": {
+        "name": "desactiver",
+        "description": "Désactive les annonces de boost."
+      },
+      "channel": {
+        "name": "salon",
+        "description": "Définit le salon des messages de boost.",
+        "options": {
+          "channel": {
+            "name": "salon",
+            "description": "Le salon à utiliser. Choisis none pour effacer."
+          }
+        }
+      },
+      "role": {
+        "name": "role",
+        "description": "Définit le rôle attribué pendant le boost.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "Le rôle à utiliser. Choisis none pour effacer."
+          }
+        }
+      }
+    }
   }
 }

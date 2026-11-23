@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Server boosting: announcements, booster role, leaderboard and history.",
+    "options": {
+      "stats": {
+        "name": "stats",
+        "description": "Show boosting statistics for this server."
+      },
+      "leaderboard": {
+        "name": "leaderboard",
+        "description": "Show the longest-running boosters."
+      },
+      "history": {
+        "name": "history",
+        "description": "Show one member's boost history.",
+        "options": {
+          "user": {
+            "name": "user",
+            "description": "The member to look up."
+          }
+        }
+      },
+      "view": {
+        "name": "view",
+        "description": "Show the booster configuration."
+      },
+      "enable": {
+        "name": "enable",
+        "description": "Turn booster announcements on."
+      },
+      "disable": {
+        "name": "disable",
+        "description": "Turn booster announcements off."
+      },
+      "channel": {
+        "name": "channel",
+        "description": "Set the channel booster messages are sent to.",
+        "options": {
+          "channel": {
+            "name": "channel",
+            "description": "The channel to use. Choose none to clear."
+          }
+        }
+      },
+      "role": {
+        "name": "role",
+        "description": "Set the role granted while boosting.",
+        "options": {
+          "role": {
+            "name": "role",
+            "description": "The role to use. Choose none to clear."
+          }
+        }
+      }
+    }
   }
 }

@@ -36,6 +36,7 @@ import { settingsService } from '../services/settingsService.js';
 import { LocaleService, localeService } from '../services/localeService.js';
 import { LoggingService } from '../services/loggingService.js';
 import { WelcomeService } from '../services/welcomeService.js';
+import { BoosterService } from '../services/boosterService.js';
 import { healthService } from '../services/healthService.js';
 import { metrics } from '../services/metrics.js';
 import { settingsCache } from '../services/cacheManager.js';
@@ -121,6 +122,18 @@ export class XxxFamilyClient extends Client {
       new WelcomeService({
         models,
         settings: this.settings,
+        logging: this.logging,
+        localeService: this.localeService,
+        resolveChannel,
+        isDbReady: () => isDatabaseConfigured(),
+        logger: this.logger,
+        metrics: this.metrics,
+      });
+
+    this.booster =
+      deps.booster ??
+      new BoosterService({
+        models,
         logging: this.logging,
         localeService: this.localeService,
         resolveChannel,
@@ -244,6 +257,7 @@ export class XxxFamilyClient extends Client {
         localeService: this.localeService,
         logging: this.logging,
         welcome: this.welcome,
+        booster: this.booster,
         health: this.health,
         metrics: this.metrics,
       });

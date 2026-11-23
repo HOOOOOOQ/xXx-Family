@@ -65,6 +65,8 @@
     "previous": "戻る"
   },
   "time": {
+    "years": "{{count}}年",
+    "months": "{{count}}か月",
     "days": "{{count}}日",
     "hours": "{{count}}時間",
     "minutes": "{{count}}分",
@@ -176,5 +178,45 @@
       "deletedAuthor": "投稿者不明",
       "truncated": "内容を切り詰めました"
     }
+  },
+  "booster": {
+    "titleStart": "新しいブースター！",
+    "titleEnd": "ブースト終了",
+    "start": "{user.mention} が **{server.name}** をブーストしました！🎉 現在のブースト数は **{server.boostCount}**（ティア {server.boostTier}）です。",
+    "end": "**{user.name}** のブーストが終了しました。{duration} 間ブーストしてくれました。ありがとう！💜",
+    "milestone": "{user.mention} がブースト **{months} か月** を達成！🏆",
+    "dm": "**{server.name}** をブーストしてくれてありがとう！💜"
+  },
+  "boosterPanel": {
+    "title": "ブースターシステム",
+    "status": "状態",
+    "enabled": "有効",
+    "disabled": "無効",
+    "channel": "チャンネル",
+    "noChannel": "チャンネル未設定",
+    "role": "ブースターロール",
+    "noRole": "なし",
+    "rewards": "マイルストーン報酬",
+    "noRewards": "なし",
+    "boosters": "現在のブースター",
+    "lifetime": "累計ブースター",
+    "totalMonths": "累計ブースト月数",
+    "tier": "ブーストティア",
+    "boostCount": "ブースト数",
+    "leaderboard": "ブースターランキング",
+    "noBoosters": "まだ誰もブーストしていません。",
+    "since": "ブースト開始",
+    "months": "{{count}} か月",
+    "history": "ブースト履歴",
+    "noHistory": "そのメンバーのブースト履歴はありません。",
+    "saved": "設定を保存しました",
+    "enabledNow": "ブースター通知は**有効**になりました。",
+    "disabledNow": "ブースター通知は**無効**になりました。",
+    "channelSet": "ブースターメッセージは {{channel}} に送信されます。",
+    "noChannelConfigured": "先に `/booster channel` でチャンネルを設定してください。",
+    "roleSet": "ブースターには {{role}} が付与されます。",
+    "roleCleared": "ブースターロールを解除しました。",
+    "roleAboveBot": "{{role}} は付与できません — 私の最高ロールより上位です。",
+    "monthsLabel": "月数"
   }
 }

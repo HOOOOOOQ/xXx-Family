@@ -65,6 +65,8 @@
     "previous": "Zurück"
   },
   "time": {
+    "years": "{{count}}J",
+    "months": "{{count}}M",
     "days": "{{count}} T",
     "hours": "{{count}} Std",
     "minutes": "{{count}} Min",
@@ -176,5 +178,45 @@
       "deletedAuthor": "Unbekannter Autor",
       "truncated": "Inhalt gekürzt"
     }
+  },
+  "booster": {
+    "titleStart": "Neuer Booster!",
+    "titleEnd": "Boost beendet",
+    "start": "{user.mention} hat gerade **{server.name}** geboostet! 🎉 Der Server hat jetzt **{server.boostCount}** Boosts (Stufe {server.boostTier}).",
+    "end": "**{user.name}** boostet den Server nicht mehr. Er hat {duration} geboostet. Danke! 💜",
+    "milestone": "{user.mention} hat **{months} Monate** Boost erreicht! 🏆",
+    "dm": "Danke, dass du **{server.name}** boostest! 💜"
+  },
+  "boosterPanel": {
+    "title": "Booster-System",
+    "status": "Status",
+    "enabled": "Aktiviert",
+    "disabled": "Deaktiviert",
+    "channel": "Kanal",
+    "noChannel": "Kein Kanal festgelegt",
+    "role": "Booster-Rolle",
+    "noRole": "Keine",
+    "rewards": "Meilenstein-Belohnungen",
+    "noRewards": "Keine",
+    "boosters": "Aktuelle Booster",
+    "lifetime": "Booster insgesamt",
+    "totalMonths": "Geboostete Monate gesamt",
+    "tier": "Boost-Stufe",
+    "boostCount": "Boosts",
+    "leaderboard": "Booster-Rangliste",
+    "noBoosters": "Bisher boostet niemand.",
+    "since": "Boostet seit",
+    "months": "{{count}} M",
+    "history": "Boost-Verlauf",
+    "noHistory": "Dieses Mitglied hat keinen Boost-Verlauf.",
+    "saved": "Konfiguration gespeichert",
+    "enabledNow": "Booster-Ankündigungen sind jetzt **aktiviert**.",
+    "disabledNow": "Booster-Ankündigungen sind jetzt **deaktiviert**.",
+    "channelSet": "Booster-Nachrichten werden an {{channel}} gesendet.",
+    "noChannelConfigured": "Lege zuerst einen Kanal mit `/booster channel` fest.",
+    "roleSet": "Booster erhalten {{role}}.",
+    "roleCleared": "Die Booster-Rolle wurde entfernt.",
+    "roleAboveBot": "Ich kann {{role}} nicht vergeben — die Rolle liegt über meiner höchsten Rolle.",
+    "monthsLabel": "Monate"
   }
 }

@@ -65,6 +65,8 @@
     "previous": "Back"
   },
   "time": {
+    "years": "{{count}}y",
+    "months": "{{count}}mo",
     "days": "{{count}}d",
     "hours": "{{count}}h",
     "minutes": "{{count}}m",
@@ -176,5 +178,45 @@
       "deletedAuthor": "Unknown author",
       "truncated": "Content truncated"
     }
+  },
+  "booster": {
+    "titleStart": "New booster!",
+    "titleEnd": "Boost ended",
+    "start": "{user.mention} just boosted **{server.name}**! 🎉 The server now has **{server.boostCount}** boosts (Tier {server.boostTier}).",
+    "end": "**{user.name}** is no longer boosting the server. They boosted for {duration}. Thank you! 💜",
+    "milestone": "{user.mention} reached **{months} months** of boosting! 🏆",
+    "dm": "Thank you for boosting **{server.name}**! 💜"
+  },
+  "boosterPanel": {
+    "title": "Booster system",
+    "status": "Status",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "channel": "Channel",
+    "noChannel": "No channel set",
+    "role": "Booster role",
+    "noRole": "None",
+    "rewards": "Milestone rewards",
+    "noRewards": "None",
+    "boosters": "Current boosters",
+    "lifetime": "All-time boosters",
+    "totalMonths": "Total months boosted",
+    "tier": "Boost tier",
+    "boostCount": "Boosts",
+    "leaderboard": "Booster leaderboard",
+    "noBoosters": "Nobody is boosting yet.",
+    "since": "Boosting since",
+    "months": "{{count}} mo",
+    "history": "Boost history",
+    "noHistory": "No boost history for that member.",
+    "saved": "Configuration saved",
+    "enabledNow": "Booster announcements are now **enabled**.",
+    "disabledNow": "Booster announcements are now **disabled**.",
+    "channelSet": "Booster messages will be sent to {{channel}}.",
+    "noChannelConfigured": "Set a channel first with `/booster channel`.",
+    "roleSet": "Boosters will receive {{role}}.",
+    "roleCleared": "The booster role was removed.",
+    "roleAboveBot": "I cannot grant {{role}} — it is above my highest role.",
+    "monthsLabel": "Months"
   }
 }

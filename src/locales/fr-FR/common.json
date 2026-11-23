@@ -65,6 +65,8 @@
     "previous": "Retour"
   },
   "time": {
+    "years": "{{count}}a",
+    "months": "{{count}}m",
     "days": "{{count}} j",
     "hours": "{{count}} h",
     "minutes": "{{count}} min",
@@ -176,5 +178,45 @@
       "deletedAuthor": "Auteur inconnu",
       "truncated": "Contenu tronqué"
     }
+  },
+  "booster": {
+    "titleStart": "Nouveau booster !",
+    "titleEnd": "Boost terminé",
+    "start": "{user.mention} vient de booster **{server.name}** ! 🎉 Le serveur compte maintenant **{server.boostCount}** boosts (Niveau {server.boostTier}).",
+    "end": "**{user.name}** ne booste plus le serveur. Il a boosté pendant {duration}. Merci ! 💜",
+    "milestone": "{user.mention} a atteint **{months} mois** de boost ! 🏆",
+    "dm": "Merci d'avoir boosté **{server.name}** ! 💜"
+  },
+  "boosterPanel": {
+    "title": "Système de boost",
+    "status": "État",
+    "enabled": "Activé",
+    "disabled": "Désactivé",
+    "channel": "Salon",
+    "noChannel": "Aucun salon défini",
+    "role": "Rôle de booster",
+    "noRole": "Aucun",
+    "rewards": "Récompenses par palier",
+    "noRewards": "Aucune",
+    "boosters": "Boosters actuels",
+    "lifetime": "Boosters historiques",
+    "totalMonths": "Mois de boost cumulés",
+    "tier": "Niveau de boost",
+    "boostCount": "Boosts",
+    "leaderboard": "Classement des boosters",
+    "noBoosters": "Personne ne booste pour l'instant.",
+    "since": "Booste depuis",
+    "months": "{{count}} mois",
+    "history": "Historique de boost",
+    "noHistory": "Ce membre n'a aucun historique de boost.",
+    "saved": "Configuration enregistrée",
+    "enabledNow": "Les annonces de boost sont **activées**.",
+    "disabledNow": "Les annonces de boost sont **désactivées**.",
+    "channelSet": "Les messages de boost seront envoyés dans {{channel}}.",
+    "noChannelConfigured": "Définis d'abord un salon avec `/booster channel`.",
+    "roleSet": "Les boosters recevront {{role}}.",
+    "roleCleared": "Le rôle de booster a été retiré.",
+    "roleAboveBot": "Je ne peux pas attribuer {{role}} — il est au-dessus de mon rôle le plus haut.",
+    "monthsLabel": "Mois"
   }
 }

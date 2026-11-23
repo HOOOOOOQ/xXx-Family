@@ -65,6 +65,8 @@
     "previous": "Voltar"
   },
   "time": {
+    "years": "{{count}}a",
+    "months": "{{count}}m",
     "days": "{{count}} d",
     "hours": "{{count}} h",
     "minutes": "{{count}} min",
@@ -176,5 +178,45 @@
       "deletedAuthor": "Autor desconhecido",
       "truncated": "Conteúdo truncado"
     }
+  },
+  "booster": {
+    "titleStart": "Novo booster!",
+    "titleEnd": "Boost encerrado",
+    "start": "{user.mention} acabou de dar boost em **{server.name}**! 🎉 O servidor agora tem **{server.boostCount}** boosts (Nível {server.boostTier}).",
+    "end": "**{user.name}** não está mais dando boost no servidor. Deu boost por {duration}. Obrigado! 💜",
+    "milestone": "{user.mention} alcançou **{months} meses** de boost! 🏆",
+    "dm": "Obrigado por dar boost em **{server.name}**! 💜"
+  },
+  "boosterPanel": {
+    "title": "Sistema de boosters",
+    "status": "Estado",
+    "enabled": "Ativado",
+    "disabled": "Desativado",
+    "channel": "Canal",
+    "noChannel": "Nenhum canal definido",
+    "role": "Cargo de booster",
+    "noRole": "Nenhum",
+    "rewards": "Recompensas por marco",
+    "noRewards": "Nenhuma",
+    "boosters": "Boosters atuais",
+    "lifetime": "Boosters históricos",
+    "totalMonths": "Meses totais de boost",
+    "tier": "Nível de boost",
+    "boostCount": "Boosts",
+    "leaderboard": "Ranking de boosters",
+    "noBoosters": "Ninguém deu boost ainda.",
+    "since": "Dando boost desde",
+    "months": "{{count}} m",
+    "history": "Histórico de boosts",
+    "noHistory": "Esse membro não tem histórico de boosts.",
+    "saved": "Configuração salva",
+    "enabledNow": "Os anúncios de boosters estão **ativados**.",
+    "disabledNow": "Os anúncios de boosters estão **desativados**.",
+    "channelSet": "As mensagens de boosters serão enviadas em {{channel}}.",
+    "noChannelConfigured": "Defina primeiro um canal com `/booster channel`.",
+    "roleSet": "Os boosters receberão {{role}}.",
+    "roleCleared": "O cargo de booster foi removido.",
+    "roleAboveBot": "Não posso dar {{role}} — está acima do meu cargo mais alto.",
+    "monthsLabel": "Meses"
   }
 }

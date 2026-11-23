@@ -148,5 +148,61 @@
         }
       }
     }
+  },
+  "booster": {
+    "name": "booster",
+    "description": "Boost server: pengumuman, peran booster, papan peringkat dan riwayat.",
+    "options": {
+      "stats": {
+        "name": "statistik",
+        "description": "Tampilkan statistik boost server ini."
+      },
+      "leaderboard": {
+        "name": "peringkat",
+        "description": "Tampilkan booster terlama."
+      },
+      "history": {
+        "name": "riwayat",
+        "description": "Tampilkan riwayat boost seorang anggota.",
+        "options": {
+          "user": {
+            "name": "anggota",
+            "description": "Anggota yang dicari."
+          }
+        }
+      },
+      "view": {
+        "name": "tampilan",
+        "description": "Tampilkan konfigurasi booster."
+      },
+      "enable": {
+        "name": "aktifkan",
+        "description": "Nyalakan pengumuman booster."
+      },
+      "disable": {
+        "name": "matikan",
+        "description": "Matikan pengumuman booster."
+      },
+      "channel": {
+        "name": "kanal",
+        "description": "Atur kanal tujuan pesan booster.",
+        "options": {
+          "channel": {
+            "name": "kanal",
+            "description": "Kanal yang dipakai. Pilih none untuk menghapus."
+          }
+        }
+      },
+      "role": {
+        "name": "peran",
+        "description": "Atur peran yang diberikan selama mem-boost.",
+        "options": {
+          "role": {
+            "name": "peran",
+            "description": "Peran yang dipakai. Pilih none untuk menghapus."
+          }
+        }
+      }
+    }
   }
 }
